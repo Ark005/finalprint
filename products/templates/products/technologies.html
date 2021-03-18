@@ -1,0 +1,83 @@
+<a href="/">
+  <figure class="stock">
+    <img src="/media/products/банер2.jpg" width="1450" height="450">
+  </figure>
+</a>
+            
+    
+    {% extends 'products/base.html' %}
+    {% load thumbnail %}
+    
+    
+    
+    
+   
+    
+  
+      
+    <div class="blog">
+    
+      <H6 STYLE="font-family: 'avenir next rounded std'">
+     <div class="container">
+      
+     <h2 class="text-center">технологии</h2>
+     <H6 STYLE="font-family: 'avenir next rounded std'"></H6>
+     <br>
+      <div class="row">
+
+
+
+       
+    
+        {% for product in filter.qs %}
+    
+    
+    
+         
+              
+                  {% thumbnail product.mainimage "300" as im %}
+                    <img align="center" src="{{ im.url }}" alt="not found" class="img-fluid">
+                   
+                {% endthumbnail %}
+           
+    
+      
+      
+        
+         
+    
+        
+    
+    
+      
+      
+           
+        
+              
+            {% endfor %}
+    
+       </div>
+   
+     
+   
+   
+    
+    
+      
+    
+    
+      
+    
+    <div 
+    
+
+    
+  
+    
+
+    
+    
+    
+    
+    
+   

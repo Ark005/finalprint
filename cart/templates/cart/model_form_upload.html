@@ -1,0 +1,13 @@
+{% extends 'products/base.html' %}
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type= "submit"
+    class= "btn btn-success btn-buy">
+      загрузить файл
+    </button>
+  </form>
+
+  <p><a href="{% url 'mainapp:cart-home' %}">вернуться к заказу</a></p>
+{% endblock %}
