@@ -19,15 +19,32 @@
      <h4> </h4>
      
    
+
+
+
+
+
+
+
      
      <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
      <span class="sr-only">Загрузка...</span>
      <h2>мы готовы начать</h2>
-     <h6 class="card-title"><span class="text-muted">заказать можно  после регистрации</span></a></h6>
- 
-     <a href="{% url 'mainapp:cart' product.slug %}" class="btn  btn-lg btn-primary btn-secondary text-uppercase"> <i class="fas fa-shopping-cart"></i>  Заказать </a>
-    </div> 
+    <!-- <h6 class="card-title"><span class="text-muted">заказать продукцию можно только после регистрации</span></a></h6>-->
     
+
+
+{% if request.user.is_authenticated %}
+<a href="{% url 'mainapp:cart' product.slug %}" class="btn  btn-lg  btn-secondary text-uppercase"> <i class="fas fa-shopping-cart"></i>  Заказать </a>
+{% else %}
+<script>
+    alert('заказать продукцию можно будет только после регистрации');
+  </script>
+{% endif %}
+    
+     
+    </div> 
+
     <!-- slider-product.// -->
     </article> <!-- gallery-wrap .end// -->
             </aside>
@@ -117,7 +134,7 @@
             
 
         </tr>
-        {% endfor %}
+       {% endfor %}
         </tbody>
     </table>
 
