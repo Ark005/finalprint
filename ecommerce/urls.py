@@ -44,10 +44,14 @@ urlpatterns = [
     path('layout.html/', TemplateView.as_view(template_name="products/layout.html")),
     path('delivery.html/', TemplateView.as_view(template_name="products/delivery.html")),
     path('photo.html/', TemplateView.as_view(template_name="products/photo.html")),
-      
+    path(
+        "robots.txt",
+        TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),
+    ),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 
 urlpatterns += staticfiles_urlpatterns()
+
