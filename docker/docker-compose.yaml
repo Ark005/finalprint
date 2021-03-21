@@ -1,0 +1,50 @@
+version: '3.3'
+
+services:
+  # database containers, one for each db
+  pgsql:
+    restart: always
+    build: ./pgsql
+    networks:
+      - web_network
+    volumes:
+      - /data/bd:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  ## web container, with django project and revers proxy (nginx)
+  nginx:
+    restart: always
+    build: ./nginx
+    ports:
+      - 80:80
+      - 443:443
+    # volumes:
+    #   - /data/project:/005
+    networks:
+      - nginx_network
+      - web_network
+    depends_on:
+      - pgsql
+      - python
+  
+  python:
+    restart: always
+    build: ./python 
+    volumes:
+      - /data/project:/005
+    ports:
+      - "8000:8000"
+    networks:
+      web_network:
+        aliases:
+          - "web"
+        
+    
+
+
+networks:
+  web_network:
+    driver: bridge
+  nginx_network:
+    driver: bridge
