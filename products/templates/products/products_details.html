@@ -13,22 +13,15 @@
             <aside class="col-sm-5 border-right">
     <article class="gallery-wrap"> 
     <div class="img-big-wrap">
-       
-      <div> <a href="#"><img src="/media/{{product.mainimage }}" style="width: 450px"></a></div>
+        {% load thumbnail %}
+        {% thumbnail product.mainimage "300" as im %}
+        <img align="center" src="{{ im.url }}" alt="not found" class="img-fluid">
+    {% endthumbnail %}
+  <!--    <div> <a href="#"><img src="/media/{{product.mainimage }}" style="width: 450px"></a></div> -->
  <!-- <div> <a href="#"><img src="/media/{{product.box_size.mainimage }}" style="width: 450px"></a></div> -->
      <h4> </h4>
      
    
-
-
-
-
-
-
-
-     
-     <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
-     <span class="sr-only">Загрузка...</span>
      <h2>мы готовы начать</h2>
     <!-- <h6 class="card-title"><span class="text-muted">заказать продукцию можно только после регистрации</span></a></h6>-->
     
