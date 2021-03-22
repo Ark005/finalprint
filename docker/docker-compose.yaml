@@ -6,7 +6,9 @@ services:
     restart: always
     build: ./pgsql
     networks:
-      - web_network
+      web_network:
+        aliases:
+          - "pgsql"
     volumes:
       - /data/bd:/var/lib/postgresql/data
     ports:

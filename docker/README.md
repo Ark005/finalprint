@@ -10,6 +10,10 @@ ip: ```207.154.195.66:50001```
 user: ```"admin"```
 passwd: ```"Ms9Nx8eQFLD9rFgzLTg9ZECURX3g8zZY"```
 
+i7.ru - продление сертификатов
+user: ``` 005ark@gmail.com```
+passwd: ```9S1i3M7n```
+почта админа: ```admin@005.ru```
 
 2. Склонируем проект локально 
 Необходимо поменять пользователя и пароль чтобы склонировать репо 
@@ -32,7 +36,7 @@ DATABASES = {
         'NAME': 'db',
         'USER': '005user',
         'PASSWORD': '005project',
-        'HOST': 'docker_pgsql_1',
+        'HOST': 'pgsql',
         'PORT': '5432',
     }
 }
