@@ -37,6 +37,9 @@ services:
       - /data/project:/005
     ports:
       - "8000:8000"
+      - "587:587"
+      - "25:25"
+      - "465:465"
     networks:
       web_network:
         aliases:
