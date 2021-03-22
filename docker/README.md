@@ -3,7 +3,7 @@
 1. Учетные данные для подключения:
 ip: ```207.154.195.66```
 login: ```root```
-passwd: ```55UuaeGmbAx7kYtq6VTpmZPtbv2R5AKg```
+passwd: ```fa06659cd110f71cd6034bc7c0```
 
 Portainer - программа для управления docker
 ip: ```207.154.195.66:50001```
