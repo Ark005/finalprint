@@ -1,5 +1,6 @@
 {% extends 'products/base.html' %}
 
+{% load thumbnail %}
 
 {% load crispy_forms_tags %}
 
@@ -35,14 +36,23 @@
 		  <div class="col-md-6 col-sm-12 col-lg-4">
 			<figure class="card card-product">
 				<div class="img-wrap"> 
-					<img src="{{ product.mainimage.url }}" style="width: 100%; height: 250px;">
+
+
+					{% thumbnail product.mainimage "300" as im %}
+					<img align="center" src="{{ im.url }}" alt="not found" class="img-fluid">
+					
+					{% endthumbnail %}  
+
+
+
+				<!--	<img src="{{ product.mainimage.url }}" style="width: 100%; height: 250px;"> -->
 				</div>
 				<figcaption class="info-wrap">
 					<!-- Старый -->
 
 					<div class="card-body">
 						<H6 STYLE="font-family: 'Courier New'"></H6>
-						 <h6 class="card-title"><a href="/product/{{ product.slug }}"><p style="color:rgb(36, 163, 60)">{{ product.name }}></p></a></h6>
+					 <h6 class="card-title"><a href="/product/{{ product.slug }}"><p style="color:rgb(36, 163, 60)">{{ product.name }}></p></a></h6>  
 				
 				 <h6 class="card-title"><span class="text-muted">   {{ product.preview_text}} </span></a></h6>
 				  

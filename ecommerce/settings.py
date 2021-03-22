@@ -184,8 +184,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 
 # Сюда поставить пароль и почту 
-EMAIL_HOST_USER = '888'
-EMAIL_HOST_PASSWORD = '888'
+EMAIL_HOST_USER = 'olgayudkis50@gmail.com'
+EMAIL_HOST_PASSWORD = 'Tykveol005!test'
 
 """
 EMAIL_USE_TLS = True
