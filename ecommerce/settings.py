@@ -201,3 +201,7 @@ DEFAULT_TO_EMAIL = '888'
 
 
 THUMBNAIL_DEBUG = True,
+
+
+LANGUAGE_CODE = 'ru-RU'  # для русской локали
+USE_I18N = True # интернационалицация по-умолчанию включена
