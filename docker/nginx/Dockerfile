@@ -20,6 +20,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 #Copy certs/ /etc/nginx/certs
 COPY 005.conf /etc/nginx/conf.d/005.conf
+COPY 005nowww.conf /etc/nginx/conf.d/005nowww.conf
 COPY certs/ /etc/nginx/certs
 
 # Expose ports
