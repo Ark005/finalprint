@@ -7,7 +7,7 @@
 
 
 
-	{% thumbnail product.mainimage "300" as im %}
+	{% thumbnail product.mainimage "350" as im %}
 		        <img align="center" src="{{ im.url }}" alt="not found" class="img-fluid">
 			{% endthumbnail %}
 
@@ -24,15 +24,11 @@
 {% block content %}
 
 
+{% thumbnail  "350" as im %}
+<img align="center" src="{{ im.url }}" alt="not found" width="100%" class="img-fluid">
+<img src="/media/products/банер2.jpg" width="100%">
+{% endthumbnail %}
 
-<div>
-  <a href="/">
-    <figure class="stock">
-      <img src="/media/products/банер2.jpg" width="1450" height="450">
-    </figure>
-  </a>
-
-</div>
 
 <style>
   .outer {
@@ -44,11 +40,12 @@
   }
 </style>
 
-
+<br><br>
 
 <div class="outer"><div align = "center"
   <div class="inner"><div align = "center"
     class="col-md-3">
+    
       <span class="icon"><i class="fa fa-search"></i></span>
       <H6 STYLE="font-family: 'avenir next rounded std'">
       <form method="get">
@@ -62,44 +59,42 @@
 </div>
 
 
+
+
+
+
 <div>
-  <div style="position:absolute;z-index:10000;top:700px;margin-left:700px;">
+  <div style="position:absolute;z-index:10000;top:740px;margin-left:750px;">
     <i class="fa fa-2x fa-spin fa-refresh"></i>  
 
-    <div style="position:absolute;z-index:10000;top:0px;margin-left:-250px;">
-    <h6 class="card-title"><span class="text-muted"><p style="color:rgb(229, 152, 147)"> <svg xmlns="http://www.w3.org/2000/svg" width="58" height="38" fill="currentColor" class="bi bi-stopwatch" viewBox="0 0 16 16">
+    <div style="position:absolute;z-index:10000;top: -3 px;margin-left:-240px;">
+  <!--  <h6 class="card-title"><span class="text-muted"><p style="color:rgb(229, 152, 147)"> <svg xmlns="http://www.w3.org/2000/svg" width="58" height="38" fill="currentColor" class="bi bi-stopwatch" viewBox="0 0 16 16">
       <path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5V5.6z"/>
       <path d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64a.715.715 0 0 1 .012-.013l.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354a.512.512 0 0 1-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5zM8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3z"/>
-    </svg> </span></a></h6>
-  <div><h6 class="card-title"><span class="text-muted">мгновенный расчет</h6></span></div>
+    </svg> </span></a></h6> -->
+  <div><h5 class="card-title"><span class="text-muted"><span class="text-muted"> <svg xmlns="http://www.w3.org/2000/svg" width="48" height="28" fill="currentColor" class="bi bi-stopwatch" viewBox="0 0 16 16">
+    <path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5V5.6z"/>
+    <path d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64a.715.715 0 0 1 .012-.013l.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354a.512.512 0 0 1-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5zM8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3z"/>
+  </svg> </span></a>мгновенный расчёт</h5></span></div>
   </div>
 
-  <div style="position:absolute;z-index:10000;top:-5px;margin-left:265px;">
-    <h6 class="card-title"><span class="text-muted"> <h1><i class="fa fa-shopping-cart" aria-hidden="true"></i></h1> </span></a></h6>
-    <h6 class="card-title"><span class="text-muted">онлайн </h6></span>
- 
-    </div>
-    <div style="position:absolute;z-index:10000;top:750px;margin-left:1100px;">
-
-      </div>
-
     </div>
 
-      <div style="position:absolute;z-index:10000;top:700px;margin-left:130px;">
-        <div class="rating">
-        
-         <h6 class="card-title"><span class="text-muted"> <h2><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></h2> </span></a></h6>
-         <h6 class="card-title"><span class="text-muted">высокое качество</h6></span>
-          </div>
+      <div style="position:absolute;z-index:10000;top:767px;margin-left:170px;">
+        <div class="rating"> 
+         <!-- <h3 class="card-title"><span class="text-muted"> <h2></h2><span class="icon"><i class="fa fa-star" ></i><i class="fa fa-star" ></i><i class="fa fa-star" ></i><i class="fa fa-star" ></i><i class="fa fa-star" ></i></span>  -->
+          <h5 class="card-title"><span class="text-muted"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></i> высокое качество</h5></span>
+         
+        </div>  
         </div>
+        <div style="position:absolute;z-index:10000;top:767px;margin-left:900px;">
+          <!--   <h6 class="card-title"><span class="text-muted">   <h2><i class="fas fa-truck"></i></h2></span></a></h6>-->
+          <h5 class="card-title"><span class="text-muted"> онлайн <i class="fa fa-shopping-cart" ></i></h5></span>
+           </div>
 
-
-        <div style="position:absolute;z-index:10000;top:705px;margin-left:1220px;">
-        
-        
-          <h6 class="card-title"><span class="text-muted">   <h2><i class="fas fa-truck"></i></h2></span></a></h6>
-        
-          <h6 class="card-title"><span class="text-muted">доставка</h6></span>
+        <div style="position:absolute;z-index:10000;top:767px;margin-left:1120px;">
+         <!--   <h6 class="card-title"><span class="text-muted">   <h2><i class="fas fa-truck"></i></h2></span></a></h6>-->
+          <h5 class="card-title"><span class="text-muted">доставка <i class="fas fa-walking"></i> , <i class="fas fa-truck"></i></h5></span>
           </div>
 
         </div>
@@ -109,18 +104,20 @@
           <br>
           <br>
           <br>
-   
+        
+        
+       
 
 <div class="blog">
 
   <H6 STYLE="font-family: 'avenir next rounded std'">
  <div class="container">
   
- 
+
  <H2 class="text-center" STYLE="font-family: 'avenir next rounded std'">Категории продуктов</H2>
- <br>
+ <br><br>
   <div class="row">
-    
+          
           <br>
           <br>
           <br>
@@ -175,7 +172,14 @@
   
   </div>
 	   
-	
+  
+  
+  
+
+
+
+
+
 		  
 		{% endfor %}
 
@@ -186,13 +190,15 @@
 </div>
 </div>
 
-  
-<nav class="navbar navbar-expand-lg navbar-light bg-light"><br><br></nav>
 
-  <div>
-    <h6 class="text-center"></h6> 
-    
-    </div>
+  
+
+
+
+
+
+
+
 <br>
 <br>
 <br>
@@ -202,21 +208,16 @@
 
 <div>
 
-<a href="/">
-  <figure class="stock">
-    <img src="/media/products/baner.jpg"width="{{ thumb.width }}" height="{{ thumb.height }}" alt="{{ recipe.title }}" />
-    </figure>
-</a>
+{% thumbnail  "350" as im %}
+<a href="/"></a>
+<figure class="stock">
+<img src="/media/products/baner.jpg" width="100%">
+</figure>
+{% endthumbnail %}
+
 
 </div>
-{% load thumbnail %}
-{% thumbnail recipe.image "1450x450" as thumb %}
-<a href="/">
-  <figure class="stock">
-    <img src="{{ thumb.url }}"width="{{ thumb.width }}" height="{{ thumb.height }}" alt="{{ recipe.title }}" />
-    </figure>
-</a>
-{% endthumbnail %}
+
 
 
               
@@ -225,27 +226,3 @@
 {% endblock %}
 
 
-
-
-
-
-{% thumbnail product.mainimage "100" as im %}
-<img align="center" src="{{ im.url }}" alt="not found" class="img-fluid">
-
-{% endthumbnail %}
-
-
-
-
-{% load thumbnail %}
-{% thumbnail recipe.image "1450x450" as thumb %}
-<a href="/">
-  <figure class="stock">
-    <img src="/media/products/baner.jpg"width="{{ thumb.width }}" height="{{ thumb.height }}" alt="{{ recipe.title }}" />
-    </figure>
-</a>
-{% endthumbnail %}
-
-{% thumbnail recipe.image "430x250" as thumb %}
-     <img src="{{ thumb.url }}" width="{{ thumb.width }}" height="{{ thumb.height }}" alt="{{ recipe.title }}" />
-{% endthumbnail %}-->
