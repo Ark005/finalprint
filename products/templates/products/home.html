@@ -25,7 +25,7 @@
 
 
 {% thumbnail  "350" as im %}
-<img align="center" src="{{ im.url }}" alt="not found" width="100%" class="img-fluid">
+<img align="center" src="{{ im.url }}"  width="100%" class="img-fluid">
 <img src="/media/products/банер2.jpg" width="100%">
 {% endthumbnail %}
 
@@ -169,27 +169,32 @@
   
  <h6 class="card-title"><span class="text-muted"> {{ product.preview_text}}</span></a></h6>
          <p class="card-text">
-         
+          
 	      
 	      </p>
 	     </div>
-
+     
 	    </div>
 
-
+      <br><br>
   
   </div>
 	   
   
   
-  
+
 
 
 
 
 
 		  
-		{% endfor %}
+    {% endfor %}
+    
+    {% thumbnail  "350" as im %}
+  
+    <img src="/media/products/baner.jpg" width="100%">
+    {% endthumbnail %}
 
    </div>
   </div>
