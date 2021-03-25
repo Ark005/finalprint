@@ -4,11 +4,15 @@
 {% extends 'products/base.html' %}
 {% load thumbnail %}
 
+{% load static %}
 
 
+<!-- DON'T WRITE THIS -->
+{% load static %}
+<img src="{% static "images/hi.jpg" %}" alt="Hi!" />
 
 	{% thumbnail product.mainimage "300" as im %}
-		        <img align="center" src="{{ im.url }}" alt="not found" class="img-fluid">
+		        <img align="center" src="{{ im.url }}"  class="img-fluid">
 			{% endthumbnail %}
 
 
@@ -145,17 +149,6 @@
 
 	    <div class="card">
 	     <div class="card-img">
-	      <!-- <img align="center" src="{{ product.mainimage.url }}" class="img-fluid"> -->
-	      <!-- <img align="center" src="media/{{ product.mainimage }}" class="img-fluid"> -->
-          <!-- { % thumbnail 'product.mainimage' "50" as im % } -->
-          <!--  im = get_thumbnail(my_file, '100x100', crop='center', quality=99)
-
-          {% load thumbnail %}
-
-          {% thumbnail recipe.image "430x250" as thumb %}
-               <img src="{{ thumb.url }}" width="{{ thumb.width }}" height="{{ thumb.height }}" alt="{{ recipe.title }}" />
-          {% endthumbnail %}-->
-
 
       		{% thumbnail product.mainimage "300" as im %}
 		        <img align="center" src="{{ im.url }}" alt="not found" class="img-fluid">

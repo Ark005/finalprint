@@ -21,7 +21,7 @@ from django.urls import path
 from django.views.generic import TemplateView
 from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-
+  
 
 
 
@@ -48,6 +48,7 @@ urlpatterns = [
         "robots.txt",
         TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),
     ),
+  
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
