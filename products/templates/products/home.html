@@ -1,5 +1,19 @@
- 
-<meta name="google-site-verification" content="NqnOesCfi00hB_plnpL-E_pa9D1Gm_FGJYWEO1DvFLM" />
+ <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(74638276, "init", {
+       clickmap:true,
+       trackLinks:true,
+       accurateTrackBounce:true,
+       webvisor:true,
+       ecommerce:"dataLayer"
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/74638276" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 
 {% extends 'products/base.html' %}
 {% load thumbnail %}
@@ -7,12 +21,9 @@
 {% load static %}
 
 
-<!-- DON'T WRITE THIS -->
-{% load static %}
-<img src="{% static "products/hi.jpg" %}" alt="Hi!" />
 
 	{% thumbnail product.mainimage "300" as im %}
-		        <img align="center" src="{{ im.url }}"  class="img-fluid">
+		        <img align="center"  onclick="imgCH(this);" src="{{ im.url }}"  class="img-fluid">
 			{% endthumbnail %}
 
 
