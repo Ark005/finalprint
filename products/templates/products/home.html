@@ -33,12 +33,6 @@
 
 
 
-  {% thumbnail product.mainimage "300" as im %}
-  Б
-		        <img align="center"  onclick="imgCH(this);" src="{{ im.url }}"  class="img-fluid">
-			{% endthumbnail %}
-
-
 {% load crispy_forms_tags %}
 <div class="col-md-">
   <span class="icon"><i class="fa fa-search"></i></span>
@@ -207,11 +201,12 @@
 		  
     {% endfor %}
     
+    <a href="/">
     {% thumbnail  "350" as im %}
-  
     <img src="/media/products/baner.jpg" width="100%">
     {% endthumbnail %}
-
+  </a>
+  
    </div>
   </div>
  </div>
