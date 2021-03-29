@@ -22,7 +22,19 @@
 
 
 
-	{% thumbnail product.mainimage "300" as im %}
+<div class="col-xs-6 col-md-3">
+  {% thumbnail product.mainimage "300" as im %}
+  <a href="products_by_category/{{ product.id }}">" class="thumbnail">
+
+  <img src="{{ im.url }}" 
+  </a>
+  {% endthumbnail %}
+</div>
+
+
+
+  {% thumbnail product.mainimage "300" as im %}
+  Б
 		        <img align="center"  onclick="imgCH(this);" src="{{ im.url }}"  class="img-fluid">
 			{% endthumbnail %}
 
@@ -55,7 +67,7 @@
   }
 </style>
 
-<br><br><br><br>
+<br><br><br>
 
 
 
@@ -100,7 +112,7 @@
 
     </div>
 
-      <div style="position:absolute;z-index:10000;top:677px;margin-left:170px;">
+      <div style="position:absolute;z-index:10000;top:660px;margin-left:170px;">
         <div class="rating"> 
 
           <h5 class="card-title"><span class="text-muted"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></i> </h5></span>
@@ -108,13 +120,13 @@
          
         </div>  
         </div>
-        <div style="position:absolute;z-index:10000;top:679px;margin-left:900px;">
+        <div style="position:absolute;z-index:10000;top:660px;margin-left:900px;">
           <!--   <h6 class="card-title"><span class="text-muted">   <h2><i class="fas fa-truck"></i></h2></span></a></h6>-->
           <h5 class="card-title"><span class="text-muted"> <i class="fa fa-shopping-cart" ></i></h5></span>
           <h5 class="card-title"><span class="text-muted"> онлайн</h5></span>
            </div>
 
-        <div style="position:absolute;z-index:10000;top:679px;margin-left:1170px;">
+        <div style="position:absolute;z-index:10000;top:655px;margin-left:1170px;">
 
           <h5 class="card-title"><span class="text-muted"> <i class="fas fa-walking"></i> , <i class="fas fa-truck"></i></h5></span>
           <h5 class="card-title"><span class="text-muted">доставка </h5></span>
@@ -162,7 +174,7 @@
 	     <div class="card-img">
 
       		{% thumbnail product.mainimage "300" as im %}
-		        <img align="center" src="{{ im.url }}" alt="not found" class="img-fluid">
+		        <img align="center" src="{{ im.url }}"  class="img-fluid">
 			{% endthumbnail %}
 	     </div>
 

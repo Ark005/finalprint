@@ -190,18 +190,15 @@ EMAIL_PORT = 587
 # Сюда поставить пароль и почту 
 EMAIL_HOST_USER = 'olgayudkis50@gmail.com'
 EMAIL_HOST_PASSWORD = 'Tykveol005!test'
-
 """
-EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.yandex.ru'
-EMAIL_PORT = 587 
-
-# Сюда поставить пароль и почту ВАШИ jkj
-EMAIL_HOST_USER = '888'
-EMAIL_HOST_PASSWORD = '888'
+EMAIL_HOST_USER = 'info@005.ru'
+EMAIL_HOST_PASSWORD = 'akxfizngmjcaeilo'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 """
-DEFAULT_FROM_EMAIL = '888'
-DEFAULT_TO_EMAIL = '888'
+DEFAULT_FROM_EMAIL = 'info@005.ru'
+DEFAULT_TO_EMAIL = '005ark@gmail.com'
 
 
 THUMBNAIL_DEBUG = True,
