@@ -22,15 +22,6 @@
 
 
 
-<div class="col-xs-6 col-md-3">
-  {% thumbnail product.mainimage "300" as im %}
-  <a href="products_by_category/{{ product.id }}">" class="thumbnail">
-
-  <img src="{{ im.url }}" 
-  </a>
-  {% endthumbnail %}
-</div>
-
 
 
 {% load crispy_forms_tags %}
@@ -120,7 +111,7 @@
           <h5 class="card-title"><span class="text-muted"> онлайн</h5></span>
            </div>
 
-        <div style="position:absolute;z-index:10000;top:655px;margin-left:1170px;">
+        <div style="position:absolute;z-index:10000;top:656px;margin-left:1170px;">
 
           <h5 class="card-title"><span class="text-muted"> <i class="fas fa-walking"></i> , <i class="fas fa-truck"></i></h5></span>
           <h5 class="card-title"><span class="text-muted">доставка </h5></span>
@@ -167,9 +158,11 @@
 	    <div class="card">
 	     <div class="card-img">
 
+        <a href="products_by_category/{{ product.id }}">
       		{% thumbnail product.mainimage "300" as im %}
 		        <img align="center" src="{{ im.url }}"  class="img-fluid">
-			{% endthumbnail %}
+      {% endthumbnail %}
+        </a>
 	     </div>
 
 	    <div class="card-body">
@@ -206,7 +199,7 @@
     <img src="/media/products/baner.jpg" width="100%">
     {% endthumbnail %}
   </a>
-  
+
    </div>
   </div>
  </div>
