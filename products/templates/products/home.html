@@ -36,7 +36,7 @@
 {% block content %}
 
 
-{% thumbnail  'resize_100_100_aa.jpg' "350" as im %}
+{% thumbnail  "0" as im %}
 <img align="center" src="{{ im.url }}"  width="100%" class="img-fluid">
 <img src="/media/products/банер2.jpg" width="100%">
 {% endthumbnail %}
@@ -195,7 +195,7 @@
     {% endfor %}
     
     <a href="/">
- {% thumbnail  'resize_100_100_aa.jpg' "350" as im %}
+ {% thumbnail   "0" as im %}
     <img src="/media/products/baner.jpg" width="100%">
     {% endthumbnail %}
   </a>
