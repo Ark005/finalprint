@@ -36,7 +36,7 @@
 {% block content %}
 
 
-{% thumbnail  "350" as im %}
+{% thumbnail  'resize_100_100_aa.jpg' "350" as im %}
 <img align="center" src="{{ im.url }}"  width="100%" class="img-fluid">
 <img src="/media/products/банер2.jpg" width="100%">
 {% endthumbnail %}
@@ -111,7 +111,7 @@
           <h5 class="card-title"><span class="text-muted"> онлайн</h5></span>
            </div>
 
-        <div style="position:absolute;z-index:10000;top:656px;margin-left:1170px;">
+        <div style="position:absolute;z-index:10000;top:657px;margin-left:1170px;">
 
           <h5 class="card-title"><span class="text-muted"> <i class="fas fa-walking"></i> , <i class="fas fa-truck"></i></h5></span>
           <h5 class="card-title"><span class="text-muted">доставка </h5></span>
@@ -195,7 +195,7 @@
     {% endfor %}
     
     <a href="/">
-    {% thumbnail  "350" as im %}
+ {% thumbnail  'resize_100_100_aa.jpg' "350" as im %}
     <img src="/media/products/baner.jpg" width="100%">
     {% endthumbnail %}
   </a>
