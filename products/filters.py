@@ -30,4 +30,3 @@ class CategoryFilter(django_filters.FilterSet):
 
 
 
-

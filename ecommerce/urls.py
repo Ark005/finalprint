@@ -24,12 +24,14 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
   
 
 
-
 from products.views import (
     indexView,
     postProduct, 
     checkNickName,
 )
+
+
+
 
 urlpatterns = [
  	path('', include('products.urls', namespace='mainapp')),
@@ -50,9 +52,10 @@ urlpatterns = [
     ),
   
 
+  
+
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 
 urlpatterns += staticfiles_urlpatterns()
-

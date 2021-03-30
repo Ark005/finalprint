@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'sorl.thumbnail',
   
+  
     
  
     # 'send_email.apps.SendEmailConfig',
