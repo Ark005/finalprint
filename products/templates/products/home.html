@@ -37,10 +37,10 @@
 {% block content %}
 
 
-{% thumbnail  "0" as im %}
+
 <img align="center" src="{{ im.url }}"  width="100%" class="img-fluid">
 <img src="/media/products/банер_red_new.png" width="100%">
-{% endthumbnail %}
+
 
 
 <style>
@@ -200,14 +200,15 @@
 
 
 
-
+  <a href="/">
+   
 		  
     {% endfor %}
     
     <a href="/">
- {% thumbnail   "0" as im %}
+
     <img src="/media/products/banner.png" width="100%">
-    {% endthumbnail %}
+   
   </a>
 
    </div>
