@@ -37,6 +37,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+
     'polymorphic',
     'allauth',
     'allauth.account',
@@ -55,6 +56,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'sorl.thumbnail',
     'allauth.socialaccount.providers.vk',
+   
   
   
     
@@ -154,11 +156,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
-
-USE_I18N = True
 
 USE_L10N = True
 
@@ -175,7 +175,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staic')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 SITE_ID = 1
-LOGIN_REDIRECT_URL = '/'
+
+LOGIN_REDIRECT_URL = 'https://www.005.ru/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
     
@@ -206,7 +207,7 @@ DEFAULT_FROM_EMAIL = 'info@005.ru'
 DEFAULT_TO_EMAIL = '005ark@gmail.com'
 
 
-THUMBNAIL_DEBUG = True,
+THUMBNAIL_DEBUG = False,
 
 
 LANGUAGE_CODE = 'ru-RU'  # для русской локализации
@@ -214,3 +215,4 @@ USE_I18N = True # интернационалицация по-умолчанию
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
