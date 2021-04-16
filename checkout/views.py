@@ -180,12 +180,10 @@ def send_email(request):
         # Куда отправлять для теста
         email = 'am-005@yandex.ru'
         email = '005ark@gmail.com'
-        #email = request.user.email
+        email = request.user.email
         #email = request.POST.get('email', '')
       
         print(email)
-
-        # New kod
 
         
 

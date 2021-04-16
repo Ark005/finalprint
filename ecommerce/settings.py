@@ -174,7 +174,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staic')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-SITE_ID = 1
+SITE_ID = 2
 
 LOGIN_REDIRECT_URL = 'https://www.005.ru/'
 
@@ -186,7 +186,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
 STRIPE_PUBLISHABLE_KEY = os.getenv("STRIPE_PUBLISHABLE_KEY")
 
-
+"""
 
 # Настройки почты
 EMAIL_USE_TLS = True
@@ -199,10 +199,13 @@ EMAIL_HOST_PASSWORD = 'Tykveol005!test'
 """
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_HOST_USER = 'info@005.ru'
-EMAIL_HOST_PASSWORD = 'akxfizngmjcaeilo'
+EMAIL_HOST_PASSWORD = 'LizaArt005!'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-"""
+
+
+
+
 DEFAULT_FROM_EMAIL = 'info@005.ru'
 DEFAULT_TO_EMAIL = '005ark@gmail.com'
 
@@ -213,6 +216,9 @@ THUMBNAIL_DEBUG = False,
 LANGUAGE_CODE = 'ru-RU'  # для русской локализации
 USE_I18N = True # интернационалицация по-умолчанию включена
 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
+#ACCOUNT_ADAPTER = 'project.users.adapter.MyAccountAdapter'
