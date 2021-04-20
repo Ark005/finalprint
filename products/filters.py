@@ -7,7 +7,7 @@ from django import forms
 class ProductFilter(django_filters.FilterSet):
     name = django_filters.CharFilter(lookup_expr='icontains', label='',max_length=100,
                            widget= forms.TextInput
-                           (attrs={'placeholder':'поиск продукта'}))
+                           (attrs={'placeholder':'что ищете? возможно вам нужна: картонная'}))
     #price = RangeFilter()
 
 
@@ -19,7 +19,7 @@ class CategoryFilter(django_filters.FilterSet):
 
     name = django_filters.CharFilter(lookup_expr='icontains', 
                          label='' , widget= forms.TextInput 
-                           (attrs={'placeholder':'введите раздел поиска, например: коробка'}))
+                           (attrs={'placeholder':'что ищете? возможно вам нужна: коробка'}))
  
     class Meta:
         model = Category    
