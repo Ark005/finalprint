@@ -178,10 +178,10 @@ def send_email(request):
         # email = request.POST.get('email', '')
 
         # Куда отправлять для теста
-        email = 'am-005@yandex.ru'
-        email = '005ark@gmail.com'
         email = request.user.email
-        #email = request.POST.get('email', '')
+        #email = '005ark@gmail.com'
+      
+        #email = request.POST.get(email, '005ark@gmail.com')
       
         print(email)
 

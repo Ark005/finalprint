@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from .filters import ProductFilter, CategoryFilter
@@ -14,26 +13,7 @@ from .models import  Product, Category, SubCategory
 #from django.core.exceptions import ObjectDoesNotExist
 from django.core.exceptions import FieldDoesNotExist
 from django.http import HttpResponseNotFound
-
 from django.views import View
-
-
-
-from .models import Test
-from django.shortcuts import HttpResponse
-
-# http://127.0.0.1:8000/my_test
-def test_view(request):
-    tests = Test.objects.all()
-    print(tests)
-    print(tests[0])
-    print(tests[0].int_list)
-
-    print(type(tests[0].int_list))
-    return HttpResponse("<h2>Hello, !!</h2>")
-
-
-
 from django.urls import path
 from django.views.generic.base import TemplateView
 
