@@ -5,7 +5,7 @@ from products.models import Category, Product, SubCategory, \
 BoxType1, BoxType2,FolderType1, FolderType2, Test, BoxSizes, Note1,Note2
 
 
-admin.site.register(Test)
+
 admin.site.register(BoxSizes)
 
 

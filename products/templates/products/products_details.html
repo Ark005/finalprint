@@ -1,11 +1,13 @@
 
 {% extends "products/base.html" %}
+{% load thumbnail %}
 
+{% load static %}
 
 {% block content %}
 
 {% for product in products %}
-{% load static %}
+
 
 <div class="container my-5">
     
@@ -14,7 +16,7 @@
             <aside class="col-sm-5 border-right">
     <article class="gallery-wrap"> 
     <div class="img-big-wrap">
-        {% load thumbnail %}
+       
         {% thumbnail product.mainimage "500" as im %}
         <img align="center" src="{{ im.url }}"  class="img-fluid">
     {% endthumbnail %}
@@ -149,7 +151,7 @@
 
             <li>
    
-               <p><a href="javascript:flipflop('an');">вы вводите один тираж, а на экране вы видете другой? </a></p> 
+               <p><a href="javascript:flipflop('an');">вы вводите один тираж, а на экране выводится другой? </a></p> 
               
                <ul id="an" style="display: none;">
                  <li><div id="browse_app">
