@@ -31,7 +31,7 @@ from products.views import (
 )
 
 
-
+from django.conf.urls import url, include
 
 urlpatterns = [
  	path('', include('products.urls', namespace='mainapp')),
@@ -40,6 +40,11 @@ urlpatterns = [
     path('get/ajax/validate/nickname', checkNickName, name = "validate_nickname"),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
+    #path('products/account/password_reset.html/', TemplateView.as_view(template_name="products/account/password_reset.html")),
+    #path('signup.html/', TemplateView.as_view(template_name="products/signup.html")),
+    path('password_reset.html/', TemplateView.as_view(template_name="products/password_reset.html")),
+    path('register.html/', TemplateView.as_view(template_name="products/register.html")),
+    path('/account/login.html/', TemplateView.as_view(template_name="account/login.html")),
     path('about.html/', TemplateView.as_view(template_name="products/about.html")),
     path('requirements.html/', TemplateView.as_view(template_name="products/requirements.html")),
     path('technologies.html/', TemplateView.as_view(template_name="products/technologies.html")),
