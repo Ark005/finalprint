@@ -244,10 +244,10 @@ ACCOUNT_USERNAME_REQUIRED =True
 ACCOUNT_USERNAME_VALIDATORS = None
 
 #Account adapters
-ACCOUNT_ADAPTER = 'ecommerce.adapter.CustomProcessAdapter'
+ACCOUNT_ADAPTER = 'products.adapter.CustomProcessAdapter'
 
 #Account Signup
-ACCOUNT_FORMS = {'signup': 'ecommerce.forms.SignupForm',}
+ACCOUNT_FORMS = {'signup': 'products.forms.SignupForm',}
 
 #Social Account Settings
 SOCIALACCOUNT_PROVIDERS = {

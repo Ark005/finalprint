@@ -1,4 +1,5 @@
 
+ 
     
     {% extends 'products/base.html' %}
     {% load thumbnail %}
@@ -12,7 +13,9 @@
     
     
     {% block content %}
-
+    
+    <h5 class="text-center"><span class="text-muted"></h5></span>
+      
     <div class="blog">
     
       <H6 STYLE="font-family: 'avenir next rounded std'">
@@ -22,29 +25,8 @@
 
    
      <br>
-        
-    
-    {% thumbnail  "350" as im %}
-    <img align="center" src="{{ im.url }}"  width="20%" class="img-fluid">
-    <img src="/media/products/обечайка.png" width="20%">
-    {% endthumbnail %}
-    
-    <h5 class="text-left">любую продукцию можно брендировать с помощью обечайки. <p>Её можно запечатать цветом или оттиснить фольгой</h5>
-    <h5 class="text-center"><span class="text-muted"></h5></span>
-      
- 
-    <html>
-      <body>
-     
-    
-        <ol>
-          <li>Кофе</li>
-          <li>Чай</li>
-          <li>Молоко</li>
-        </ol>
-     
-      </body>
-    </html>
+  
+<h1>Поддержка на любом этапе</h1>
 
    
      <br>
@@ -138,4 +120,3 @@
        
         Your browser does not support the video tag.
       </video>
-   

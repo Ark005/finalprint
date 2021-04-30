@@ -59,13 +59,44 @@
       <li class="nav-item">
         <a class="nav-link" href="/"></a>
       </li>
-      <a class="nav-link active" href="mailto:info@005.ru"><i class="fas fa-envelope"></i>info@005.ru</a>
-      <a class="nav-link active" href="/"><i class="fas fa-phone"></i> +7(495) 740-38-93</a>
-    </li>
+      <li 
+     <a class="nav-link active"
+      <a class="nav-link active" 
+    </li></a>
     <li class="nav-item">
       <a class="nav-link" href="/"></a>
     </li>
-  
+    <li 
+    <a class="nav-link active"
+     <a class="nav-link active" 
+   </li></a>
+   <li class="nav-item">
+     <a class="nav-link" href="/"></a>
+   </li>
+   <li 
+   <a class="nav-link active"
+    <a class="nav-link active" 
+  </li></a>
+  <li class="nav-item">
+    <a class="nav-link" href="/"></a>
+  </li>
+  <li 
+  <a class="nav-link active"
+   <a class="nav-link active" 
+ </li></a>
+ <li class="nav-item">
+   <a class="nav-link" href="/"></a>
+ </li>
+
+
+
+<li 
+<a class="nav-link active"
+<a class="nav-link active" 
+</li></a>
+<li class="nav-item">
+<a class="nav-link" href="/"></a>
+</li>
       {% if request.user.is_authenticated %}
       <li class="nav-item">
         <a class="nav-link" href="{% url 'mainapp:cart-home' %}">
@@ -85,9 +116,7 @@
           <!--<a class="dropdown-item" href="#">Панель</a>-->
           <a class="dropdown-item" href="{% url 'checkout:oderView' %}"><strong> Заказы</strong> </a>
           <a class="dropdown-item" href="/register.html">регистрация</a>
-          <a class="dropdown-item" href="/signup.html">зарегистрироваться</a>
-          <a class="dropdown-item" href="/password_reset.html">забыли пароль?</a>
-          <a class="dropdown-item" href="/password_reset.html">сменить пароль</a>
+          
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="/accounts/logout/">выход из системы</a>
         </div>
@@ -97,8 +126,8 @@
       </li>
       {% else %}
        <li class="nav-item">
-    <!--  <a  class="btn btn-success" href="/accounts/login/">Логин / Регистрация</a> -->  
-        <a  class="btn btn-success" href="register.html">Логин / Регистрация</a>
+ <!-- <a  class="btn btn-success" href="/accounts/login/">Логин / Регистрация</a> -->
+        <a  class="btn btn-success" href="https://www.005.ru/register.html/">Логин / Регистрация</a>
       </li>
       {% endif %}
      

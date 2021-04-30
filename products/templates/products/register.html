@@ -1,5 +1,5 @@
 
-{% extends 'products/base_r.html' %}
+{% extends 'products/base.html' %}
 
 
 {% load i18n %}
@@ -45,7 +45,7 @@
   
   {% endif %}
   
-  <button  class="btn btn-outline-primary " type="submit">{% trans "Sign In" %}</button>
+  <button  class="btn btn-outline-primary " type="submit">{% trans "Войти" %}</button>
   <a  class="btn btn-outline-dark" href="{% url 'account_reset_password' %}">{% trans "Забыли пароль ?" %}</a>  
 
 </form>
@@ -62,12 +62,12 @@
   
   {% endif %}
   
-  <button class="btn btn-outline-primary btn-lg" type="submit">{% trans "Sign Up" %}</button>
+  <button class="btn btn-outline-primary btn-lg" type="submit">{% trans "Зарегистрироваться" %}</button>
 </form>
 <form method="POST" action="{% url 'account_change_password' %}" class="container-fluid text-center" id="change_password_form">
   {% csrf_token %}
   {{ form.as_p }}
-  <button class="btn btn-outline-info" type="submit" name="action">{% trans "Change Password" %}</button>
+  <button class="btn btn-outline-info" type="submit" name="action">{% trans "Поменять Пароль" %}</button>
 </form>
 
 <form class="container-fluid text-center" id="logout_form" method="post" action="{% url 'account_logout' %}">
@@ -79,7 +79,7 @@
 
   {% endif %}
   
-  <button  class="btn btn-outline-success" type="submit">{% trans 'Sign Out' %}</button>
+  <button  class="btn btn-outline-success" type="submit">{% trans 'Выйти из системы' %}</button>
   <a class="btn btn-outline-danger" id="custom_logout_no" href="https://www.005.ru/">{% trans 'На главную' %}</a>
 </form>
 
