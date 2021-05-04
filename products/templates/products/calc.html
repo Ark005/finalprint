@@ -1,122 +1,63 @@
-
- 
-    
-    {% extends 'products/base.html' %}
-    {% load thumbnail %}
-    
-    
-    
-    
-    {% load crispy_forms_tags %}
-    
-    
-    
-    
-    {% block content %}
-    
-    <h5 class="text-center"><span class="text-muted"></h5></span>
-      
-    <div class="blog">
-    
-      <H6 STYLE="font-family: 'avenir next rounded std'">
-     <div class="container">
-      
-     <h2 class="text-center">Поддержка</h2>
-
-   
-     <br>
-  
-<h1>Поддержка на любом этапе</h1>
-
-   
-     <br>
-      <div class="row">
+{% extends 'products/base.html' %}
+{% load crispy_forms_tags %}
 
 
+{% load i18n %}
 
-       
-        <!-- <div class="card"> -->
-         <!-- <div class="card-img">
-          <img align="center" src="images/posts/polit.jpg" class="img-fluid">
-         </div> -->
-    
-        {% for product in filter.qs %}
-      
-      <!-- <div class="tile__body list-default__parent"> -->
-    
-    
-        <div class="col-md-3 col-lg-3 col-sm-6">
-        
-    
-            <div class="card">
-             <div class="card-img">
-              <!-- <img align="center" src="{{ product.mainimage.url }}" class="img-fluid"> -->
-              <!-- <img align="center" src="media/{{ product.mainimage }}" class="img-fluid"> -->
-              <!-- { % thumbnail 'product.mainimage' "50" as im % } -->
-              
-                  {% thumbnail product.mainimage "300" as im %}
-                    <img align="center" src="{{ im.url }}" alt="not found" class="img-fluid">
-                    <!-- { % empty % }
-                    <p>No image</p> -->
-                {% endthumbnail %}
-             </div>
-    
-            <div class="card-body">
-            <H6 STYLE="font-family: 'Courier New'"></H6>
-             <h6 class="card-title"><a href="products_by_category/{{ product.id }}"><p style="color:rgb(36, 163, 60)">{{ product.name }}></p></a></h6>
-     {{ product.preview_text}} 
-      
-      
-             <p class="card-text">
-    
-              
-              </p>
-             </div>
-    
-            </div>
-    
-    
-      
-      </div>
-           
-        
-              
-            {% endfor %}
-    
-       </div>
-      </div>
-     </div>
-    </div>
-    </div>
-    </div>
-    
-      
-    
-    
-      <div>
-        <h6 class="text-center"></h6> 
-        
+{% block head_links %} 
+
+<title>The Test</title>
+
+{% endblock %}
+
+{% block head_title %}{% trans "Sign In" %} {% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+
+ {% block messages %}
+    {% if messages %}
+    <div>
+        <ul>
+        {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>{{message}}</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
         </div>
-    <br>
-    <br>
-    <br>
-    
-    <div 
-    
+        {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+  {% endblock %}
 
-    
-              </div>
-    
-    {% endblock %}
-    
-    
-    
-    
-    
-    <body>
-    
-      <video controls loop>
-        <source src="media/box_production1.mp4" type="video/mp4">
-       
-        Your browser does not support the video tag.
-      </video>
+<h3 class="h3" id="head_banner">{% trans "Sign In" %}</h3>
+
+<form class="container-fluid text-center" id="login_form" method="POST" action="{% url 'account_login' %}">
+  {% csrf_token %}
+  
+  {{ form.as_p }}
+
+  {% if redirect_field_value %}
+  
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+  
+  {% endif %}
+  
+  <button  class="btn btn-outline-primary " type="submit">{% trans "Sign In" %}</button>
+  <a  class="btn btn-outline-dark" href="{% url 'account_reset_password' %}">{% trans "Forgot Password ?" %}</a>  
+
+</form>
+    {% load account socialaccount %}
+
+    {% get_providers as socialaccount_providers %}
+    <ul class="social_providers_list">
+    {% for provider in socialaccount_providers %}
+        <a title="{{provider.name}}" class="btn btn-outline-dark" 
+         href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}"><i class="fa fa-{{provider.name}}" id="social_icon"></i>{{provider.name}}</a>
+    {% endfor %}
+     </ul>
+
+</div>
+{% endblock %}

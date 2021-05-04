@@ -20,24 +20,12 @@
         {% thumbnail product.mainimage "500" as im %}
         <img align="center" src="{{ im.url }}"  class="img-fluid">
     {% endthumbnail %}
-  <!--    <div> <a href="#"><img src="/media/{{product.mainimage }}" style="width: 450px"></a></div> -->
- <!-- <div> <a href="#"><img src="/media/{{product.box_size.mainimage }}" style="width: 450px"></a></div> -->
  
-
-    <!--  <h2>мы готовы начать</h2> -->
-    <!-- <h6 class="card-title"><span class="text-muted">заказать продукцию можно только после регистрации</span></a></h6>-->
-    
-
-
 
     
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body> 
-
-
-
-
 
 
 
@@ -79,7 +67,9 @@
         
     </td>   
 <ul>
-    <h3 class="title mb-3">{{ product.name }}</h3>
+  <!-- <span class="price h3 text-warning">  --> 
+    <h3 class="title mb-3"> {{ product.name }}</h3>
+
 </ul>
 <ul>
     <div onmouseover="this.style.color='green';" onmouseout="this.style.color='black';">{{product.detail_text }}</div>
@@ -170,11 +160,11 @@
     
     
             </tbody>
-        </table>
+  <!--     </table>   --> 
 
         
      
-    </div> 
+  <!-- </div> --> 
 
 
     
@@ -210,16 +200,14 @@
 
            
            
-           
-            
-            
+        
             <p><a href="javascript:flipflop('animals');">у вас слетает введенный тираж? </a></p> 
            
             <ul id="animals" style="display: none;">
               <li><div id="browse_app">
 
                 
-                значение тиража не слетает, результат выводится на экран слева в строке  зеленым цветом, а поле ввода обнуляется для следующего расчёта
+                значение тиража не слетает, результат выводится на экран  в строке  зеленым цветом, а поле ввода обнуляется для следующего расчёта
        
          </li>
 
