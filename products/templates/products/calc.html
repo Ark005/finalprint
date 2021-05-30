@@ -1,0 +1,192 @@
+
+ 
+    
+    {% extends 'products/base.html' %}
+    {% load thumbnail %}
+    
+    
+    
+    
+    {% load crispy_forms_tags %}
+    
+    
+    
+    
+    {% block content %}
+    
+    <h5 class="text-center"><span class="text-muted"></h5></span>
+      
+    <div class="blog">
+    
+      <H6 STYLE="font-family: 'avenir next rounded std'">
+     <div class="container">
+      
+   
+
+
+<h1>Посчитать/заказать очень просто</h1>
+
+   
+     <br>
+      <div class="row">
+
+Сначала на главном экране выбираем название нужной категории <br> 
+
+{% thumbnail  "350" as im %}
+
+
+<img src="/media/products/choice_strE.png" width="100%">
+
+{% endthumbnail %}
+
+или
+
+выбираем категорию по картинке
+
+{% thumbnail  "350" as im %}
+
+
+<img src="/media/products/choiceE.png" width="25%">
+
+{% endthumbnail %}
+
+или ищем категорию через поиск, при этом достаточно набрать несколько первых символов с маленькой буквы
+
+
+{% thumbnail  "350" as im %}
+
+
+<img src="/media/products/searchE.png" width="100%">
+
+{% endthumbnail %}
+
+затем делаем нужный выбор, нажимаем и оказываемся на следующем экране, где в выбранной категории выбираем нужный продукт
+
+
+{% thumbnail  "350" as im %}
+
+
+<img src="/media/products/choiceE2.png" width="30%">
+
+{% endthumbnail %}
+
+и, наконец, попадаем на страничку с расчётом, где нам останется только ввести тираж, выбрать один из параметров  и посмотреть результат расчёта
+
+{% thumbnail  "350" as im %}
+
+
+<img src="/media/products/calcE.png" width="70%">
+
+{% endthumbnail %}
+
+
+после чего, жмем на кнопку заказать и переходим на страницу заказа
+
+{% thumbnail  "350" as im %}
+
+
+<img src="/media/products/orderE.png" width="70%">
+
+{% endthumbnail %}  
+
+жмем желтую кнопку заказать и попадаем на страницу, где заполняем адрес доставки и вписываем своё имя в ячейку Name,чтобы получить счёт на почту, указанную при регистрации
+
+{% thumbnail  "350" as im %}
+
+
+<img src="/media/products/nameE.png" width="70%">
+
+{% endthumbnail %}  
+
+
+                                    
+
+
+
+            
+      
+<p style="color:rgb(36, 163, 60)" class="text-center" class="text-muted"> <a style="color:rgb(36, 163, 60)"href="mailto:info@005.ru"><i class="fa fa-envelope" aria-hidden="true"></i>info@005.ru </a> 
+
+  <a href="/">
+ 
+      <img src="/media/products/logo_rose.png" width="97" height="65">
+ 
+  </a>
+
+<i class="fa fa-phone"></i>      +7(495) 740-38-93</p></h6></span>  
+        <!-- <div class="card"> -->
+         <!-- <div class="card-img">
+          <img align="center" src="images/posts/polit.jpg" class="img-fluid">
+         </div> -->
+    
+        {% for product in filter.qs %}
+      
+      <!-- <div class="tile__body list-default__parent"> -->
+    
+    
+        <div class="col-md-3 col-lg-3 col-sm-6">
+        
+    
+            <div class="card">
+             <div class="card-img">
+              <!-- <img align="center" src="{{ product.mainimage.url }}" class="img-fluid"> -->
+              <!-- <img align="center" src="media/{{ product.mainimage }}" class="img-fluid"> -->
+              <!-- { % thumbnail 'product.mainimage' "50" as im % } -->
+              
+                  {% thumbnail product.mainimage "300" as im %}
+                    <img align="center" src="{{ im.url }}" alt="not found" class="img-fluid">
+                    <!-- { % empty % }
+                    <p>No image</p> -->
+                {% endthumbnail %}
+             </div>
+    
+            <div class="card-body">
+            <H6 STYLE="font-family: 'Courier New'"></H6>
+             <h6 class="card-title"><a href="products_by_category/{{ product.id }}"><p style="color:rgb(36, 163, 60)">{{ product.name }}></p></a></h6>
+     {{ product.preview_text}} 
+      
+      
+             <p class="card-text">
+    
+              
+              </p>
+             </div>
+    
+            </div>
+    
+    
+      
+      </div>
+           
+        
+              
+            {% endfor %}
+    
+       </div>
+      </div>
+     </div>
+    </div>
+    </div>
+    </div>
+    
+      
+    
+    
+      <div>
+        <h6 class="text-center"></h6> 
+        
+        </div>
+    <br>
+    <br>
+    <br>
+    
+    <div 
+    
+
+    
+              </div>
+    
+    {% endblock %}
+    
+    
+    
