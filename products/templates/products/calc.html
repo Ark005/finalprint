@@ -14,34 +14,27 @@
     
     {% block content %}
     
-    <h5 class="text-center"><span class="text-muted"></h5></span>
-      
-    <div class="blog">
-    
-      <H6 STYLE="font-family: 'avenir next rounded std'">
-     <div class="container">
-      
+
+
    
-
-
-<h1>Посчитать/заказать очень просто</h1>
-
+  
    
      <br>
       <div class="row">
 
-Сначала на главном экране выбираем название нужной категории <br> 
+        <h1  style="color:rgb(206, 129, 87)" class="text-center" class="card-title"><br> Посчитать/заказать очень просто <br>  </h1></span>
+
+        <h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title"><br> Сначала на главном экране выбираем название нужной категории <br>  </h5></span>
+
+
 
 {% thumbnail  "350" as im %}
 
-
-<img src="/media/products/choice_strE.png" width="100%">
+<img  src="/media/products/choice_strE.png" width="90%">
 
 {% endthumbnail %}
 
-или
-
-выбираем категорию по картинке
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">или выбираем категорию по картинке <br>  </h5></span>
 
 {% thumbnail  "350" as im %}
 
@@ -50,17 +43,21 @@
 
 {% endthumbnail %}
 
-или ищем категорию через поиск, при этом достаточно набрать несколько первых символов с маленькой буквы
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">или ищем категорию через поиск, при этом достаточно набрать несколько первых символов с маленькой буквы <br>  </h5></span>
+
+
 
 
 {% thumbnail  "350" as im %}
 
 
-<img src="/media/products/searchE.png" width="100%">
+<img src="/media/products/searchE.png" width="90%">
 
 {% endthumbnail %}
 
-затем делаем нужный выбор, нажимаем и оказываемся на следующем экране, где в выбранной категории выбираем нужный продукт
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">затем делаем нужный выбор, нажимаем и оказываемся на следующем экране, где в выбранной категории выбираем нужный продукт <br>  </h5></span>
+
+
 
 
 {% thumbnail  "350" as im %}
@@ -70,7 +67,9 @@
 
 {% endthumbnail %}
 
-и, наконец, попадаем на страничку с расчётом, где нам останется только ввести тираж, выбрать один из параметров  и посмотреть результат расчёта
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">и, наконец, попадаем на страничку с расчётом, где нам останется только ввести тираж, выбрать один из параметров  и посмотреть результат расчёта <br>  </h5></span>
+
+
 
 {% thumbnail  "350" as im %}
 
@@ -79,22 +78,24 @@
 
 {% endthumbnail %}
 
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">после чего, нажимаем на кнопку "заказать" и переходим на страницу заказа <br>  </h5></span>
 
-после чего, жмем на кнопку заказать и переходим на страницу заказа
 
 {% thumbnail  "350" as im %}
-
 
 <img src="/media/products/orderE.png" width="70%">
 
 {% endthumbnail %}  
 
-жмем желтую кнопку заказать и попадаем на страницу, где заполняем адрес доставки и вписываем своё имя в ячейку Name,чтобы получить счёт на почту, указанную при регистрации
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">заполняем адрес доставки и вписываем своё имя в ячейку Name,чтобы получить счёт на почту, указанную при регистрации <br>  </h5></span>
+
+ 
 
 {% thumbnail  "350" as im %}
 
+<img align="center" src="/media/products/nameE.png" width="70%">class="img-fluid"> 
 
-<img src="/media/products/nameE.png" width="70%">
+
 
 {% endthumbnail %}  
 
@@ -103,7 +104,7 @@
 
 
 
-            
+    <div>       
       
 <p style="color:rgb(36, 163, 60)" class="text-center" class="text-muted"> <a style="color:rgb(36, 163, 60)"href="mailto:info@005.ru"><i class="fa fa-envelope" aria-hidden="true"></i>info@005.ru </a> 
 
@@ -118,50 +119,24 @@
          <!-- <div class="card-img">
           <img align="center" src="images/posts/polit.jpg" class="img-fluid">
          </div> -->
+
+        </div> 
     
-        {% for product in filter.qs %}
       
-      <!-- <div class="tile__body list-default__parent"> -->
-    
-    
-        <div class="col-md-3 col-lg-3 col-sm-6">
-        
-    
-            <div class="card">
-             <div class="card-img">
               <!-- <img align="center" src="{{ product.mainimage.url }}" class="img-fluid"> -->
               <!-- <img align="center" src="media/{{ product.mainimage }}" class="img-fluid"> -->
               <!-- { % thumbnail 'product.mainimage' "50" as im % } -->
               
-                  {% thumbnail product.mainimage "300" as im %}
-                    <img align="center" src="{{ im.url }}" alt="not found" class="img-fluid">
-                    <!-- { % empty % }
-                    <p>No image</p> -->
-                {% endthumbnail %}
+             
              </div>
-    
-            <div class="card-body">
-            <H6 STYLE="font-family: 'Courier New'"></H6>
-             <h6 class="card-title"><a href="products_by_category/{{ product.id }}"><p style="color:rgb(36, 163, 60)">{{ product.name }}></p></a></h6>
-     {{ product.preview_text}} 
-      
-      
-             <p class="card-text">
-    
-              
+  
               </p>
              </div>
     
             </div>
     
-    
-      
       </div>
-           
-        
-              
-            {% endfor %}
-    
+
        </div>
       </div>
      </div>
@@ -169,22 +144,13 @@
     </div>
     </div>
     
-      
-    
-    
-      <div>
-        <h6 class="text-center"></h6> 
-        
-        </div>
+  </div>
     <br>
     <br>
     <br>
-    
-    <div 
     
 
     
-              </div>
     
     {% endblock %}
     
