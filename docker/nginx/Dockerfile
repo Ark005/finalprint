@@ -18,6 +18,9 @@ RUN rm /etc/nginx/conf.d/default.conf
 # Copy nginx config, certificats, and sites enabled.
 COPY nginx.conf /etc/nginx/nginx.conf
 
+#copy env
+COPY venv /Users/a12345/.local/share/virtualenvs/venv
+
 #Copy certs/ /etc/nginx/certs
 COPY 005.conf /etc/nginx/conf.d/005.conf
 COPY 005nowww.conf /etc/nginx/conf.d/005nowww.conf
