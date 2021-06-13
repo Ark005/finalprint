@@ -24,12 +24,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '#l+yarcxe!v^dhadywe4(s9!7jg$^^g5bp1fs-&hq#&2xz38n$'
+
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
 #SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 ALLOWED_HOSTS = ['*']
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    # 'allauth_bootstrap',
     'cart',
     'checkout',
     'products',
@@ -56,9 +58,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'sorl.thumbnail',
-    #'allauth.socialaccount.providers.vk',
-   
-  
+    'whitenoise.runserver_nostatic',
+    'django.contrib.admindocs',
+
+    'allauth.socialaccount.providers.vk',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.telegram',
+    'allauth.socialaccount.providers.google',
   
     
  
@@ -88,9 +94,7 @@ TEMPLATES = [
         #'DIRS': [os.path.join(BASE_DIR, 'templates'),],
         #'DIRS': [os.path.join(BASE_DIR, os.path.join (BASE_DIR,'templates', 'bootstrap', 'allauth', 'account')),],
         #'DIRS': [os.path.join(BASE_DIR, 'templates', 'bootstrap', 'allauth', 'account'),],
-        'DIRS': [ os.path.join(BASE_DIR, 'templates'),
-                 os.path.join(BASE_DIR, 'templates', 'allauth','account'),],
-        'DIRS': [],
+         'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -178,12 +182,16 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-STATIC_ROOT = os.path.join(BASE_DIR, 'staic')
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+if DEBUG:
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staic'),os.path.join(BASE_DIR, 'staticfiles')]
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staic')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-SITE_ID = 1
 
-LOGIN_REDIRECT_URL = 'https://www.005.ru/'
+SITE_ID = 2
+
+LOGIN_REDIRECT_URL = '/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
     
@@ -201,8 +209,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 
 # Сюда поставить пароль и почту 
-EMAIL_HOST_USER = 'olgayudkis50@gmail.com'
-EMAIL_HOST_PASSWORD = 'Tykveol005!test'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = 'none'
 """
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_HOST_USER = 'info@005.ru'
@@ -235,7 +243,7 @@ ACCOUNT_EMAIL_VERIFICATION = "none"
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 86400 # 1 day. This does ot prevent admin login frombeing brut forced.
 ACCOUNT_LOGOUT_REDIRECT_URL ='/accounts/login/' #or any other page
-LOGIN_REDIRECT_URL = '/accounts/email/' # redirects to profile page by default
+LOGIN_REDIRECT_URL = '/' # redirects to profile page by default
 ACCOUNT_PRESERVE_USERNAME_CASING = False # reduces the delays in iexact lookups
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
 ACCOUNT_UNIQUE_EMAIL=True
