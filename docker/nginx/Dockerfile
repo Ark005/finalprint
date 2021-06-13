@@ -19,7 +19,7 @@ RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/nginx.conf
 
 #copy env
-COPY venv /Users/a12345/.local/share/virtualenvs/venv
+#COPY venv /Users/a12345/.local/share/virtualenvs/venv
 
 #Copy certs/ /etc/nginx/certs
 COPY 005.conf /etc/nginx/conf.d/005.conf
