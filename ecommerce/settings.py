@@ -251,6 +251,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 5
 ACCOUNT_USERNAME_REQUIRED =True
 ACCOUNT_USERNAME_VALIDATORS = None
 
+
 #Account adapters
 #ACCOUNT_ADAPTER = 'products.adapter.CustomProcessAdapter'
 
