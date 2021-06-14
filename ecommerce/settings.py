@@ -61,10 +61,10 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.admindocs',
 
-    'allauth.socialaccount.providers.vk',
-    'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.telegram',
-    'allauth.socialaccount.providers.google',
+    #'allauth.socialaccount.providers.vk',
+    #'allauth.socialaccount.providers.facebook',
+    #'allauth.socialaccount.providers.telegram',
+    #'allauth.socialaccount.providers.google',
   
     
  

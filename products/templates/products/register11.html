@@ -44,10 +44,10 @@
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   
   {% endif %}
-  
+  <!--
   <button  class="btn btn-outline-primary " type="submit">{% trans "Войти" %}</button>
   <a  class="btn btn-outline-dark" href="{% url 'account_reset_password' %}">{% trans "Забыли пароль ?" %}</a>  
-
+-->
 </form>
 
 
@@ -80,7 +80,7 @@
   {% endif %}
   
   <button  class="btn btn-outline-success" type="submit">{% trans 'Выйти из системы' %}</button>
-  <a class="btn btn-outline-danger" id="custom_logout_no" href="https://www.005.ru/">{% trans 'На главную' %}</a>
+  <a class="btn btn-outline-danger" id="custom_logout_no" href="/">{% trans 'На главную' %}</a>
 </form>
 
 </div>
