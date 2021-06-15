@@ -8,7 +8,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
 from django.core import serializers
 from .forms import ProductForm
-from .models import  Product, Category, SubCategory
+from .models import  Product, Category, SubCategory, Banner
 
 #from django.core.exceptions import ObjectDoesNotExist
 from django.core.exceptions import FieldDoesNotExist
@@ -41,7 +41,8 @@ class Home(ListView):
 def home(request):
     category_list = Category.objects.all()
     category_filter = CategoryFilter(request.GET, queryset=category_list)
-    return render(request, 'products/home.html', {'filter': category_filter})
+    baner = Banner.objects.all()
+    return render(request, 'products/home.html', {'filter': category_filter, 'banner': baner})
 
 
 class ProductDetail(LoginRequiredMixin, DetailView):
@@ -358,6 +359,13 @@ from django.shortcuts import render, HttpResponse
 #     product_filter = ProductFilter(request.GET, queryset=product_list)
 
 #     return render(request, 'products/subcategory_products.html', {'filter': product_filter})
+
+from checkout.forms import NameForm
+
+def diliveryview(request):
+    form = NameForm(request.POST or None)
+    context = {"test_form": form}
+    return render(request, 'products/delivery.html', context)
 
 # возвращает субкатегории
 def get_subcategory(request, category):

@@ -36,20 +36,3 @@
 {% endblock %}
 
 
-{% extends 'products/base.html' %} {% load i18n %} {% block head_links %} {% endblock %} {% block head_title %}{% trans "Sign In" %} {% endblock %} {% block content %}
-{% block messages %} {% if messages %}
-{% for message in messages %}
-{{message}} ×
-{% endfor %}
-{% endif %} {% endblock %}
-
-
-{% csrf_token %} {{ form.as_p }} {% if redirect_field_value %} {% endif %} {% trans "Войти" %} {% trans "Забыли пароль ?" %}
-{% csrf_token %} {{ form.as_p }} {% if redirect_field_value %} {% endif %} {% trans "Зарегистрироваться" %}
-{% csrf_token %} {{ form.as_p }} {% trans "Поменять Пароль" %}
-{% csrf_token %} {% if redirect_field_value %} {% endif %} {% trans 'Выйти из системы' %} {% trans 'На главную' %}
-{% if user.is_authenticated %} {% include "account/snippets/already_logged_in.html" %} {% block content_extra %} {% endblock %} {% else %} {% endif %}
-{% load account socialaccount %} {% get_providers as socialaccount_providers %}
-{% for provider in socialaccount_providers %} {{provider.name}} {% endfor %}
-
-{% endblock %}

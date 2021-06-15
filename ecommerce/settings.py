@@ -39,7 +39,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-
+    'modeltranslation',
     'polymorphic',
     'allauth',
     'allauth.account',
@@ -167,17 +167,28 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'Ru-ru'
+LANGUAGE_CODE = 'ru-en'
 
 TIME_ZONE = 'UTC'
 
 USE_L10N = True
 
 USE_TZ = True
+gettext = lambda s: s
+
+LOCALE_PATHS = (
+    BASE_DIR + 'locale/', )
+
+LANGUAGES = [
+    ('en', 'English'),
+    ('ru', 'Russian')
+]
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
+
+
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
@@ -228,7 +239,7 @@ DEFAULT_TO_EMAIL = '005ark@gmail.com'
 THUMBNAIL_DEBUG = False,
 
 
-LANGUAGE_CODE = 'ru-RU'  # для русской локализации
+
 USE_I18N = True # интернационалицация по-умолчанию включена
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
@@ -242,7 +253,7 @@ ACCOUNT_EMAIL_REQUIRED = False
 ACCOUNT_EMAIL_VERIFICATION = "none"
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 86400 # 1 day. This does ot prevent admin login frombeing brut forced.
-ACCOUNT_LOGOUT_REDIRECT_URL ='/accounts/login/' #or any other page
+ACCOUNT_LOGOUT_REDIRECT_URL ='/' #or any other page
 LOGIN_REDIRECT_URL = '/' # redirects to profile page by default
 ACCOUNT_PRESERVE_USERNAME_CASING = False # reduces the delays in iexact lookups
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True

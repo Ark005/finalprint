@@ -1,0 +1,92 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-15 15:27+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: products/templates/products/navbar.html:18
+msgid "о нас"
+msgstr "about us"
+
+#: products/templates/products/navbar.html:33
+msgid "требования к файлам"
+msgstr "requirements to files"
+
+#: products/templates/products/navbar.html:42
+msgid "доставка"
+msgstr "delivery"
+
+#: products/templates/products/navbar.html:124
+msgid "Корзина"
+msgstr "Cart"
+
+#: products/templates/products/navbar.html:136
+msgid "Заказы"
+msgstr "Orders"
+
+#: products/templates/products/navbar.html:137
+msgid "Регистрация"
+msgstr "Registraion"
+
+#: products/templates/products/navbar.html:140
+msgid "выход из системы"
+msgstr "logout"
+
+#: products/templates/products/navbar.html:149
+msgid "Войти / Регистрация"
+msgstr "Login / Registraion"
+
+#: products/templates/products/register.html:13
+#: products/templates/products/register11.html:13
+msgid "Sign In"
+msgstr "Войти"
+
+#: products/templates/products/register.html:48
+#: products/templates/products/register11.html:48
+msgid "Войти"
+msgstr "Sign in"
+
+#: products/templates/products/register.html:49
+#: products/templates/products/register11.html:49
+msgid "Забыли пароль ?"
+msgstr "Forget Password ?"
+
+#: products/templates/products/register.html:65
+#: products/templates/products/register11.html:65
+msgid "Зарегистрироваться"
+msgstr "register"
+
+#: products/templates/products/register.html:70
+#: products/templates/products/register11.html:70
+msgid "Поменять Пароль"
+msgstr "Change Password"
+
+#: products/templates/products/register.html:82
+#: products/templates/products/register11.html:82
+msgid "Выйти из системы"
+msgstr "logout"
+
+#: products/templates/products/register.html:83
+#: products/templates/products/register11.html:83
+msgid "На главную"
+msgstr "Home page"
+
+#: products/templates/products/reset.html:6
+#: products/templates/products/reset.html:28
+#: products/templates/products/reset.html:33
+msgid "Set Password"
+msgstr "Установить пароль"

@@ -1,19 +1,24 @@
 from django.contrib import admin
 
 from polymorphic.admin import PolymorphicParentModelAdmin, PolymorphicChildModelAdmin, PolymorphicChildModelFilter
-from products.models import Category, Product, SubCategory, \
-BoxType1, BoxType2,FolderType1, FolderType2, Test, BoxSizes, Note1,Note2
-
+from products.models import *
+from modeltranslation.admin import TranslationAdmin
 
 
 admin.site.register(BoxSizes)
 
 
-admin.site.register(Category)
+@admin.register(Category)
+class CategoryAdmin(TranslationAdmin):
+    list_display = ('name', 'preview_text')
+    list_display_links = ('name', )
 # admin.site.register(Product)
-admin.site.register(SubCategory)
+#admin.site.register(SubCategory)
  
-
+@admin.register(SubCategory)
+class CategoryAdmin(TranslationAdmin):
+    list_display = ('name', 'preview_text')
+    list_display_links = ('name', )
 # нужен чтобы наследовать дочерние модели
 class ModelAChildAdmin(PolymorphicChildModelAdmin):
     """ Base admin class for all child models """
@@ -59,12 +64,19 @@ class ModelBAdmin(ModelAChildAdmin):
 class ModelBAdmin(ModelAChildAdmin):
     base_model = FolderType2  # Explicitly set here!
     # define custom features here
+
+
 @admin.register(Note1)
-class ModelBAdmin(ModelAChildAdmin):
+class ModelBAdmin(TranslationAdmin):
     base_model = Note1  
+
 @admin.register(Note2)
-class ModelBAdmin(ModelAChildAdmin):
+class ModelBAdmin(TranslationAdmin):
     base_model = Note2
+
+@admin.register(Banner)
+class BanerAdmin(TranslationAdmin):
+    base_model = Banner
 
 
 # Базовая модель

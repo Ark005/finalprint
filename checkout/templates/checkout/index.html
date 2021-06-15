@@ -96,9 +96,9 @@
              
                   <h6 class="mb-3"> введите ваше имя<span class="text-muted"></span></h6>
                   <div class="test_form">
-                     <form action="{% url 'checkout:send_email' %}" method="post" >
+                     <form action="{% url 'checkout:send_email' %}" method="POST" >
                         {% csrf_token %}
-                        {{ test_form}}
+                        {{ test_form }}
                         <br> <br>
                         <button type="submit" class="btn btn-info float-right">отправить коммерческое предложение</button>
                      </form>

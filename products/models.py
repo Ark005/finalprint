@@ -202,7 +202,8 @@ class Payment(models.Model):
 
 '''
 
-
+class Banner(models.Model):
+    mainimage = models.ImageField(upload_to='banner/', blank=True, null=True)
 
 
 

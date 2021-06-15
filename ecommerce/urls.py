@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
@@ -36,7 +37,12 @@ from django.conf.urls import url, include
 urlpatterns = [
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
- 	path('', include('products.urls', namespace='mainapp')),
+ 	path('i18n/', include('django.conf.urls.i18n')),
+
+  
+]
+urlpatterns += i18n_patterns(
+    path('', include('products.urls', namespace='mainapp')),
  	path('', include('checkout.urls', namespace='checkout')),
     path('post/ajax/product', postProduct, name = "post_product"),
     path('get/ajax/validate/nickname', checkNickName, name = "validate_nickname"),
@@ -58,14 +64,18 @@ urlpatterns = [
     path('layout.html/', TemplateView.as_view(template_name="products/layout.html")),
     path('delivery.html/', TemplateView.as_view(template_name="products/delivery.html")),
     path('photo.html/', TemplateView.as_view(template_name="products/photo.html")),
+    path('terms&conditions.html/', TemplateView.as_view(template_name="products/terms&conditions.html")),
+    path('privacy-policy.html/', TemplateView.as_view(template_name="products/privacy-policy.html")),
+    
     path(
         "robots.txt",
         TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),
     ),
-  
 
-  
-]
+)
+
+
+
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

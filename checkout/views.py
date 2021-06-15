@@ -23,7 +23,7 @@ def checkout(request):
 
     # Checkout view
     form = BillingForm
-    test_form = NameForm
+    test_form = NameForm(request.POST or None)
 
     if request.method == "POST":
 	    print(dict(request.POST), 'checkout')
@@ -36,7 +36,7 @@ def checkout(request):
     
 
 
-    context = {"form": form, "order_items": order_items, "order_total": order_total}
+    context = {"form": form, "order_items": order_items, "order_total": order_total,'test_form': test_form}
     print(str(context))
     # Getting the saved saved_address
     saved_address = BillingAddress.objects.filter(user = request.user)

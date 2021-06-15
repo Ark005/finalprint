@@ -1,11 +1,12 @@
 
-
+from django.forms import PasswordInput, TextInput
 from django import forms
 from .models import Name
  
 class NameForm(forms.Form):
 
-    name = forms.CharField()
+    name = forms.CharField(widget=TextInput(
+        attrs={'class': 'form-input', 'placeholder': '', 'type': 'text'}))
     class Meta():
         model = Name
         fields = [ 'name']

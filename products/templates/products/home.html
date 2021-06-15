@@ -23,10 +23,9 @@
 {% block content %}
 
 
-{% thumbnail  "350" as im %}
+<img src="{% static 'img/банер2.png' %}" alt="images" style="margin-bottom: 200px;" width="100%">
 
-<img src="{% static 'img/банер2.png' %}" width="100%">
-{% endthumbnail %}
+
 
 
 
@@ -40,10 +39,11 @@
   }
 </style>
 
+
+{% for ban in banner %}
+  <img src="{{ ban.mainimage.url }}" alt="images" width="100%">
+{% endfor %}
 <br><br><br><br><br>
-
-
-
 <div class="container">
   <div class="row">
 
@@ -71,9 +71,10 @@
 </svg>
 -->
 
+
 <div class="container">
   <div class="row">
-
+    
  <a data-role="button" data-inline="true" href="support.html"> 
       <div class="col-sm">
         <h5 style="color:rgb(0, 0, 0)" class="card-title"><i class="fa fa-headset" ></i></h5></span>
