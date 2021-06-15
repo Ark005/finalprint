@@ -8,13 +8,15 @@
 
 {% load static %}
 
+{% load i18n %}
+
 
 <div class="blog">
 
 	<H6 STYLE="font-family: 'avenir next rounded std'">
    <div class="container">
 	<br>  <br>  
-   <h2 class="text-center">Продукты</h2>
+   <h2 class="text-center">{% trans 'Продукты' %}</h2>
    <br>
 
 
@@ -29,7 +31,7 @@
 	  <div class="col-sm">
 		<button type= "submit"
 		
-		  type="button" class="btn btn-success">Искать</button>
+		  type="button" class="btn btn-success">{% trans 'искать' %}</button>
   
 		</button>
 

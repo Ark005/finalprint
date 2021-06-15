@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-15 15:27+0300\n"
+"POT-Creation-Date: 2021-06-15 17:16+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,135 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: products/templates/products/category_products.html:19
+msgid "Продукты"
+msgstr "Products"
+
+#: products/templates/products/category_products.html:34
+msgid "искать"
+msgstr ""
+
+#: products/templates/products/home.html:60
+msgid "Искать"
+msgstr ""
+
+#: products/templates/products/home.html:83
+msgid "поддержка"
+msgstr ""
+
+#: products/templates/products/home.html:84
+msgid "консультации при"
+msgstr ""
+
+#: products/templates/products/home.html:84
+msgid "онлайн заказе"
+msgstr ""
+
+#: products/templates/products/home.html:92
+msgid "высокое качество"
+msgstr ""
+
+#: products/templates/products/home.html:93
+msgid "контроль качества"
+msgstr ""
+
+#: products/templates/products/home.html:106
+msgid "мгновенный расчёт"
+msgstr ""
+
+#: products/templates/products/home.html:107
+msgid "очень простой калькулятор расчёта  в 2 клика"
+msgstr ""
+
+#: products/templates/products/home.html:128
+msgid "для ресторанов"
+msgstr ""
+
+#: products/templates/products/home.html:129
+msgid "специальное предложение "
+msgstr ""
+
+#: products/templates/products/home.html:136
+#: products/templates/products/home.html:137
+#, fuzzy
+#| msgid "доставка"
+msgid "доставка "
+msgstr "delivery"
+
+#: products/templates/products/home.html:137
+#, fuzzy
+#| msgid "Заказы"
+msgid "заказа"
+msgstr "Orders"
+
+#: products/templates/products/home.html:167
+msgid "Категории продуктов "
+msgstr ""
+
+#: products/templates/products/home.html:193
+msgid "блокноты"
+msgstr ""
+
+#: products/templates/products/home.html:194
+msgid "визитные карточки"
+msgstr ""
+
+#: products/templates/products/home.html:195
+msgid "журналы"
+msgstr ""
+
+#: products/templates/products/home.html:196
+msgid "календари"
+msgstr ""
+
+#: products/templates/products/home.html:197
+msgid "книги"
+msgstr ""
+
+#: products/templates/products/home.html:198
+msgid "конверты"
+msgstr ""
+
+#: products/templates/products/home.html:199
+msgid "коробки"
+msgstr ""
+
+#: products/templates/products/home.html:201
+msgid "листовки"
+msgstr ""
+
+#: products/templates/products/home.html:202
+msgid "наклейки"
+msgstr ""
+
+#: products/templates/products/home.html:204
+msgid "пакеты"
+msgstr ""
+
+#: products/templates/products/home.html:205
+msgid "папки"
+msgstr ""
+
+#: products/templates/products/home.html:206
+msgid "подарки"
+msgstr ""
+
+#: products/templates/products/home.html:208
+msgid "постеры"
+msgstr ""
+
+#: products/templates/products/home.html:209
+msgid "приглашения"
+msgstr ""
+
+#: products/templates/products/home.html:212
+msgid "ролл апы"
+msgstr ""
+
+#: products/templates/products/home.html:213
+msgid "этикетки"
+msgstr ""
 
 #: products/templates/products/navbar.html:18
 msgid "о нас"
@@ -30,58 +159,98 @@ msgstr "requirements to files"
 msgid "доставка"
 msgstr "delivery"
 
-#: products/templates/products/navbar.html:124
+#: products/templates/products/navbar.html:126
 msgid "Корзина"
 msgstr "Cart"
 
-#: products/templates/products/navbar.html:136
+#: products/templates/products/navbar.html:138
 msgid "Заказы"
 msgstr "Orders"
 
-#: products/templates/products/navbar.html:137
+#: products/templates/products/navbar.html:139
 msgid "Регистрация"
 msgstr "Registraion"
 
-#: products/templates/products/navbar.html:140
+#: products/templates/products/navbar.html:142
 msgid "выход из системы"
 msgstr "logout"
 
-#: products/templates/products/navbar.html:149
+#: products/templates/products/navbar.html:151
 msgid "Войти / Регистрация"
 msgstr "Login / Registraion"
 
+#: products/templates/products/products_details.html:37
+#, fuzzy
+#| msgid "Заказы"
+msgid "Заказать"
+msgstr "Orders"
+
+#: products/templates/products/products_details.html:40
+msgid "пожалуйста, зарегистрируйтесь,чтобы мы смогли оформить заказ"
+msgstr ""
+
+#: products/templates/products/products_details.html:130
+msgid "Размер"
+msgstr ""
+
+#: products/templates/products/products_details.html:131
+msgid "Дата изготовления"
+msgstr ""
+
+#: products/templates/products/products_details.html:132
+msgid "Тираж(шт.)"
+msgstr ""
+
+#: products/templates/products/products_details.html:133
+msgid "Цена(руб.)"
+msgstr ""
+
+#: products/templates/products/products_details.html:206
+msgid "у вас слетает введенный тираж? "
+msgstr ""
+
+#: products/templates/products/products_details.html:211
+msgid ""
+" значение тиража не слетает, результат выводится на экран  в строке  зеленым "
+"цветом, а поле ввода обнуляется для следующего расчёта"
+msgstr ""
+
+#: products/templates/products/products_details.html:229
+msgid ""
+"Всё нормально, алгоритм ориентируется на min или max тиражи, то есть "
+"автоматически увеличивает тираж до минимального, или считает не больше "
+"максимального "
+msgstr ""
+
+#: products/templates/products/quality.html:26
+msgid "Качество во главе угла"
+msgstr ""
+
 #: products/templates/products/register.html:13
-#: products/templates/products/register11.html:13
 msgid "Sign In"
 msgstr "Войти"
 
 #: products/templates/products/register.html:48
-#: products/templates/products/register11.html:48
 msgid "Войти"
 msgstr "Sign in"
 
 #: products/templates/products/register.html:49
-#: products/templates/products/register11.html:49
 msgid "Забыли пароль ?"
 msgstr "Forget Password ?"
 
 #: products/templates/products/register.html:65
-#: products/templates/products/register11.html:65
 msgid "Зарегистрироваться"
 msgstr "register"
 
 #: products/templates/products/register.html:70
-#: products/templates/products/register11.html:70
 msgid "Поменять Пароль"
 msgstr "Change Password"
 
 #: products/templates/products/register.html:82
-#: products/templates/products/register11.html:82
 msgid "Выйти из системы"
 msgstr "logout"
 
 #: products/templates/products/register.html:83
-#: products/templates/products/register11.html:83
 msgid "На главную"
 msgstr "Home page"
 

@@ -6,6 +6,8 @@
 
 {% load static %}
 
+{% load i18n %}
+
 
 
 
@@ -55,7 +57,7 @@
     <div class="col-sm">
       <button type= "submit"
       
-        type="button" class="btn btn-success">Искать</button>
+        type="button" class="btn btn-success">{% trans 'Искать' %}</button>
 
       </button>
     </div>
@@ -78,8 +80,8 @@
  <a data-role="button" data-inline="true" href="support.html"> 
       <div class="col-sm">
         <h5 style="color:rgb(0, 0, 0)" class="card-title"><i class="fa fa-headset" ></i></h5></span>
-        <h5  style="color:rgb(36, 163, 60)" class="card-title">поддержка </h5></span>
-        <h7 class="card-title"><span class="text-muted"> консультации при <br> <i class="fas fa-shopping-cart"></i> онлайн заказе</h7></span>
+        <h5  style="color:rgb(36, 163, 60)" class="card-title"> {% trans 'поддержка' %}</h5></span>
+        <h7 class="card-title"><span class="text-muted">  {% trans 'консультации при' %}<br> <i class="fas fa-shopping-cart"></i> {% trans 'онлайн заказе' %}</h7></span>
       </a>
       </div>
   
@@ -87,8 +89,8 @@
   <a data-role="button" data-inline="true" href="quality.html"> 
       <div class="col-sm">
         <h5 style="color:rgb(0, 0, 0)" class="card-title"><i class="fas fa-star"></i></h5></span>
-        <h5  style="color:rgb(36, 163, 60)"  class="card-title"> высокое качество</h5></span>   
-        <h7 class="card-title"><span class="text-muted">контроль качества<br> на всех этапах  </h7></span> 
+        <h5  style="color:rgb(36, 163, 60)"  class="card-title"> {% trans 'высокое качество' %}</h5></span>   
+        <h7 class="card-title"><span class="text-muted"><br> {% trans 'контроль качества' %} </h7></span> 
       </a> 
     </div>
 
@@ -101,8 +103,8 @@
    <a data-role="button" data-inline="true" href="calc.html"> 
       <div class="col-sm">
       <h5 style="color:rgb(0, 0, 0)" class="card-title"> <i class="fas fa-calculator"></i> 
-      <h5  style="color:rgb(36, 163, 60)" class="card-title">  мгновенный расчёт</h5></span>   
-      <h7 class="card-title"><span class="text-muted">очень простой калькулятор расчёта  в 2 клика  </h7></span>
+      <h5  style="color:rgb(36, 163, 60)" class="card-title"> {% trans 'мгновенный расчёт' %} </h5></span>   
+      <h7 class="card-title"><span class="text-muted">{% trans 'очень простой калькулятор расчёта  в 2 клика' %}  </h7></span>
       </a>
     </div>
    
@@ -123,16 +125,16 @@
     <a data-role="button" data-inline="true" href="rest.html"> 
       <div class="col-sm">
         <h5 style="color:rgb(0, 0, 0)" class="card-title"><i class="fas fa-utensils"></i></h5></span>
-        <h5  style="color:rgb(36, 163, 60)" class="card-title">для ресторанов</h5></span>
-        <h7 class="card-title"><span class="text-muted"> специальное предложение  <br></h7></span>
+        <h5  style="color:rgb(36, 163, 60)" class="card-title">{% trans 'для ресторанов' %} </h5></span>
+        <h7 class="card-title"><span class="text-muted"> {% trans 'специальное предложение ' %}  <br></h7></span>
       </a>
       </div>
 
        <a data-role="button" data-inline="true" href="delivery.html"> 
         <div class="col-sm">
           <h5 style="color:rgb(0, 0, 0)" class="card-title"><i class="fa fa-truck" ></i></h5></span>
-          <h5  style="color:rgb(36, 163, 60)" class="card-title">доставка</h5></span>
-          <h7 class="card-title"><span class="text-muted"> доставка  <br> <i class="fas fa-shopping-cart"></i> заказа</h7></span>
+          <h5  style="color:rgb(36, 163, 60)" class="card-title">{% trans 'доставка ' %} </h5></span>
+          <h7 class="card-title"><span class="text-muted"> {% trans 'доставка ' %}  <br> <i class="fas fa-shopping-cart"></i> {% trans 'заказа' %} </h7></span>
         </a>
         </div>
 
@@ -162,7 +164,7 @@
  <div class="container">
   
 
-  <H2 class="text-center"  >Категории продуктов</H2>
+  <H2 class="text-center"  >{% trans 'Категории продуктов ' %} </H2>
   <br>
  
   <style>
@@ -188,27 +190,27 @@
 <ul id="menu">
     
       
-          <li><a href="/products_by_category/2/">блокноты</a></li>
-          <li><a href="/products_by_category/16/">визитные карточки</a></li>
-          <li><a href="/products_by_category/10/">журналы</a></li>
-          <li><a href="/products_by_category/13/">календари</a></li>
-        <li><a href="/products_by_category/5/">книги</a></li>
-        <li><a href="/products_by_category/21/">конверты</a></li>
-        <li><a href="/products_by_category/1/">коробки</a></li>
+          <li><a href="/products_by_category/2/">{% trans 'блокноты' %}</a></li>
+          <li><a href="/products_by_category/16/">{% trans 'визитные карточки' %}</a></li>
+          <li><a href="/products_by_category/10/">{% trans 'журналы' %}</a></li>
+          <li><a href="/products_by_category/13/">{% trans 'календари' %}</a></li>
+        <li><a href="/products_by_category/5/">{% trans 'книги' %}</a></li>
+        <li><a href="/products_by_category/21/">{% trans 'конверты' %}</a></li>
+        <li><a href="/products_by_category/1/">{% trans 'коробки' %}</a></li>
         
-        <li><a href="/products_by_category/11/">листовки</a></li>
-        <li><a href="/products_by_category/18/">наклейки</a></li>
+        <li><a href="/products_by_category/11/">{% trans 'листовки' %}</a></li>
+        <li><a href="/products_by_category/18/">{% trans 'наклейки' %}</a></li>
         
-    <li><a href="/products_by_category/20/">пакеты</a></li>
-        <li><a href="/products_by_category/3/">папки</a></li>
-        <li><a href="/products_by_category/7/">подарки</a></li>
+    <li><a href="/products_by_category/20/">{% trans 'пакеты' %}</a></li>
+        <li><a href="/products_by_category/3/">{% trans 'папки' %}</a></li>
+        <li><a href="/products_by_category/7/">{% trans 'подарки' %}/a></li>
         
-        <li><a href="/products_by_category/12/">постеры</a></li>
-        <li><a href="/products_by_category/17/">приглашения</a></li>
+        <li><a href="/products_by_category/12/">{% trans 'постеры' %}</a></li>
+        <li><a href="/products_by_category/17/">{% trans 'приглашения' %}</a></li>
 
   
-        <li><a href="/products_by_category/14/">ролл апы</a></li>
-      <li><a href="/products_by_category/15/">этикетки</a></li>
+        <li><a href="/products_by_category/14/">{% trans 'ролл апы' %}</a></li>
+      <li><a href="/products_by_category/15/">{% trans 'этикетки' %}</a></li>
     
 
 
