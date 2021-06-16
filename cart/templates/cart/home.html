@@ -8,25 +8,27 @@
 {% extends 'products/base.html' %}
 
 {% block content %}
+{% load i18n %}
 
  
 
 
 <div class="container my-5">
 <div class="my-5">
-	<h2>Ваш Заказ</h2>
+
+  <h2 class="text-center">{% trans 'Ваш Заказ' %}</h2>
 </div>
 
 <table class="table table-hover">
   <thead>
     <tr>
       <th scope="col">№</th>     
-      <th scope="col">Наименование продукта</th>
-      <th scope="col">Параметры изделия</th>
-      <th scope="col">Дата изготовления</th>
-      <th scope="col">Тираж</th>
-      <th scope="col">Цена</th>
-      <th scope="col">Убрать товар</th>
+      <th scope="col">{% trans 'Наименование продукта' %}</th>
+      <th scope="col">{% trans 'Параметры изделия' %}</th>
+      <th scope="col">{% trans 'Дата изготовления' %}</th>
+      <th scope="col">{% trans 'Тираж' %}</th>
+      <th scope="col">{% trans 'Цена' %}</th>
+      <th scope="col">{% trans 'Убрать товар' %}</th>
     </tr>
   </thead>
   <tbody>
@@ -88,7 +90,7 @@
 	{% endfor %}
     <tr>
       <th scope="row"></th> 
-      <td colspan="2">Итого</td>
+      <td colspan="2">{% trans 'Итого' %}</td>
       <td>₽{{ order.get_totals| floatformat:0 }}</td> 
  
     </tr>
@@ -96,15 +98,15 @@
       <th scope="row"></th>
       <td colspan="3" class="text-right ">
        <!-- <a href="{% url 'mainapp:home' %}" class="btn btn-warning mr-4" >Продолжить покупки</a>-->
-       <a href="/" class="btn btn-secondary mr-4" >продолжить покупки</a>
+       <a href="/" class="btn btn-secondary mr-4" >{% trans 'продолжить покупки' %}</a>
 
       <!-- Старая кнопка -->
         <!-- <a href="{% url 'checkout:index' %}" class="btn btn-success mr-4"> загрузить файлы</a> -->
-        <a href="{% url 'mainapp:upload_file' %}" class="btn btn-success mr-4"> загрузить файлы</a>
+        <a href="{% url 'mainapp:upload_file' %}" class="btn btn-success mr-4"> {% trans 'загрузить файлы' %}</a>
 
 
 
-       <a href="{% url 'checkout:index' %}" class="btn btn-warning mr-4">заказать</a>
+       <a href="{% url 'checkout:index' %}" class="btn btn-warning mr-4">{% trans 'заказать' %}</a>
       </td>
       
     </tr>

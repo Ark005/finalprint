@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-16 11:05+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: cart/templates/cart/home.html:17
+msgid "Ваш Заказ"
+msgstr "Your Order"
+
+#: cart/templates/cart/home.html:24
+msgid "Наименование продукта"
+msgstr "Product Name"
+
+#: cart/templates/cart/home.html:25
+msgid "Параметры изделия"
+msgstr "Product Parameters"
+
+#: cart/templates/cart/home.html:26
+msgid "Дата изготовления"
+msgstr "Date of manufacture"
+
+#: cart/templates/cart/home.html:27
+msgid "Тираж"
+msgstr "Quantity"
+
+#: cart/templates/cart/home.html:28
+msgid "Цена"
+msgstr "Price"
+
+#: cart/templates/cart/home.html:29
+msgid "Убрать товар"
+msgstr "Remove product"
+
+#: cart/templates/cart/home.html:91
+msgid "Итого"
+msgstr "Total"
+
+#: cart/templates/cart/home.html:99
+msgid "продолжить покупки"
+msgstr "continue shopping"
+
+#: cart/templates/cart/home.html:103
+msgid "загрузить файлы"
+msgstr "upload files"
+
+#: cart/templates/cart/home.html:107
+#: cart/templates/cart/model_form_upload.html:35
+msgid "заказать"
+msgstr "order"
+
+#: cart/templates/cart/model_form_upload.html:7
+msgid ""
+"файлы будут проверяться, после проверки вам поступит письмо на электронную "
+"почту, которую вы указали при регистрации. Сроки производства не изменятся , "
+"если технически файл сделан корректно. Требования к файлам указаны выше."
+msgstr "the files will be checked, and after checking, you will receive an email to the emailaddress, that you specified during registration. The production time will not change, if the file is technically made correctly. The file requirements are listed above."
+
+#: cart/templates/cart/model_form_upload.html:31
+msgid "загрузить файл"
+msgstr "upload file"

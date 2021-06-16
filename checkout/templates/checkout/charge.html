@@ -1,10 +1,11 @@
 {% extends 'products/base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
+{% load i18n %}
 
 <div class="container mt-5 text-center">
-<h2 class="text-center">Спасибо за покупку</h2>
-<a href="/my-orders" class="btn btn-success">Мои Заказы</a>
+<h2 class="text-center">{% trans 'Спасибо за покупку' %}</h2>
+<a href="/my-orders" class="btn btn-success">{% trans 'Мои Заказы' %}</a>
 </div>
 
 {% endblock %}

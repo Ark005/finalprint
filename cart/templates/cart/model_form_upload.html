@@ -1,10 +1,11 @@
 {% extends 'products/base.html' %}
 {% block content %}
+{% load i18n %}
 
   <form method="post" enctype="multipart/form-data">
     <br>
     <p class="text-center">  <i class="fas fa-file"></i></p>
-    <p class="text-center">файлы будут проверяться, после проверки вам поступит письмо на электронную почту, которую вы указали при регистрации. Сроки производства не изменятся , если технически файл сделан корректно. Требования к файлам указаны выше.</p>
+    <p class="text-center">{% trans 'файлы будут проверяться, после проверки вам поступит письмо на электронную почту, которую вы указали при регистрации. Сроки производства не изменятся , если технически файл сделан корректно. Требования к файлам указаны выше' %}</p>
    <h5> </i></h4>
  
 
@@ -28,11 +29,11 @@
     {{ form.as_p }}
     <button type= "submit"
     class= "btn btn-success btn-buy">
-      загрузить файл
+    {% trans 'загрузить файл' %}  
     </button>
   </form>
  
-  <button type= "submit" class= "btn btn-warning btn-buy"><a href="{% url 'mainapp:cart-home' %}">вернуться к заказу </button></a>
+  <button type= "submit" class= "btn btn-warning btn-buy"><a href="{% url 'mainapp:cart-home' %}">{% trans 'заказать' %}</button></a>
 <br>
 
 </center>

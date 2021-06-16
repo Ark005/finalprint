@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-15 17:16+0300\n"
+"POT-Creation-Date: 2021-06-16 11:05+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,59 +18,91 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: products/templates/products/base.html:148
+msgid "условия и положения"
+msgstr "terms and conditions"
+
+#: products/templates/products/base.html:149
+msgid "политика конфиденциальности"
+msgstr "privacy policy"
+
 #: products/templates/products/category_products.html:19
 msgid "Продукты"
 msgstr "Products"
 
 #: products/templates/products/category_products.html:34
-msgid "искать"
-msgstr ""
-
 #: products/templates/products/home.html:60
-msgid "Искать"
+msgid "искать"
+msgstr "find"
+
+#: products/templates/products/delivery.html:9
+msgid ""
+"Стоимость доставки расчитывается отдельно и составляет от 400 рублей за груз "
+"до 5 кг."
 msgstr ""
+"The cost of delivery is calculated separately and ranges from 400 rubles for "
+"the cargo up to 5 kg."
+
+#: products/templates/products/delivery.html:10
+msgid "и от 1500 рублей"
+msgstr "and from 1500 rubles"
+
+#: products/templates/products/delivery.html:10
+msgid ""
+"за груз от 5 килограмм в зависимости от веса и расстояния и времени суток по "
+"г. Москве. Доставка в другие города рассчитывается согласно тарифам "
+"транспортной компании конкретного региона."
+msgstr ""
+"for a load of 5 kilograms, depending on the weight and distance and time of "
+"day in  Moscow. Delivery to other cities is calculated according to the "
+"tariffs of the  transport company of a particular region."
+
+#: products/templates/products/delivery.html:20
+msgid " Куда везём?"
+msgstr "Where"
 
 #: products/templates/products/home.html:83
 msgid "поддержка"
-msgstr ""
+msgstr "support"
 
 #: products/templates/products/home.html:84
 msgid "консультации при"
-msgstr ""
+msgstr "advice when"
 
 #: products/templates/products/home.html:84
 msgid "онлайн заказе"
-msgstr ""
+msgstr "ordering online"
 
 #: products/templates/products/home.html:92
 msgid "высокое качество"
-msgstr ""
+msgstr "high quality"
 
 #: products/templates/products/home.html:93
 msgid "контроль качества"
-msgstr ""
+msgstr "quality control"
 
 #: products/templates/products/home.html:106
 msgid "мгновенный расчёт"
-msgstr ""
+msgstr "instant calculation"
 
 #: products/templates/products/home.html:107
 msgid "очень простой калькулятор расчёта  в 2 клика"
-msgstr ""
+msgstr "very simple calculation in 2 clicks"
 
 #: products/templates/products/home.html:128
 msgid "для ресторанов"
-msgstr ""
+msgstr "for restaurants"
 
 #: products/templates/products/home.html:129
+#, fuzzy
+#| msgid "специальное предложение"
 msgid "специальное предложение "
-msgstr ""
+msgstr "special offer"
 
 #: products/templates/products/home.html:136
 #: products/templates/products/home.html:137
-#, fuzzy
-#| msgid "доставка"
-msgid "доставка "
+#: products/templates/products/navbar.html:42
+msgid "доставка"
 msgstr "delivery"
 
 #: products/templates/products/home.html:137
@@ -81,71 +113,71 @@ msgstr "Orders"
 
 #: products/templates/products/home.html:167
 msgid "Категории продуктов "
-msgstr ""
+msgstr "Product Categories"
 
 #: products/templates/products/home.html:193
 msgid "блокноты"
-msgstr ""
+msgstr "notepads"
 
 #: products/templates/products/home.html:194
 msgid "визитные карточки"
-msgstr ""
+msgstr "business cards"
 
 #: products/templates/products/home.html:195
 msgid "журналы"
-msgstr ""
+msgstr "magazines"
 
 #: products/templates/products/home.html:196
 msgid "календари"
-msgstr ""
+msgstr "calendars"
 
 #: products/templates/products/home.html:197
 msgid "книги"
-msgstr ""
+msgstr "books"
 
 #: products/templates/products/home.html:198
 msgid "конверты"
-msgstr ""
+msgstr "envelopes"
 
 #: products/templates/products/home.html:199
 msgid "коробки"
-msgstr ""
+msgstr "boxes"
 
 #: products/templates/products/home.html:201
 msgid "листовки"
-msgstr ""
+msgstr "flyers"
 
 #: products/templates/products/home.html:202
 msgid "наклейки"
-msgstr ""
+msgstr "stickers"
 
 #: products/templates/products/home.html:204
 msgid "пакеты"
-msgstr ""
+msgstr "paper bags"
 
 #: products/templates/products/home.html:205
 msgid "папки"
-msgstr ""
+msgstr "folders"
 
 #: products/templates/products/home.html:206
 msgid "подарки"
-msgstr ""
+msgstr "gifts"
 
 #: products/templates/products/home.html:208
 msgid "постеры"
-msgstr ""
+msgstr "posters"
 
 #: products/templates/products/home.html:209
 msgid "приглашения"
-msgstr ""
+msgstr "invitations"
 
 #: products/templates/products/home.html:212
 msgid "ролл апы"
-msgstr ""
+msgstr "roll-ups"
 
 #: products/templates/products/home.html:213
 msgid "этикетки"
-msgstr ""
+msgstr "labels"
 
 #: products/templates/products/navbar.html:18
 msgid "о нас"
@@ -153,11 +185,7 @@ msgstr "about us"
 
 #: products/templates/products/navbar.html:33
 msgid "требования к файлам"
-msgstr "requirements to files"
-
-#: products/templates/products/navbar.html:42
-msgid "доставка"
-msgstr "delivery"
+msgstr "file requirements"
 
 #: products/templates/products/navbar.html:126
 msgid "Корзина"
@@ -183,37 +211,50 @@ msgstr "Login / Registraion"
 #, fuzzy
 #| msgid "Заказы"
 msgid "Заказать"
-msgstr "Orders"
+msgstr "Order"
 
 #: products/templates/products/products_details.html:40
 msgid "пожалуйста, зарегистрируйтесь,чтобы мы смогли оформить заказ"
-msgstr ""
+msgstr "please, register so, that we can place your order"
+
+#: products/templates/products/products_details.html:117
+msgid "Рассчитать"
+msgstr "Calculate"
 
 #: products/templates/products/products_details.html:130
 msgid "Размер"
-msgstr ""
+msgstr "Size"
 
 #: products/templates/products/products_details.html:131
 msgid "Дата изготовления"
-msgstr ""
+msgstr "Date of manufacture"
 
 #: products/templates/products/products_details.html:132
 msgid "Тираж(шт.)"
-msgstr ""
+msgstr "Quantity(pcs.)"
 
 #: products/templates/products/products_details.html:133
 msgid "Цена(руб.)"
-msgstr ""
+msgstr "Price(rub.)"
 
 #: products/templates/products/products_details.html:206
-msgid "у вас слетает введенный тираж? "
-msgstr ""
+#, fuzzy
+#| msgid "у вас слетает введенный тираж? "
+msgid "у вас слетает введенный тираж?"
+msgstr "do you lose the entered circulation?"
 
 #: products/templates/products/products_details.html:211
 msgid ""
 " значение тиража не слетает, результат выводится на экран  в строке  зеленым "
 "цветом, а поле ввода обнуляется для следующего расчёта"
 msgstr ""
+"the value of the quantity does not fly off, the result is displayed on the "
+"screen in the line in green  color, and the input field is reset to zero for "
+"the next calculation"
+
+#: products/templates/products/products_details.html:223
+msgid "вы вводите один тираж, а на экране выводится другой?"
+msgstr "do you enter one value and the screen displays another?"
 
 #: products/templates/products/products_details.html:229
 msgid ""
@@ -221,10 +262,13 @@ msgid ""
 "автоматически увеличивает тираж до минимального, или считает не больше "
 "максимального "
 msgstr ""
+"Everything is fine, the algorithm focuses on min or max runs, that is, "
+"automatically increases the run to the minimum, or counts no more than  "
+"maximum"
 
 #: products/templates/products/quality.html:26
 msgid "Качество во главе угла"
-msgstr ""
+msgstr "Quality is at the forefront"
 
 #: products/templates/products/register.html:13
 msgid "Sign In"
@@ -240,7 +284,7 @@ msgstr "Forget Password ?"
 
 #: products/templates/products/register.html:65
 msgid "Зарегистрироваться"
-msgstr "register"
+msgstr "Register"
 
 #: products/templates/products/register.html:70
 msgid "Поменять Пароль"
@@ -248,7 +292,7 @@ msgstr "Change Password"
 
 #: products/templates/products/register.html:82
 msgid "Выйти из системы"
-msgstr "logout"
+msgstr "Logout"
 
 #: products/templates/products/register.html:83
 msgid "На главную"
@@ -259,3 +303,11 @@ msgstr "Home page"
 #: products/templates/products/reset.html:33
 msgid "Set Password"
 msgstr "Установить пароль"
+
+#~ msgid "Искать"
+#~ msgstr "Find"
+
+#, fuzzy
+#~| msgid "доставка"
+#~ msgid "доставка "
+#~ msgstr "delivery"

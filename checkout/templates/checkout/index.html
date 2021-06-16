@@ -1,6 +1,8 @@
 {% extends 'products/base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
+{% load i18n %}
+
 <div class="card-body">
 <ul class="list-group list-group-flush"></ul>
 <div class="container mt-5">
@@ -9,23 +11,23 @@
          
          <div class="card mb-5" style="height: auto">
             <div class="card-body">
-               <h4 class="mb-3">адрес доставки  <span class="text-muted"></span></h4>
+               <h4 class="mb-3">{% trans 'адрес доставки' %}  <span class="text-muted"></span></h4>
                <form method="POST">
                   {% csrf_token %}
                   {{ form | crispy}}
-                  <button type="submit" class="btn btn-success float-right">сохранить</button>
+                  <button type="submit" class="btn btn-success float-right">{% trans 'сохранить' %}</button>
                </form>
             </div>
          </div>
          {% if savedAddress %}
          <div class="card mb-5" style="height: auto">
             <div class="card-body">
-               <h4>Сохраненный Адрес</h4>
-               <p><b>адрес :</b> {{ savedAddress.address }}</p>
-               <p><b>почтовый индекс :</b> {{ savedAddress.zipcode }}</p>
-               <p><b>номер телефона :</b> {{ savedAddress.cellular }}</p>
-               <p><b>ориентир :</b> {{ savedAddress.landmark }}</p>
-               <p><b>комментарий к заказу :</b> {{ savedAddress.comments}}</p>
+               <h4>{% trans 'Сохраненный Адрес' %}</h4>
+               <p><b>{% trans 'адрес' %} :</b> {{ savedAddress.address }}</p>
+               <p><b>{% trans 'почтовый индекс' %} :</b> {{ savedAddress.zipcode }}</p>
+               <p><b>{% trans 'номер телефона' %} :</b> {{ savedAddress.cellular }}</p>
+               <p><b>{% trans 'ориентир ' %}:</b> {{ savedAddress.landmark }}</p>
+               <p><b>{% trans 'комментарий к заказу' %} :</b> {{ savedAddress.comments}}</p>
            
             </div>
 
@@ -78,9 +80,9 @@
                </ul>
             </div>
             <div class="card-footer">
-               <span class="float-left"><b>сумма</b></span>
+               <span class="float-left"><b>{% trans 'сумма' %}</b></span>
                <span class="float-right"><b>₽ {{ order_total | floatformat:0 }}</b></span>
-               <span class="float-center"><b>(без учета доставки)</b></span>
+               <span class="float-center"><b>{% trans '(без учета доставки)' %}</b></span>
                <br>
             </div>
             
@@ -94,13 +96,13 @@
                <div class="card-body">
                   <ul class="list-group list-group-flush"></ul>
              
-                  <h6 class="mb-3"> введите ваше имя<span class="text-muted"></span></h6>
+                  <h6 class="mb-3"> {% trans 'введите ваше имя' %}<span class="text-muted"></span></h6>
                   <div class="test_form">
                      <form action="{% url 'checkout:send_email' %}" method="POST" >
                         {% csrf_token %}
                         {{ test_form }}
                         <br> <br>
-                        <button type="submit" class="btn btn-info float-right">отправить коммерческое предложение</button>
+                        <button type="submit" class="btn btn-info float-right">{% trans 'отправить коммерческое предложение' %}</button>
                      </form>
                   </div>
                </div>
@@ -127,8 +129,8 @@
                      <ul class="list-group list-group-flush"> </ul>
                      <h4 class="mb-3">  <span class="text-muted"></span></h4>
                      <form method="POST" action="{% url 'checkout:charge' %}">
-                         {% csrf_token %} спасибо, что вы с нами!
-                        <button class="btn btn-secondary float-right" onclick="myFunction()">подтвердить заказ</button>
+                         {% csrf_token %} {% trans 'спасибо, что вы с нами!' %}
+                        <button class="btn btn-secondary float-right" onclick="myFunction()">{% trans 'подтвердите заказ' %}</button>
 <!--                        <input type="checkbox" name="option1" id="option1" value="True" checked> Подтвердить-->
 <!--                         <button class="btn btn-success float-right" id="fa" name="button" value="True" onclick="myFunction()">Подтвердить заказ</button>-->
                      </form>
