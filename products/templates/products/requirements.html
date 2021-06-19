@@ -1,21 +1,16 @@
-
+<!--
   <a href="/">
     <figure class="stock">
       <img src="/media/products/банер2.jpg" width="1450" height="450">
     </figure>
   </a>
+
+  -->
     
     {% extends 'products/base.html' %}
     {% load thumbnail %}
-    
-    
     {% load i18n %}
-    
     {% load crispy_forms_tags %}
-   
-    
-    
-    
     {% block content %}
     
       
@@ -24,14 +19,12 @@
       <H6 STYLE="font-family: 'avenir next rounded std'">
      <div class="container">
       <br>
-     <h2 class="text-center">требования к файлам</h2>
+     <h2 class="text-center">{% trans 'требования к файлам' %}</h2>
      <H6 STYLE="font-family: 'avenir next rounded std'"></H6>
      <br>
       <div class="row">
 
-
-
-        Форматы файлов
+        {% trans 'Форматы файлов
 
         Для печати принимаются растровые, векторные, PostScript и PDF файлы, а также файлы верстки QuarkXPress, PageMaker, InDesign в цветовой модели CMYK и Pantone:
         
@@ -103,8 +96,9 @@
         - верстка должна производиться по обрезному формату с доливкой по 5мм.
         
         Файлы, не соответствующие вышеперечисленным требованиям, не являются файлами готовыми к печати. Доработка файлов и как следствие изменение сроков сдачи тиража оговариваются дополнительно.
+' %}
 
-     
+        
     
        
     

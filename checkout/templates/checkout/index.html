@@ -11,7 +11,7 @@
          
          <div class="card mb-5" style="height: auto">
             <div class="card-body">
-               <h4 class="mb-3">{% trans 'адрес доставки' %}  <span class="text-muted"></span></h4>
+               <h4 class="mb-3">{% trans 'адрес доставки' %} <span class="text-muted"></span></h4>
                <form method="POST">
                   {% csrf_token %}
                   {{ form | crispy}}
@@ -23,6 +23,7 @@
          <div class="card mb-5" style="height: auto">
             <div class="card-body">
                <h4>{% trans 'Сохраненный Адрес' %}</h4>
+               <h4>{% trans 'Адрес' %}</h4>
                <p><b>{% trans 'адрес' %} :</b> {{ savedAddress.address }}</p>
                <p><b>{% trans 'почтовый индекс' %} :</b> {{ savedAddress.zipcode }}</p>
                <p><b>{% trans 'номер телефона' %} :</b> {{ savedAddress.cellular }}</p>
@@ -50,7 +51,7 @@
          <div class="card" style="height: auto">
             <div class="card-body">
                <ul class="list-group list-group-flush">
-                  <h4 class="mb-3">предмет счёта <span class="text-muted"></span></h4>
+                  <h4 class="mb-3">{% trans 'предмет счёта' %} <span class="text-muted"></span></h4>
                   {% for item in order_items %}
                   <!--<li class="list-group-item">{{ item.item.name }} x {{ item.quantity }}</li>-->
                   <li class="list-group-item">

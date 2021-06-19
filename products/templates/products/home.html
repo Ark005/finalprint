@@ -21,11 +21,66 @@
  
 </div> 
 
-
 {% block content %}
 
+<style>
+  a:link {
+   color: #00d0d0; /* Цвет ссылок */
+  }
+  a:visited {
+  
+    color:	#808080; /* Цвет посещенных ссылок */
+  }
+  a:active {
+   color: #f00; /* Цвет активной ссылки */ 
+  }
 
-<img src="{% static 'img/банер2.png' %}" alt="images" style="margin-bottom: 200px;" width="100%">
+ 
+   ul#menu li {
+      color: green;
+      display:inline;
+  }
+  
+  </style>
+
+
+
+
+
+<ul id="menu">
+
+
+  
+    
+        <li><a href="/products_by_category/2/">{% trans 'блокноты' %}</a></li>
+        <li><a href="/products_by_category/16/">{% trans 'визитки' %}</a></li>
+        <li><a href="/products_by_category/10/">{% trans 'журналы' %}</a></li>
+        <li><a href="/products_by_category/13/">{% trans 'календари' %}</a></li>
+      <li><a href="/products_by_category/5/">{% trans 'книги' %}</a></li>
+      <li><a href="/products_by_category/21/">{% trans 'конверты' %}</a></li>
+      <li><a href="/products_by_category/1/">{% trans 'коробки' %}</a></li>
+      <li><a href="/products_by_category/22/">{% trans 'ленты' %}</a></li>
+      <li><a href="/products_by_category/11/">{% trans 'листовки' %}</a></li>
+      <li><a href="/products_by_category/18/">{% trans 'наклейки' %}</a></li>
+      <li><a href="/products_by_category/20/">{% trans 'пакеты' %}</a></li>
+      <li><a href="/products_by_category/3/">{% trans 'папки' %}</a></li>
+      <li><a href="/products_by_category/7/">{% trans 'подарки' %} </a></li>
+      <li><a href="/products_by_category/12/">{% trans 'постеры' %}</a></li>
+      <li><a href="/products_by_category/17/">{% trans 'приглашения' %}</a></li>
+      <li><a href="/products_by_category/14/">{% trans 'ролл апы' %}</a></li>
+      <li><a href="/products_by_category/25/">{% trans 'плейсметы' %}</a></li>
+      <li><a href="/products_by_category/15/">{% trans 'этикетки' %}</a></li>
+   
+    
+
+  </ul>
+
+
+
+</div>
+
+
+
 
 
 
@@ -90,7 +145,7 @@
       <div class="col-sm">
         <h5 style="color:rgb(0, 0, 0)" class="card-title"><i class="fas fa-star"></i></h5></span>
         <h5  style="color:rgb(36, 163, 60)"  class="card-title"> {% trans 'высокое качество' %}</h5></span>   
-        <h7 class="card-title"><span class="text-muted"><br> {% trans 'контроль качества' %} </h7></span> 
+        <h7 class="card-title"><span class="text-muted">{% trans 'контроль качества' %} </h7></span> 
       </a> 
     </div>
 
@@ -126,7 +181,7 @@
       <div class="col-sm">
         <h5 style="color:rgb(0, 0, 0)" class="card-title"><i class="fas fa-utensils"></i></h5></span>
         <h5  style="color:rgb(36, 163, 60)" class="card-title">{% trans 'для ресторанов' %} </h5></span>
-        <h7 class="card-title"><span class="text-muted">{% trans 'специальное предложение ' %} <br></h7></span>
+        <h7 class="card-title"><span class="text-muted"> {% trans 'специальное предложение' %}</h7></span>
       </a>
       </div>
 
@@ -134,7 +189,7 @@
         <div class="col-sm">
           <h5 style="color:rgb(0, 0, 0)" class="card-title"><i class="fa fa-truck" ></i></h5></span>
           <h5  style="color:rgb(36, 163, 60)" class="card-title">{% trans 'доставка' %}  </h5></span>
-          <h7 class="card-title"><span class="text-muted"> {% trans 'доставка' %}  <br> <i class="fas fa-shopping-cart"></i> {% trans 'заказа' %} </h7></span>
+          <h7 class="card-title"><span class="text-muted"> {% trans 'доставка' %}  <br> <i class="fas fa-shopping-cart"></i></h7></span>
         </a>
         </div>
 
@@ -157,7 +212,7 @@
           <br>
         
         
-       
+    
 
 <div class="blog">
 
@@ -167,57 +222,8 @@
   <H2 class="text-center"  >{% trans 'Категории продуктов ' %} </H2>
   <br>
  
-  <style>
-    a:link {
-     color: #00d0d0; /* Цвет ссылок */
-    }
-    a:visited {
-    
-      color:	#808080; /* Цвет посещенных ссылок */
-    }
-    a:active {
-     color: #f00; /* Цвет активной ссылки */ 
-    }
  
-   
-     ul#menu li {
-        color: green;
-        display:inline;
-    }
-    
-    </style>
 
-<ul id="menu">
-    
-      
-          <li><a href="/products_by_category/2/">{% trans 'блокноты' %}</a></li>
-          <li><a href="/products_by_category/16/">{% trans 'визитные карточки' %}</a></li>
-          <li><a href="/products_by_category/10/">{% trans 'журналы' %}</a></li>
-          <li><a href="/products_by_category/13/">{% trans 'календари' %}</a></li>
-        <li><a href="/products_by_category/5/">{% trans 'книги' %}</a></li>
-        <li><a href="/products_by_category/21/">{% trans 'конверты' %}</a></li>
-        <li><a href="/products_by_category/1/">{% trans 'коробки' %}</a></li>
-        
-        <li><a href="/products_by_category/11/">{% trans 'листовки' %}</a></li>
-        <li><a href="/products_by_category/18/">{% trans 'наклейки' %}</a></li>
-        
-    <li><a href="/products_by_category/20/">{% trans 'пакеты' %}</a></li>
-        <li><a href="/products_by_category/3/">{% trans 'папки' %}</a></li>
-        <li><a href="/products_by_category/7/">{% trans 'подарки' %} </a></li>
-        
-        <li><a href="/products_by_category/12/">{% trans 'постеры' %}</a></li>
-        <li><a href="/products_by_category/17/">{% trans 'приглашения' %}</a></li>
-
-  
-        <li><a href="/products_by_category/14/">{% trans 'ролл апы' %}</a></li>
-      <li><a href="/products_by_category/15/">{% trans 'этикетки' %}</a></li>
-    
-
-
-
-    </ul>
- 
-  </nav>
 
 
 

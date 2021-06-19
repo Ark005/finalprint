@@ -64,32 +64,45 @@
 <!-- <p style="color:rgb(36, 163, 60)" class="text-center"><a href="/"> <img src="/media/products/logo_rose.png" width="90" height="60"></a>                            <i class="fas fa-users"></i> дружественный полиграфический сервис: <a class="text-muted" class="fas fa-users"></i><i class="fas fa-headset"></i> поддержка, <i class="fas fa-eye"></i> визуализация, <i class="fas fa-calculator"></i> мгновенный расчёт, </i> доставка <i class="fas fa-truck"></i></i></p> -->
 
   
-
+  <div class="container" >
+ 
+ <!--    <ul id="menu" style="display: flex;"> -->
    
 <p style="color:rgb(36, 163, 60)" class="text-center" class="text-muted"> <a style="color:rgb(36, 163, 60)"href="mailto:info@005.ru"><i class="fa fa-envelope" aria-hidden="true"></i> info@005.ru</a> 
 
   <a href="/">
  
-      <img src="/media/products/logo_rose.png" width="97" height="65">
+    <img src="/media/products/logo_rose.png" width="89" height="58">
+
+</a>  
+
+
+
+<a href="#" class="tlg-button">
  
-  </a>
+ <img src="/media/banner/Pink telegram logo.jpeg" width="45" height="45"> 
+ 
+  <!-- <img src="/media/banner/tlogo.jpeg" width="45" height="45">-->
 
-<i class="fa fa-phone"></i>   +7 (925) 740-38-93   </p></h6></span>  
-
-
-
-
+</a>
 
 
+<!--<a href="https://t.me/print_005_bot"><i style="color:rgb(36, 163, 60)" class="fab fa-telegram"> </i></h6> </a> -->
 
-    
-  
+
+<!--<h3 style="color:rgb(36, 163, 60)" class="text-center" class="text-muted"><a href="https://t.me/print_005_bot"><i class="fab fa-telegram"></i></a>   </h3</span>-->
+  <i class="fa fa-phone"></i>   +7 (495) 740-38-93   </h6>  
+
+
+
+</div>
+
     {% include 'products/navbar.html' %}
 
     
  
   
-  <link rel="shortcut icon" href="/media/products/favicon.ico" type="image/x-icon»>
+  <link rel="shortcut icon" href="/media/products/favicon.ico" type="image/x-icon"/>
 
       {% if messages %}
       <div class="messages container mt-2">
@@ -150,7 +163,13 @@
 
 
 <p class="text-center">copyright © 2021 . all rights reserved.</p>
-
+<script>
+  let btn = document.querySelector('.tlg-button')
+  btn.addEventListener('click', () => {
+    window.open('https://t.me/print_005_bot', 'https://t.me/print_005_bot', 'width=400,height=250')
+  })
+  
+</script>
 {% endblock %}
 
 
