@@ -38,7 +38,7 @@ class Note2TranslationOptions(TranslationOptions):
 class Note2TranslationOptions(TranslationOptions):
     fileds = ('name',)
 
-@register(Note1)
+@register(Placement)
 class Note2TranslationOptions(TranslationOptions):
     fileds = ('name',)
 @register(FolderType1)

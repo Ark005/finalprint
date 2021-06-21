@@ -178,7 +178,7 @@ def new_indexView(request, slug):
         
 
         form  = modelform_factory(type(product), fields = ('tirazh', 'box_size'), \
-            labels = {'tirazh':'тираж', 'box_size':'параметры'}, \
+            labels = {'tirazh':'тираж/quantity', 'box_size':'параметры/parameters'}, \
             widgets = {'box_size': Select(choices=boxsizes) }),\
                         
       

@@ -144,11 +144,11 @@ class FolderType2(Product):
  
         super(FolderType2, self).__init__(*args, **kwargs)
 
-class Note1 (Product):
+class Placement (Product):
 
     def __init__(self, *args, **kwargs):
      
-        super(Note1, self).__init__(*args, **kwargs)
+        super(Placement, self).__init__(*args, **kwargs)
 
 class Note2 (Product):
 

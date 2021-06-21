@@ -66,9 +66,9 @@ class ModelBAdmin(ModelAChildAdmin):
     # define custom features here
 
 
-@admin.register(Note1)
+@admin.register(Placement)
 class ModelBAdmin(TranslationAdmin):
-    base_model = Note1  
+    base_model = Placement 
 
 @admin.register(Note2)
 class ModelBAdmin(TranslationAdmin):
@@ -84,6 +84,6 @@ class BanerAdmin(TranslationAdmin):
 class ProductParentAdmin(PolymorphicParentModelAdmin):
     """ The parent model admin """
     base_model = Product  # Optional, explicitly set here.
-    child_models = (BoxType2, BoxType1,  FolderType1, FolderType2,Note1,Note2)
+    child_models = (BoxType2, BoxType1,  FolderType1, FolderType2,Placement,Note2)
     list_filter = (PolymorphicChildModelFilter,)  # This is optional
    

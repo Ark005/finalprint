@@ -1,4 +1,4 @@
-from .models import  SubCategory, Product, BoxType1, BoxType2,Note1
+from .models import  SubCategory, Product, BoxType1, BoxType2,Placement
 from django import forms
 import datetime
 
@@ -7,7 +7,7 @@ from polymorphic.formsets import polymorphic_modelformset_factory, PolymorphicFo
 ProductFormSet = polymorphic_modelformset_factory(Product, formset_children=(
     PolymorphicFormSetChild(BoxType1),
     PolymorphicFormSetChild(BoxType2),
-    PolymorphicFormSetChild(Note1),
+    PolymorphicFormSetChild(Placement),
 ), fields = ('tirazh', 'box_size'))
 
 
