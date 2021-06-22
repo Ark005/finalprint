@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-19 01:54+0300\n"
+"POT-Creation-Date: 2021-06-22 17:06+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,6 +86,7 @@ msgid "конверты"
 msgstr "envelopes"
 
 #: products/templates/products/home.html:61
+#: products/templates/products/rest.html:56
 msgid "коробки"
 msgstr "boxes"
 
@@ -94,18 +95,22 @@ msgid "ленты"
 msgstr "ribbons fabric"
 
 #: products/templates/products/home.html:63
+#: products/templates/products/rest.html:58
 msgid "листовки"
 msgstr "flyers"
 
 #: products/templates/products/home.html:64
+#: products/templates/products/rest.html:61
 msgid "наклейки"
 msgstr "stickers"
 
 #: products/templates/products/home.html:65
+#: products/templates/products/rest.html:62
 msgid "пакеты"
 msgstr "paper bags"
 
 #: products/templates/products/home.html:66
+#: products/templates/products/rest.html:63
 msgid "папки"
 msgstr "folders"
 
@@ -114,22 +119,27 @@ msgid "подарки"
 msgstr "gifts"
 
 #: products/templates/products/home.html:68
+#: products/templates/products/rest.html:64
 msgid "постеры"
 msgstr "posters"
 
 #: products/templates/products/home.html:69
+#: products/templates/products/rest.html:66
 msgid "приглашения"
 msgstr "invitations"
 
 #: products/templates/products/home.html:70
+#: products/templates/products/rest.html:67
 msgid "ролл апы"
 msgstr "roll-ups"
 
 #: products/templates/products/home.html:71
+#: products/templates/products/rest.html:65
 msgid "плейсметы"
 msgstr "placemets"
 
 #: products/templates/products/home.html:72
+#: products/templates/products/rest.html:71
 msgid "этикетки"
 msgstr "labels"
 
@@ -208,6 +218,10 @@ msgstr "logout"
 #: products/templates/products/navbar.html:147
 msgid "Войти / Регистрация"
 msgstr "Login / Registraion"
+
+#: products/templates/products/privacy-policy.html:39
+msgid "вишенки"
+msgstr ""
 
 #: products/templates/products/products_details.html:37
 #, fuzzy
@@ -306,6 +320,75 @@ msgstr "Home page"
 msgid "Set Password"
 msgstr "Установить пароль"
 
+#: products/templates/products/rest.html:55
+msgid "визитные карточки"
+msgstr "business cards"
+
+#: products/templates/products/rest.html:57
+#, fuzzy
+#| msgid "ленты"
+msgid "лента"
+msgstr "ribbons fabric"
+
+#: products/templates/products/rest.html:59
+msgid "меню"
+msgstr "menu"
+
+#: products/templates/products/rest.html:60
+msgid "мобильные стенды"
+msgstr "roll ups"
+
+#: products/templates/products/rest.html:68
+#, fuzzy
+#| msgid "визитные карточки"
+msgid "бумажные стаканчики"
+msgstr "business cards"
+
+#: products/templates/products/rest.html:69
+#, fuzzy
+#| msgid "ленты"
+msgid "тейблтенты"
+msgstr "ribbons fabric"
+
+#: products/templates/products/rest.html:70
+msgid "флаеры"
+msgstr "flyers"
+
+#: products/templates/products/rest.html:87
+msgid "Вы  задаете нам вопросы,"
+msgstr "You ask any questions,"
+
+#: products/templates/products/rest.html:88
+msgid "Мы вместе уточняем детали, сразу подбираем решение,"
+msgstr "Together we clarify the details, immediately select a solution,"
+
+#: products/templates/products/rest.html:89
+msgid "На нашем сайте находим все интересующие вас полиграфические позиции,"
+msgstr ""
+"On our website we find all the printing positions you are interested in,"
+
+#: products/templates/products/rest.html:90
+msgid "Мгновенно определяем тираж, цену и сроки производства."
+msgstr "Instantly determine the circulation, price and production time."
+
+#: products/templates/products/rest.html:112
+msgid "Считаем"
+msgstr "Calculating"
+
+#: products/templates/products/rest.html:123
+msgid "Добавляем  в счет"
+msgstr "Adding to the invoice"
+
+#: products/templates/products/rest.html:125
+msgid ""
+"Мы вместе с вами найдем/разработаем лучшие полиграфические решения для "
+"вашего ресторана или кафе, а после полностью автоматизируем процесс  "
+"повторного заказа, при лучшем соотношении цена/качество"
+msgstr ""
+"Together with you, we will find / develop the best printing solutions for "
+"your restaurant or cafe, and then fully automate the process of  re-"
+"ordering, with the best price/quality ratio"
+
 #: products/templates/products/support.html:26
 msgid "Поддержка и сопровождение на любом этапе"
 msgstr "support at any stage"
@@ -314,9 +397,6 @@ msgstr "support at any stage"
 #~| msgid "искать"
 #~ msgid "скатерти"
 #~ msgstr "find"
-
-#~ msgid "визитные карточки"
-#~ msgstr "business cards"
 
 #, fuzzy
 #~| msgid "вы вводите один тираж, а на экране выводится другой?"
