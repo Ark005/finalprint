@@ -23,6 +23,8 @@ from django.views.generic import TemplateView
 from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.static import serve
+from django.contrib.sitemaps.views import sitemap
+
 
 
 from products.views import (
@@ -71,7 +73,8 @@ urlpatterns += i18n_patterns(
         "robots.txt",
         TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),
     ),
-
+   # path(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    
 )
 
 

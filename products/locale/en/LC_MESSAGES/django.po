@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 17:06+0300\n"
+"POT-Creation-Date: 2021-06-23 13:55+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,88 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: products/templates/products/about.html:33
+msgid "Приветствуем Вас, друзья!"
+msgstr "Dear friends!"
+
+#: products/templates/products/about.html:35
+msgid "предложит оптимальный результат, перебрав множество вариантов"
+msgstr "it will offer the optimal result by sorting through a variety of options"
+
+#: products/templates/products/about.html:41
+msgid "мы создали этот сервис"
+msgstr "we created this service"
+
+#: products/templates/products/about.html:41
+msgid "для выбора продуктов из готовых проектов"
+msgstr "to select products from ready-made projects"
+
+#: products/templates/products/about.html:41
+msgid "или создания новых вместе с консультантом"
+msgstr "or create new ones together with a consultant"
+
+#: products/templates/products/about.html:44
+msgid "После этого  за 60 cекунд "
+msgstr "After that, in 60 seconds"
+
+#: products/templates/products/about.html:50
+msgid "найти лучшее полиграфическое решение"
+msgstr "find the best Product decisions"
+
+#: products/templates/products/about.html:50
+msgid "узнать цену  и заказать то, что вам нужно"
+msgstr "find out the price and order what you need"
+
+#: products/templates/products/about.html:54
+msgid "Что делать пользователю?"
+msgstr "what shall user do?"
+
+#: products/templates/products/about.html:57
+msgid "при необходимости воспользоваться поддержкой оператора"
+msgstr "call the operator, if it is necessary"
+
+#: products/templates/products/about.html:58
+msgid "выбрать понравившееся изображение"
+msgstr "choose the image you like"
+
+#: products/templates/products/about.html:59
+msgid "ввести тираж"
+msgstr "enter the quantity"
+
+#: products/templates/products/about.html:60
+msgid "нажать на кнопку заказать"
+msgstr "enter order button"
+
+#: products/templates/products/about.html:63
+msgid "Как это работает?"
+msgstr "How it works?"
+
+#: products/templates/products/about.html:67
+msgid ""
+"Мы каталогизировали все по категориям, в подкатегориях разделили все на "
+"разные изделия,визуализировали изделия и вставили калькулятор,описали "
+"технические параметры,научили робота всем эти пользоваться."
+msgstr ""
+"We cataloged everything by category, and divided everything into "
+"subcategories."
+
+#: products/templates/products/about.html:76
+msgid "Что умеет и будет делать робот?"
+msgstr "What shall robot do?"
+
+#: products/templates/products/about.html:87
+msgid "Что дальше?"
+msgstr "what next?"
+
+#: products/templates/products/about.html:90
+msgid ""
+"мы планируем и дальше:<br><br><p>находить самые удачные решения, <p>делиться "
+"ими, <p>общаться с вами, <p>получать удовлетворение и удовольствие,<p>а "
+"также автоматизировать разделы доставка и дизайн</p>"
+msgstr ""
+"we are going find the best products decisions and share them with you with "
+"pleasure "
 
 #: products/templates/products/base.html:161
 msgid "условия и положения"
@@ -63,7 +145,7 @@ msgstr "Where"
 
 #: products/templates/products/home.html:55
 msgid "блокноты"
-msgstr "notepads"
+msgstr ""
 
 #: products/templates/products/home.html:56
 msgid "визитки"

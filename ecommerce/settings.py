@@ -57,12 +57,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django.contrib.sitemaps',
     'sorl.thumbnail',
     'whitenoise.runserver_nostatic',
     'django.contrib.admindocs',
 
-    'allauth.socialaccount.providers.vk',
-    'allauth.socialaccount.providers.facebook',
+    #'allauth.socialaccount.providers.vk',
+    #'allauth.socialaccount.providers.facebook',
     #'allauth.socialaccount.providers.telegram',
     'allauth.socialaccount.providers.google',
   
