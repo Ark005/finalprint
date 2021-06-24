@@ -40,6 +40,10 @@ urlpatterns = [
     path('decrease-cart/<slug>', decreaseCart, name='decrease-cart'),
     path('remove/<slug>', remove_from_cart, name='remove-cart'),
     path('upload_file/', upload_file, name='upload_file'),
+     path(
+        "robots.txt",
+        TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),
+    ),
 
 
 ]

@@ -53,3 +53,4 @@ class Note2TranslationOptions(TranslationOptions):
 @register(Banner)
 class BannerTranslationOptions(TranslationOptions):
     fields = ("mainimage", )
+

@@ -3,6 +3,9 @@
 {% block content %}
 {% load i18n %}
 
+
+
+
 <div class="card-body">
 <ul class="list-group list-group-flush"></ul>
 <div class="container mt-5">
@@ -11,7 +14,7 @@
          
          <div class="card mb-5" style="height: auto">
             <div class="card-body">
-               <h4 class="mb-3">{% trans 'адрес доставки' %} <span class="text-muted"></span></h4>
+               <h4 class="mb-3">{% trans 'адрес доставки/delivery address' %} <span class="text-muted"></span></h4>
                <form method="POST">
                   {% csrf_token %}
                   {{ form | crispy}}
@@ -25,7 +28,7 @@
                <h4>{% trans 'Сохраненный Адрес' %}</h4>
                <h4>{% trans 'Адрес' %}</h4>
                <p><b>{% trans 'адрес' %} :</b> {{ savedAddress.address }}</p>
-               <p><b>{% trans 'почтовый индекс' %} :</b> {{ savedAddress.zipcode }}</p>
+               <p><b>{% trans 'почтовый индекс ' %} :</b> {{ savedAddress.zipcode }}</p>
                <p><b>{% trans 'номер телефона' %} :</b> {{ savedAddress.cellular }}</p>
                <p><b>{% trans 'ориентир ' %}:</b> {{ savedAddress.landmark }}</p>
                <p><b>{% trans 'комментарий к заказу' %} :</b> {{ savedAddress.comments}}</p>
@@ -34,12 +37,6 @@
 
 
 
-
-            <div class="card-body">
-               <!-- Здесь отправка email -->
-               <!-- <a href="{% url 'checkout:payment' %}" class="btn btn-primary float-right">Договор-оферта</a> -->
-               <!-- <a href="{% url 'checkout:send_email' %}" class="btn btn-secondary float-right">Договор-оферта</a>-->
-            </div>
          </div>
          {% endif %}   
       </div>
@@ -83,7 +80,7 @@
             <div class="card-footer">
                <span class="float-left"><b>{% trans 'сумма' %}</b></span>
                <span class="float-right"><b>₽ {{ order_total | floatformat:0 }}</b></span>
-               <span class="float-center"><b>{% trans '(без учета доставки)' %}</b></span>
+               <span class="float-center"><b> {% trans '(стоимость доставки не включена)' %}</b></span>
                <br>
             </div>
             
@@ -91,6 +88,7 @@
 
      <br> 
    
+    
             
                   <div class="col-md-3"></div>
             <div class="card "row" style="height: auto">

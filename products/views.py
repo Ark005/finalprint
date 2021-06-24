@@ -18,13 +18,7 @@ from django.urls import path
 from django.views.generic.base import TemplateView
 
 
-urlpatterns = [
-   
-    path(
-        "robots.txt",
-        TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),
-    ),
-]
+
 
 
 class Home(ListView):
@@ -43,6 +37,8 @@ def home(request):
     category_filter = CategoryFilter(request.GET, queryset=category_list)
     baner = Banner.objects.all()
     return render(request, 'products/home.html', {'filter': category_filter, 'banner': baner})
+
+
 
 
 class ProductDetail(LoginRequiredMixin, DetailView):

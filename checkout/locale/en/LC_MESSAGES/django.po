@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-23 13:55+0300\n"
+"POT-Creation-Date: 2021-06-24 16:04+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,73 +26,78 @@ msgstr "Thank you for your purchase"
 msgid "Мои Заказы"
 msgstr "My Orders"
 
-#: checkout/templates/checkout/index.html:14
+#: checkout/templates/checkout/index.html:16
 #, fuzzy
 msgid "адрес доставки"
 msgstr "(excluding delivery)"
 
-#: checkout/templates/checkout/index.html:18
+#: checkout/templates/checkout/index.html:20
 msgid "сохранить"
 msgstr "save"
 
-#: checkout/templates/checkout/index.html:25
+#: checkout/templates/checkout/index.html:27
 msgid "Сохраненный Адрес"
 msgstr "saved address"
 
-#: checkout/templates/checkout/index.html:26
+#: checkout/templates/checkout/index.html:28
 #, fuzzy
 #| msgid "адрес"
 msgid "Адрес"
 msgstr "address"
 
-#: checkout/templates/checkout/index.html:27
+#: checkout/templates/checkout/index.html:29
 msgid "адрес"
 msgstr "address"
 
-#: checkout/templates/checkout/index.html:28
-msgid "почтовый индекс"
-msgstr "code postal"
-
-#: checkout/templates/checkout/index.html:29
-msgid "номер телефона"
-msgstr "phone number"
-
 #: checkout/templates/checkout/index.html:30
-msgid "ориентир "
-msgstr "landmark"
+#, fuzzy
+#| msgid "почтовый индекс"
+msgid "почтовый индекс "
+msgstr "code postal"
 
 #: checkout/templates/checkout/index.html:31
 #, fuzzy
-#| msgid "подтвердите заказ"
-msgid "комментарий к заказу"
-msgstr "confirm the order"
+#| msgid "номер телефона"
+msgid "номер телефона"
+msgstr "phone number"
 
-#: checkout/templates/checkout/index.html:54
+#: checkout/templates/checkout/index.html:32
+#, fuzzy
+#| msgid "ориентир "
+msgid "ориентир "
+msgstr "landmark"
+
+#: checkout/templates/checkout/index.html:33
+#, fuzzy
+#| msgid "комментарий к заказу/order_comments"
+msgid "комментарий к заказу"
+msgstr "order_comments"
+
+#: checkout/templates/checkout/index.html:50
 msgid "предмет счёта"
 msgstr "invoice"
 
-#: checkout/templates/checkout/index.html:84
+#: checkout/templates/checkout/index.html:80
 msgid "сумма"
 msgstr "amount"
 
-#: checkout/templates/checkout/index.html:86
-#, fuzzy
-msgid "(без учета доставки)"
-msgstr "(excluding delivery)"
+#: checkout/templates/checkout/index.html:82
+msgid "(стоимость доставки не включена)"
+msgstr "(the delivery cost is not included)"
 
-#: checkout/templates/checkout/index.html:100
+#: checkout/templates/checkout/index.html:97
 msgid "введите ваше имя"
 msgstr "enter your name"
 
-#: checkout/templates/checkout/index.html:106
+#: checkout/templates/checkout/index.html:103
 msgid "отправить коммерческое предложение"
 msgstr "send a commercial offer"
 
-#: checkout/templates/checkout/index.html:133
+#: checkout/templates/checkout/index.html:130
 msgid "спасибо, что вы с нами!"
 msgstr "thank you for being with us!"
 
-#: checkout/templates/checkout/index.html:134
+#: checkout/templates/checkout/index.html:131
 msgid "подтвердите заказ"
 msgstr "confirm the order"
 
@@ -123,3 +128,8 @@ msgstr "Your order is in progress"
 #: checkout/templates/checkout/order.html:57
 msgid "На главную"
 msgstr "Go to the main page"
+
+#, fuzzy
+#~| msgid "адрес"
+#~ msgid "Адрес/Address"
+#~ msgstr "address"

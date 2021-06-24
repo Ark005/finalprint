@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-23 13:55+0300\n"
+"POT-Creation-Date: 2021-06-24 16:04+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,10 +21,6 @@ msgstr ""
 #: products/templates/products/about.html:33
 msgid "Приветствуем Вас, друзья!"
 msgstr "Dear friends!"
-
-#: products/templates/products/about.html:35
-msgid "предложит оптимальный результат, перебрав множество вариантов"
-msgstr "it will offer the optimal result by sorting through a variety of options"
 
 #: products/templates/products/about.html:41
 msgid "мы создали этот сервис"
@@ -87,11 +83,16 @@ msgstr ""
 msgid "Что умеет и будет делать робот?"
 msgstr "What shall robot do?"
 
-#: products/templates/products/about.html:87
+#: products/templates/products/about.html:79
+msgid "предложит оптимальный результат, перебрав множество вариантов"
+msgstr ""
+"it will offer the optimal result by sorting through a variety of options"
+
+#: products/templates/products/about.html:84
 msgid "Что дальше?"
 msgstr "what next?"
 
-#: products/templates/products/about.html:90
+#: products/templates/products/about.html:87
 msgid ""
 "мы планируем и дальше:<br><br><p>находить самые удачные решения, <p>делиться "
 "ими, <p>общаться с вами, <p>получать удовлетворение и удовольствие,<p>а "
@@ -108,12 +109,59 @@ msgstr "terms and conditions"
 msgid "политика конфиденциальности"
 msgstr "privacy policy"
 
+#: products/templates/products/calc.html:18
+msgid "Посчитать/заказать очень просто"
+msgstr "It is very easy to calculate/order"
+
+#: products/templates/products/calc.html:25
+msgid ""
+"Сначала на главном экране в разделе \"Категории продуктов\"выбираем название "
+"нужного продукта"
+msgstr ""
+"First, on the main screen, in the \"Product categories\"section, select the "
+"name  of the desired product"
+
+#: products/templates/products/calc.html:35
+msgid "или выбираем категорию по картинке"
+msgstr "or choose a category based on the image"
+
+#: products/templates/products/calc.html:44
+msgid ""
+"или ищем категорию через поиск, при этом достаточно набрать несколько первых "
+"символов с маленькой буквы"
+msgstr ""
+"or we are looking for a category through the search, while it is enough to "
+"type the first few  characters with a small letter"
+
+#: products/templates/products/calc.html:56
+msgid ""
+"затем делаем нужный выбор, нажимаем и оказываемся на следующем экране, где в "
+"выбранной категории выбираем нужный продукт"
+msgstr ""
+
+#: products/templates/products/calc.html:68
+msgid ""
+"и, наконец, попадаем на страничку с расчётом, где нам останется только "
+"ввести тираж, выбрать один из параметров  и посмотреть результат расчёта"
+msgstr ""
+
+#: products/templates/products/calc.html:79
+msgid ""
+"после чего, нажимаем на кнопку \"заказать\" и переходим на страницу заказа"
+msgstr "after that, click on the \"order\" button and go to the order page"
+
+#: products/templates/products/calc.html:88
+msgid ""
+"заполняем адрес доставки и вписываем своё имя в ячейку Name,чтобы получить "
+"счёт на почту, указанную при регистрации"
+msgstr ""
+
 #: products/templates/products/category_products.html:19
 msgid "Продукты"
 msgstr "Products"
 
 #: products/templates/products/category_products.html:34
-#: products/templates/products/home.html:115
+#: products/templates/products/home.html:120
 msgid "искать"
 msgstr "find"
 
@@ -145,7 +193,7 @@ msgstr "Where"
 
 #: products/templates/products/home.html:55
 msgid "блокноты"
-msgstr ""
+msgstr "notepads"
 
 #: products/templates/products/home.html:56
 msgid "визитки"
@@ -168,7 +216,7 @@ msgid "конверты"
 msgstr "envelopes"
 
 #: products/templates/products/home.html:61
-#: products/templates/products/rest.html:56
+#: products/templates/products/rest.html:52
 msgid "коробки"
 msgstr "boxes"
 
@@ -177,22 +225,22 @@ msgid "ленты"
 msgstr "ribbons fabric"
 
 #: products/templates/products/home.html:63
-#: products/templates/products/rest.html:58
+#: products/templates/products/rest.html:54
 msgid "листовки"
 msgstr "flyers"
 
 #: products/templates/products/home.html:64
-#: products/templates/products/rest.html:61
+#: products/templates/products/rest.html:57
 msgid "наклейки"
 msgstr "stickers"
 
 #: products/templates/products/home.html:65
-#: products/templates/products/rest.html:62
+#: products/templates/products/rest.html:58
 msgid "пакеты"
 msgstr "paper bags"
 
 #: products/templates/products/home.html:66
-#: products/templates/products/rest.html:63
+#: products/templates/products/rest.html:59
 msgid "папки"
 msgstr "folders"
 
@@ -201,73 +249,73 @@ msgid "подарки"
 msgstr "gifts"
 
 #: products/templates/products/home.html:68
-#: products/templates/products/rest.html:64
+#: products/templates/products/rest.html:60
 msgid "постеры"
 msgstr "posters"
 
 #: products/templates/products/home.html:69
-#: products/templates/products/rest.html:66
+#: products/templates/products/rest.html:62
 msgid "приглашения"
 msgstr "invitations"
 
 #: products/templates/products/home.html:70
-#: products/templates/products/rest.html:67
+#: products/templates/products/rest.html:63
 msgid "ролл апы"
 msgstr "roll-ups"
 
 #: products/templates/products/home.html:71
-#: products/templates/products/rest.html:65
+#: products/templates/products/rest.html:61
 msgid "плейсметы"
 msgstr "placemets"
 
 #: products/templates/products/home.html:72
-#: products/templates/products/rest.html:71
+#: products/templates/products/rest.html:67
 msgid "этикетки"
 msgstr "labels"
 
-#: products/templates/products/home.html:138
+#: products/templates/products/home.html:143
 msgid "поддержка"
 msgstr "support"
 
-#: products/templates/products/home.html:139
+#: products/templates/products/home.html:144
 msgid "консультации при"
 msgstr "advice when"
 
-#: products/templates/products/home.html:139
+#: products/templates/products/home.html:144
 msgid "онлайн заказе"
 msgstr "ordering online"
 
-#: products/templates/products/home.html:147
+#: products/templates/products/home.html:152
 msgid "высокое качество"
 msgstr "high quality"
 
-#: products/templates/products/home.html:148
+#: products/templates/products/home.html:153
 msgid "контроль качества"
 msgstr "quality control"
 
-#: products/templates/products/home.html:161
+#: products/templates/products/home.html:166
 msgid "мгновенный расчёт"
 msgstr "instant calculation"
 
-#: products/templates/products/home.html:162
+#: products/templates/products/home.html:167
 msgid "очень простой калькулятор расчёта  в 2 клика"
 msgstr "very simple calculation in 2 clicks"
 
-#: products/templates/products/home.html:183
+#: products/templates/products/home.html:188
 msgid "для ресторанов"
 msgstr "for restaurants"
 
-#: products/templates/products/home.html:184
+#: products/templates/products/home.html:189
 msgid "специальное предложение"
 msgstr "special offer"
 
-#: products/templates/products/home.html:191
-#: products/templates/products/home.html:192
+#: products/templates/products/home.html:196
+#: products/templates/products/home.html:197
 #: products/templates/products/navbar.html:38
 msgid "доставка"
 msgstr "delivery"
 
-#: products/templates/products/home.html:222
+#: products/templates/products/home.html:227
 msgid "Категории продуктов "
 msgstr "Product Categories"
 
@@ -368,6 +416,43 @@ msgstr ""
 msgid "Качество во главе угла"
 msgstr "Quality is at the forefront"
 
+#: products/templates/products/quality.html:32
+msgid ""
+"До печати мы проверяем техническую корректность файлов, а после отправляем "
+"на подпись, проверенный файл в формате pdf"
+msgstr ""
+"Before printing, we check the technical correctness of the files, and then "
+"we send  for signature, a verified pdf file"
+
+#: products/templates/products/quality.html:33
+msgid ""
+"\tВ работе мы используем самое передовое полиграфическое оборудование "
+"немецкой фирмы HEIDELBERG."
+msgstr ""
+"In our work, we use the most advanced printing equipment  of the German "
+"company HEIDELBERG."
+
+#: products/templates/products/quality.html:34
+msgid ""
+"\tПри печати специальными приборами в автоматическом режиме мы контролируем "
+"плотность краски, раскат краски по бумаге, сведение полиграфических крестов."
+msgstr ""
+"When printing with special devices in automatic mode, we control the  "
+"density of paint, the roll of paint on paper, the reduction of printing "
+"crosses."
+
+#: products/templates/products/quality.html:35
+msgid ""
+"На каждом этапе производства (во время печати и на финишных этапах обработки "
+"и отделки) мастер отслеживает качество работ."
+msgstr ""
+"At each stage of production (during printing and at the final stages of "
+"processing and finishing), the master monitors the quality of work."
+
+#: products/templates/products/quality.html:36
+msgid "\tМы ориентированы на конечный качественный результат.</p>"
+msgstr "We are focused on the final quality result."
+
 #: products/templates/products/register.html:13
 msgid "Sign In"
 msgstr "Войти"
@@ -402,66 +487,60 @@ msgstr "Home page"
 msgid "Set Password"
 msgstr "Установить пароль"
 
-#: products/templates/products/rest.html:55
+#: products/templates/products/rest.html:51
 msgid "визитные карточки"
 msgstr "business cards"
 
-#: products/templates/products/rest.html:57
-#, fuzzy
-#| msgid "ленты"
-msgid "лента"
-msgstr "ribbons fabric"
+#: products/templates/products/rest.html:53
+msgid "лента с печатью"
+msgstr "ribbon with a print"
 
-#: products/templates/products/rest.html:59
+#: products/templates/products/rest.html:55
 msgid "меню"
 msgstr "menu"
 
-#: products/templates/products/rest.html:60
+#: products/templates/products/rest.html:56
 msgid "мобильные стенды"
 msgstr "roll ups"
 
-#: products/templates/products/rest.html:68
-#, fuzzy
-#| msgid "визитные карточки"
-msgid "бумажные стаканчики"
-msgstr "business cards"
+#: products/templates/products/rest.html:64
+msgid "стаканчики бумажные"
+msgstr " paper cups"
 
-#: products/templates/products/rest.html:69
-#, fuzzy
-#| msgid "ленты"
-msgid "тейблтенты"
-msgstr "ribbons fabric"
+#: products/templates/products/rest.html:65
+msgid "информационные таблички"
+msgstr "table tents"
 
-#: products/templates/products/rest.html:70
+#: products/templates/products/rest.html:66
 msgid "флаеры"
 msgstr "flyers"
 
-#: products/templates/products/rest.html:87
+#: products/templates/products/rest.html:83
 msgid "Вы  задаете нам вопросы,"
 msgstr "You ask any questions,"
 
-#: products/templates/products/rest.html:88
+#: products/templates/products/rest.html:84
 msgid "Мы вместе уточняем детали, сразу подбираем решение,"
 msgstr "Together we clarify the details, immediately select a solution,"
 
-#: products/templates/products/rest.html:89
+#: products/templates/products/rest.html:85
 msgid "На нашем сайте находим все интересующие вас полиграфические позиции,"
 msgstr ""
 "On our website we find all the printing positions you are interested in,"
 
-#: products/templates/products/rest.html:90
+#: products/templates/products/rest.html:86
 msgid "Мгновенно определяем тираж, цену и сроки производства."
 msgstr "Instantly determine the circulation, price and production time."
 
-#: products/templates/products/rest.html:112
+#: products/templates/products/rest.html:108
 msgid "Считаем"
 msgstr "Calculating"
 
-#: products/templates/products/rest.html:123
+#: products/templates/products/rest.html:119
 msgid "Добавляем  в счет"
 msgstr "Adding to the invoice"
 
-#: products/templates/products/rest.html:125
+#: products/templates/products/rest.html:121
 msgid ""
 "Мы вместе с вами найдем/разработаем лучшие полиграфические решения для "
 "вашего ресторана или кафе, а после полностью автоматизируем процесс  "
@@ -471,9 +550,39 @@ msgstr ""
 "your restaurant or cafe, and then fully automate the process of  re-"
 "ordering, with the best price/quality ratio"
 
-#: products/templates/products/support.html:26
+#: products/templates/products/support.html:24
 msgid "Поддержка и сопровождение на любом этапе"
 msgstr "support at any stage"
+
+#: products/templates/products/support.html:27
+msgid ""
+"Поддержка эксперта * 25 лет опыта * консультации по любым технологиям и "
+"ситуациям * контроль качества "
+msgstr ""
+"Expert support * 25 years of experience * consultations on any technologies "
+"and  situations * quality control"
+
+#~ msgid ""
+#~ "Обладая 25-летнем опытом и самым широким спектром технических "
+#~ "возможностей, мы готовы вместе с вами найти то единственное решение, "
+#~ "которое подходит именно вам."
+#~ msgstr ""
+#~ "With 25 years of experience and the widest range of technical "
+#~ "capabilities,  we are ready to work with you to find the only solution "
+#~ "that suits you."
+
+#, fuzzy
+#~| msgid "тейбл тент"
+#~ msgid "тейбл тенты"
+#~ msgstr "table tent"
+
+#, fuzzy
+#~| msgid "ленты"
+#~ msgid "лента"
+#~ msgstr "ribbons fabric"
+
+#~ msgid "бумажный стаканчик"
+#~ msgstr "paper cups"
 
 #, fuzzy
 #~| msgid "искать"

@@ -1,42 +1,38 @@
 
- 
+   
     
     {% extends 'products/base.html' %}
-    {% load thumbnail %}
-    
-    
+    {% load thumbnail %} 
     {% load i18n %}
-    
     {% load crispy_forms_tags %}
-    
-    
-    
-    
     {% block content %}
-    
+    {% load static %}
 
 
-   
+
+{% for 12 in banner %}
+<img src="{{ 12.mainimage.url }}" alt="images" width="90%">
+{% endfor %}
   
+
+    <h2  style="color:rgb(229, 152, 147)" class="text-center" class="card-title"><br>{% trans 'Посчитать/заказать очень просто' %}  <br>  </h2></span>
+  
+    <br>
    
-     <br>
-      <div class="row">
 
 
-
-        <h1  style="color:rgb(229, 152, 147)" class="text-center" class="card-title"><br> Посчитать/заказать очень просто <br>  </h1></span>
-
-        <h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title"><br> Сначала на главном экране в разделе "Категории продуктов"выбираем название нужного продукта  <br>  </h5></span>
+        
+        <h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">{% trans 'Сначала на главном экране в разделе "Категории продуктов"выбираем название нужного продукта'  %}  <br>  </h5></span>
 
 
-
+       
 {% thumbnail  "350" as im %}
 
 <img  src="/media/products/choice_strE.png" width="90%">
 
 {% endthumbnail %}
 
-<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">или выбираем категорию по картинке <br>  </h5></span>
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">{% trans 'или выбираем категорию по картинке' %}  <br>  </h5></span>
 
 {% thumbnail  "350" as im %}
 
@@ -45,7 +41,7 @@
 
 {% endthumbnail %}
 
-<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">или ищем категорию через поиск, при этом достаточно набрать несколько первых символов с маленькой буквы <br>  </h5></span>
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">{% trans 'или ищем категорию через поиск, при этом достаточно набрать несколько первых символов с маленькой буквы' %}  <br>  </h5></span>
 
 
 
@@ -57,7 +53,7 @@
 
 {% endthumbnail %}
 
-<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">затем делаем нужный выбор, нажимаем и оказываемся на следующем экране, где в выбранной категории выбираем нужный продукт <br>  </h5></span>
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">{% trans 'затем делаем нужный выбор, нажимаем и оказываемся на следующем экране, где в выбранной категории выбираем нужный продукт' %}  <br>  </h5></span>
 
 
 
@@ -69,7 +65,7 @@
 
 {% endthumbnail %}
 
-<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">и, наконец, попадаем на страничку с расчётом, где нам останется только ввести тираж, выбрать один из параметров  и посмотреть результат расчёта <br>  </h5></span>
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">{% trans 'и, наконец, попадаем на страничку с расчётом, где нам останется только ввести тираж, выбрать один из параметров  и посмотреть результат расчёта' %}  <br>  </h5></span>
 
 
 
@@ -80,7 +76,7 @@
 
 {% endthumbnail %}
 
-<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">после чего, нажимаем на кнопку "заказать" и переходим на страницу заказа <br>  </h5></span>
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">{% trans 'после чего, нажимаем на кнопку "заказать" и переходим на страницу заказа' %}  <br>  </h5></span>
 
 
 {% thumbnail  "350" as im %}
@@ -89,13 +85,13 @@
 
 {% endthumbnail %}  
 
-<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">заполняем адрес доставки и вписываем своё имя в ячейку Name,чтобы получить счёт на почту, указанную при регистрации <br>  </h5></span>
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">{% trans 'заполняем адрес доставки и вписываем своё имя в ячейку Name,чтобы получить счёт на почту, указанную при регистрации' %}  <br>  </h5></span>
 
  
 
 {% thumbnail  "350" as im %}
 
-<img align="center" src="/media/products/nameE.png" width="70%">class="img-fluid"> 
+<img align="center" src="/media/products/nameE.png" width="70%">
 
 
 
@@ -107,28 +103,7 @@
 
 
     <div>       
-      
-<p style="color:rgb(36, 163, 60)" class="text-center" class="text-muted"> <a style="color:rgb(36, 163, 60)"href="mailto:info@005.ru"><i class="fa fa-envelope" aria-hidden="true"></i>info@005.ru </a> 
-
-  <a href="/">
  
-      <img src="/media/products/logo_rose.png" width="97" height="65">
- 
-  </a>
-
-<i class="fa fa-phone"></i>      +7(495) 740-38-93</p></h6></span>  
-        <!-- <div class="card"> -->
-         <!-- <div class="card-img">
-          <img align="center" src="images/posts/polit.jpg" class="img-fluid">
-         </div> -->
-
-        </div> 
-    
-      
-              <!-- <img align="center" src="{{ product.mainimage.url }}" class="img-fluid"> -->
-              <!-- <img align="center" src="media/{{ product.mainimage }}" class="img-fluid"> -->
-              <!-- { % thumbnail 'product.mainimage' "50" as im % } -->
-              
              
              </div>
   

@@ -29,7 +29,7 @@ class BillingForm(ModelForm):
 		model = BillingAddress
 		fields = ['address', 'zipcode', 'cellular', 'landmark', 'comments']
 		labels = {
-           'address': ('адрес'),'zipcode': ('почтовый индекс'),'cellular': ('номер телефона'),'landmark': ('ориентир'),'comments': ('комментарии к заказу'),
+           'address': ('адрес/address'),'zipcode': ('почтовый индекс/zipcode'),'cellular': ('номер телефона/cellular'),'landmark': ('ориентир/landmark'),'comments': ('комментарии к заказу/oreder comments'),
        }
 		
 class Name(ModelForm):

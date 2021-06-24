@@ -217,5 +217,3 @@ class Banner(models.Model):
 
 
 
-
-
