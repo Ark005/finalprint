@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-24 16:04+0300\n"
+"POT-Creation-Date: 2021-06-25 00:28+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -137,13 +137,13 @@ msgstr ""
 msgid ""
 "затем делаем нужный выбор, нажимаем и оказываемся на следующем экране, где в "
 "выбранной категории выбираем нужный продукт"
-msgstr ""
+msgstr "then we make the desired choice, click and find ourselves on the next screen, where we select the desired product in the selected category"
 
 #: products/templates/products/calc.html:68
 msgid ""
 "и, наконец, попадаем на страничку с расчётом, где нам останется только "
 "ввести тираж, выбрать один из параметров  и посмотреть результат расчёта"
-msgstr ""
+msgstr "and finally, we get to the page with the calculation, where we will only have to enter the circulation, select one of the parameters and see the result of the calculation"
 
 #: products/templates/products/calc.html:79
 msgid ""
@@ -154,7 +154,7 @@ msgstr "after that, click on the \"order\" button and go to the order page"
 msgid ""
 "заполняем адрес доставки и вписываем своё имя в ячейку Name,чтобы получить "
 "счёт на почту, указанную при регистрации"
-msgstr ""
+msgstr "fill in the delivery address and enter your name in the Name cell to receive the invoice to the email address specified during registration"
 
 #: products/templates/products/category_products.html:19
 msgid "Продукты"
@@ -561,6 +561,10 @@ msgid ""
 msgstr ""
 "Expert support * 25 years of experience * consultations on any technologies "
 "and  situations * quality control"
+
+#: products/templates/products/technologies.html:15
+msgid "Технологии"
+msgstr ""
 
 #~ msgid ""
 #~ "Обладая 25-летнем опытом и самым широким спектром технических "
