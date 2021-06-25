@@ -63,8 +63,8 @@ INSTALLED_APPS = [
     'django.contrib.admindocs',
 
     #'allauth.socialaccount.providers.vk',
-    #'allauth.socialaccount.providers.facebook',
-    #'allauth.socialaccount.providers.telegram',
+   #allauth.socialaccount.providers.facebook',
+   #'allauth.socialaccount.providers.telegram',
     'allauth.socialaccount.providers.google',
   
     

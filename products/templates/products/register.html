@@ -13,6 +13,13 @@
 {% block head_title %}{% trans "Sign In" %} {% endblock %}
 
 {% block content %}
+
+
+
+
+
+
+
 <div class="container-fluid">
 
  {% block messages %}
@@ -50,11 +57,51 @@
 
 </form>
 
+<center>
+<style>
+  #link {
+    position: relative;
+  }
+  #link a {
+    pointer-events: none;
+  }
+  #link:hover:before {
+    display: block;
+    content:  {% trans '"Подтвердите своё согласие с политикой конфендециальности"' %};
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translate(-50%, calc(-100% - 10px));
+    border-radius: 3px;
+    padding: 10px;
+    background: #f7f7f7;
+    box-shadow: 0 0 2px;
+  }
+  #link:hover:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 10px;
+    border-color: #f7f7f7 transparent transparent transparent;
+  }
+  #linkDa:checked ~ #link a {
+    pointer-events: auto;
+  }
+  #linkDa:checked ~ #link:after, #linkDa:checked ~ #link:before {
+    content: none;
+  }
+  </style> 
 
-<form class="container-fluid text-center" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
+  {% trans 'Я ознакомлен/а c политикой конфенденциальности и принимаю её ' %}
+  <input type="checkbox" id="linkDa"/><label for="linkDa"></label><br>
+  <span id="link"><a href="{% url 'account_signup' %}"><button class="btn btn-outline-primary btn-lg" type="submit">{% trans "Зарегистрироваться" %}</button></a></span>
+</form>
 
-  {{ form.as_p }}
+</center>
+  
+<br>
 
   {% if redirect_field_value %}
 
@@ -62,11 +109,13 @@
   
   {% endif %}
   
-  <button class="btn btn-outline-primary btn-lg" type="submit">{% trans "Зарегистрироваться" %}</button>
-</form>
+
 <form method="POST" action="{% url 'account_change_password' %}" class="container-fluid text-center" id="change_password_form">
   {% csrf_token %}
   {{ form.as_p }}
+
+  <!--<a href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>-->
+
   <button class="btn btn-outline-info" type="submit" name="action">{% trans "Поменять Пароль" %}</button>
 </form>
 
@@ -80,7 +129,7 @@
   {% endif %}
   
   <button  class="btn btn-outline-success" type="submit">{% trans 'Выйти из системы' %}</button>
-  <a class="btn btn-outline-danger" id="custom_logout_no" href="https://www.005.ru/">{% trans 'На главную' %}</a>
+  <a class="btn btn-outline-danger" id="custom_logout_no" href="/">{% trans 'На главную' %}</a>
 </form>
 
 </div>
@@ -89,6 +138,8 @@
 
 
     <div class="container-fluid">
+
+
 
 
     
@@ -108,17 +159,53 @@
    </div>
 
 
-    {% load account socialaccount %}
 
-    {% get_providers as socialaccount_providers %}
+   {% load account socialaccount %}
+   {% get_providers as socialaccount_providers %}
     <ul class="social_providers_list">
     {% for provider in socialaccount_providers %}
-        <a title="{{provider.name}}" class="btn btn-outline-dark" 
-         href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}"><i class="fa fa-{{provider.name}}" id="social_icon"></i>{{provider.name}}</a>
-    {% endfor %}
+    <style>
+     #link {
+       position: relative;
+     }
+     #link a {
+       pointer-events: none;
+     }
+     #link:hover:before {
+       display: block;
+       content:  {% trans '"Подтвердите своё согласие с политикой конфендециальности"' %};
+       position: absolute;
+       top: 0; left: 50%;
+       transform: translate(-50%, calc(-100% - 10px));
+       border-radius: 3px;
+       padding: 10px;
+       background: #f7f7f7;
+       box-shadow: 0 0 2px;
+     }
+     #link:hover:after {
+       display: block;
+       content: "";
+       position: absolute;
+       top: 0; left: 50%;
+       transform: translate(-50%, -50%);
+       border-style: solid;
+       border-width: 10px;
+       border-color: #f7f7f7 transparent transparent transparent;
+     }
+     #linkDa:checked ~ #link a {
+       pointer-events: auto;
+     }
+     #linkDa:checked ~ #link:after, #linkDa:checked ~ #link:before {
+       content: none;
+     }
+     </style>  {% trans 'Я принимаю политику конфенденциальности ' %}
+     <input type="checkbox" id="linkDa"/><label for="linkDa"></label><br>
+   
+     <span id="link"><a class="btn btn-primary" style="background-color: #dd4b39;" href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}"><i class="fa fa-{{provider.name}}" id="social_icon"></i>{{provider.name}}</a> </span>
+     {% endfor %}
      </ul>
 
-
+     <p class="text-center"><a href="/privacy-policy.html">{% trans 'политика конфиденциальности' %}</a></p>
 <br>
 {% endblock %}
 
