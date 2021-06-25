@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 00:28+0300\n"
+"POT-Creation-Date: 2021-06-25 12:14+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -106,6 +106,7 @@ msgid "условия и положения"
 msgstr "terms and conditions"
 
 #: products/templates/products/base.html:162
+#: products/templates/products/products_details.html:75
 msgid "политика конфиденциальности"
 msgstr "privacy policy"
 
@@ -137,13 +138,18 @@ msgstr ""
 msgid ""
 "затем делаем нужный выбор, нажимаем и оказываемся на следующем экране, где в "
 "выбранной категории выбираем нужный продукт"
-msgstr "then we make the desired choice, click and find ourselves on the next screen, where we select the desired product in the selected category"
+msgstr ""
+"then we make the desired choice, click and find ourselves on the next "
+"screen, where we select the desired product in the selected category"
 
 #: products/templates/products/calc.html:68
 msgid ""
 "и, наконец, попадаем на страничку с расчётом, где нам останется только "
 "ввести тираж, выбрать один из параметров  и посмотреть результат расчёта"
-msgstr "and finally, we get to the page with the calculation, where we will only have to enter the circulation, select one of the parameters and see the result of the calculation"
+msgstr ""
+"and finally, we get to the page with the calculation, where we will only "
+"have to enter the circulation, select one of the parameters and see the "
+"result of the calculation"
 
 #: products/templates/products/calc.html:79
 msgid ""
@@ -154,7 +160,9 @@ msgstr "after that, click on the \"order\" button and go to the order page"
 msgid ""
 "заполняем адрес доставки и вписываем своё имя в ячейку Name,чтобы получить "
 "счёт на почту, указанную при регистрации"
-msgstr "fill in the delivery address and enter your name in the Name cell to receive the invoice to the email address specified during registration"
+msgstr ""
+"fill in the delivery address and enter your name in the Name cell to receive "
+"the invoice to the email address specified during registration"
 
 #: products/templates/products/category_products.html:19
 msgid "Продукты"
@@ -353,41 +361,49 @@ msgstr "Login / Registraion"
 msgid "вишенки"
 msgstr ""
 
-#: products/templates/products/products_details.html:37
+#: products/templates/products/products_details.html:42
+msgid "Подтвердите своё согласие с политикой конфендециальности"
+msgstr "Confirm your agreement with the  privacy policy"
+
+#: products/templates/products/products_details.html:71
+msgid "Я ознакомлен/а c политикой конфенденциальности и принимаю её "
+msgstr "I accept privacy policy"
+
+#: products/templates/products/products_details.html:72
 #, fuzzy
 #| msgid "Заказы"
 msgid "заказать"
 msgstr "Order"
 
-#: products/templates/products/products_details.html:40
+#: products/templates/products/products_details.html:76
 msgid "пожалуйста, зарегистрируйтесь,чтобы мы смогли оформить заказ"
 msgstr "please, register so, that we can place your order"
 
-#: products/templates/products/products_details.html:117
+#: products/templates/products/products_details.html:157
 msgid "Рассчитать"
 msgstr "Calculate"
 
-#: products/templates/products/products_details.html:130
+#: products/templates/products/products_details.html:170
 msgid "Размер"
 msgstr "Size"
 
-#: products/templates/products/products_details.html:131
+#: products/templates/products/products_details.html:171
 msgid "Дата изготовления"
 msgstr "Date of manufacture"
 
-#: products/templates/products/products_details.html:132
+#: products/templates/products/products_details.html:172
 msgid "Тираж(шт.)"
 msgstr "Quantity(pcs.)"
 
-#: products/templates/products/products_details.html:133
+#: products/templates/products/products_details.html:173
 msgid "Цена(руб.)"
 msgstr "Price(rub.)"
 
-#: products/templates/products/products_details.html:207
+#: products/templates/products/products_details.html:247
 msgid "у вас исчезает введенное значение тиража?"
 msgstr "do you lose the entered value?"
 
-#: products/templates/products/products_details.html:212
+#: products/templates/products/products_details.html:252
 msgid ""
 " значение тиража не слетает, результат выводится на экран  в строке  зеленым "
 "цветом, а поле ввода обнуляется для следующего расчёта"
@@ -398,11 +414,11 @@ msgstr ""
 "displayed on the screen in the line in green  color, and the input field is "
 "reset to zero for the next calculation"
 
-#: products/templates/products/products_details.html:224
+#: products/templates/products/products_details.html:264
 msgid "вы вводите один тираж, а на экране выводится другой?"
 msgstr "do you enter one value and the screen displays another?"
 
-#: products/templates/products/products_details.html:230
+#: products/templates/products/products_details.html:270
 msgid ""
 "Всё нормально, алгоритм ориентируется на min или max тиражи, то есть "
 "автоматически увеличивает тираж до минимального, или считает не больше "

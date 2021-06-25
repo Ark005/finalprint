@@ -39,7 +39,7 @@
         }
         #link:hover:before {
           display: block;
-          content: "Подтвердите своё согласие с политикой конфендециальности";
+          content: {% trans '"Подтвердите своё согласие с политикой конфендециальности"' %};
           position: absolute;
           top: 0; left: 50%;
           transform: translate(-50%, calc(-100% - 10px));
@@ -65,11 +65,14 @@
           content: none;
         }
         </style>
-        <br> <br> <br> <br> <br>
-       Я ознакомлен/а c политикой конфенденциальности и принимаю её  </label> <input type="checkbox" id="linkDa"/><label for="linkDa"></label><br><br> <br> 
+        <br> <br> <br>
+
+        <br> <br>
+        {% trans 'Я ознакомлен/а c политикой конфенденциальности и принимаю её ' %} </label> <input type="checkbox" id="linkDa"/><label for="linkDa"></label><br><br> <br> 
          <span id="link"><a href="{% url 'mainapp:cart' product.slug %}" class="btn  btn-lg  btn-success text-uppercase"> <i class="fas fa-shopping-cart"></i> {% trans 'заказать' %}  </a></span>
         
          {% else %}
+         <p class="text-center"><a href="/privacy-policy.html">{% trans 'политика конфиденциальности' %}</a></p>
          <h6 class="card-title"><span class="text-muted"><p style="color:rgb(229, 152, 147)">{% trans 'пожалуйста, зарегистрируйтесь,чтобы мы смогли оформить заказ' %}</p></span></a></h6>
         
   

@@ -119,69 +119,6 @@
       </video>
 
 
-      <body> 
-        <center>
-           {% if request.user.is_authenticated %}
-           <a href="{% url 'mainapp:cart' product.slug %}" class="btn  btn-lg  btn-success text-uppercase"> <i class="fas fa-shopping-cart"></i> {% trans 'заказать' %}  </a>
-           {% else %}
-          <h6 class="card-title"><span class="text-muted"><p style="color:rgb(229, 152, 147)">{% trans 'пожалуйста, зарегистрируйтесь,чтобы мы смогли оформить заказ' %}</p></span></a></h6>
-           {% endif %}
-         </center>  
-        </body> 
-
-
-
-        <body>   
-<center>
-  {% if request.user.is_authenticated %}
-  
-  <style>
-      #link {
-        position: relative;
-      }
-      #link a {
-        pointer-events: none;
-      }
-      #link:hover:before {
-        display: block;
-        content: "Подтвердите своё согласие с условиями договора";
-        position: absolute;
-        top: 0; left: 50%;
-        transform: translate(-50%, calc(-100% - 10px));
-        border-radius: 3px;
-        padding: 10px;
-        background: #f7f7f7;
-        box-shadow: 0 0 2px;
-      }
-      #link:hover:after {
-        display: block;
-        content: "";
-        position: absolute;
-        top: 0; left: 50%;
-        transform: translate(-50%, -50%);
-        border-style: solid;
-        border-width: 10px;
-        border-color: #f7f7f7 transparent transparent transparent;
-      }
-      #linkDa:checked ~ #link a {
-        pointer-events: auto;
-      }
-      #linkDa:checked ~ #link:after, #linkDa:checked ~ #link:before {
-        content: none;
-      }
-      </style>
-      <br> <br> <br> <br> <br>
-     Я ознакомлен c политикой конфенденциальности и принимаю её  </label> <input type="checkbox" id="linkDa"/><label for="linkDa"></label><br><br> <br> 
-       <span id="link"><a href="{% url 'mainapp:cart' product.slug %}" class="btn  btn-lg  btn-success text-uppercase"> <i class="fas fa-shopping-cart"></i> {% trans 'заказать' %}  </a></span>
-      
-       {% else %}
-       <h6 class="card-title"><span class="text-muted"><p style="color:rgb(229, 152, 147)">{% trans 'пожалуйста, зарегистрируйтесь,чтобы мы смогли оформить заказ' %}</p></span></a></h6>
-      
-
-       {% endif %}
-  
-      </center>
-    </body> 
 
 
 
