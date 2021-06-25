@@ -29,6 +29,16 @@
 </head>
 <body> 
 
+    
+
+
+
+
+
+
+
+
+
 
 
 
@@ -43,6 +53,53 @@
    {% endif %}
  </center>  
 </body> 
+
+
+<br><br><br><br><br>
+
+<style>
+    #link {
+      position: relative;
+    }
+    #link a {
+      pointer-events: none;
+    }
+    #link:hover:before {
+      display: block;
+      content: "Подтвердите своё согласие с условиями договора";
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translate(-50%, calc(-100% - 10px));
+      border-radius: 3px;
+      padding: 10px;
+      background: #f7f7f7;
+      box-shadow: 0 0 2px;
+    }
+    #link:hover:after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translate(-50%, -50%);
+      border-style: solid;
+      border-width: 10px;
+      border-color: #f7f7f7 transparent transparent transparent;
+    }
+    #linkDa:checked ~ #link a {
+      pointer-events: auto;
+    }
+    #linkDa:checked ~ #link:after, #linkDa:checked ~ #link:before {
+      content: none;
+    }
+    </style>
+   Я ознакомлен c политикой конфенденциальности и принимаю её  </label> <input type="checkbox" id="linkDa"/><label for="linkDa"></label><br>
+     <span id="link"><a href="/privacy-policy.html/">политика конфенденциальности</a></span>
+
+
+
+
+
+
 
 
     <!-- slider-product.// -->
