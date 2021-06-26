@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 12:14+0300\n"
+"POT-Creation-Date: 2021-06-25 22:53+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -104,11 +104,6 @@ msgstr ""
 #: products/templates/products/base.html:161
 msgid "условия и положения"
 msgstr "terms and conditions"
-
-#: products/templates/products/base.html:162
-#: products/templates/products/products_details.html:75
-msgid "политика конфиденциальности"
-msgstr "privacy policy"
 
 #: products/templates/products/calc.html:18
 msgid "Посчитать/заказать очень просто"
@@ -361,49 +356,41 @@ msgstr "Login / Registraion"
 msgid "вишенки"
 msgstr ""
 
-#: products/templates/products/products_details.html:42
-msgid "Подтвердите своё согласие с политикой конфендециальности"
-msgstr "Confirm your agreement with the  privacy policy"
-
-#: products/templates/products/products_details.html:71
-msgid "Я ознакомлен/а c политикой конфенденциальности и принимаю её "
-msgstr "I accept privacy policy"
-
-#: products/templates/products/products_details.html:72
+#: products/templates/products/products_details.html:34
 #, fuzzy
 #| msgid "Заказы"
 msgid "заказать"
 msgstr "Order"
 
-#: products/templates/products/products_details.html:76
+#: products/templates/products/products_details.html:37
 msgid "пожалуйста, зарегистрируйтесь,чтобы мы смогли оформить заказ"
 msgstr "please, register so, that we can place your order"
 
-#: products/templates/products/products_details.html:157
+#: products/templates/products/products_details.html:118
 msgid "Рассчитать"
 msgstr "Calculate"
 
-#: products/templates/products/products_details.html:170
+#: products/templates/products/products_details.html:131
 msgid "Размер"
 msgstr "Size"
 
-#: products/templates/products/products_details.html:171
+#: products/templates/products/products_details.html:132
 msgid "Дата изготовления"
 msgstr "Date of manufacture"
 
-#: products/templates/products/products_details.html:172
+#: products/templates/products/products_details.html:133
 msgid "Тираж(шт.)"
 msgstr "Quantity(pcs.)"
 
-#: products/templates/products/products_details.html:173
+#: products/templates/products/products_details.html:134
 msgid "Цена(руб.)"
 msgstr "Price(rub.)"
 
-#: products/templates/products/products_details.html:247
+#: products/templates/products/products_details.html:208
 msgid "у вас исчезает введенное значение тиража?"
 msgstr "do you lose the entered value?"
 
-#: products/templates/products/products_details.html:252
+#: products/templates/products/products_details.html:213
 msgid ""
 " значение тиража не слетает, результат выводится на экран  в строке  зеленым "
 "цветом, а поле ввода обнуляется для следующего расчёта"
@@ -414,11 +401,11 @@ msgstr ""
 "displayed on the screen in the line in green  color, and the input field is "
 "reset to zero for the next calculation"
 
-#: products/templates/products/products_details.html:264
+#: products/templates/products/products_details.html:225
 msgid "вы вводите один тираж, а на экране выводится другой?"
 msgstr "do you enter one value and the screen displays another?"
 
-#: products/templates/products/products_details.html:270
+#: products/templates/products/products_details.html:231
 msgid ""
 "Всё нормально, алгоритм ориентируется на min или max тиражи, то есть "
 "автоматически увеличивает тираж до минимального, или считает не больше "
@@ -473,29 +460,56 @@ msgstr "We are focused on the final quality result."
 msgid "Sign In"
 msgstr "Войти"
 
-#: products/templates/products/register.html:48
+#: products/templates/products/register.html:19
+#, fuzzy
+#| msgid "политика конфиденциальности"
+msgid "Необходимо согласие с политикой конфенденциальности"
+msgstr "It is necessary to agree with privacy policy"
+
+#: products/templates/products/register.html:55
 msgid "Войти"
 msgstr "Sign in"
 
-#: products/templates/products/register.html:49
+#: products/templates/products/register.html:56
 msgid "Забыли пароль ?"
 msgstr "Forget Password ?"
 
-#: products/templates/products/register.html:65
+
+#: products/templates/products/register.html:97
+msgid "Я ознакомлен/а c политикой конфенденциальности и принимаю её "
+msgstr "I accept privacy policy"
+
+#: products/templates/products/register.html:99
 msgid "Зарегистрироваться"
 msgstr "Register"
 
-#: products/templates/products/register.html:70
+#: products/templates/products/register.html:117
+#, fuzzy
+#| msgid "Set Password"
+msgid "Forgot Password?"
+msgstr "Установить пароль"
+
+#: products/templates/products/register.html:119
 msgid "Поменять Пароль"
 msgstr "Change Password"
 
-#: products/templates/products/register.html:82
+#: products/templates/products/register.html:131
 msgid "Выйти из системы"
 msgstr "Logout"
 
-#: products/templates/products/register.html:83
+#: products/templates/products/register.html:132
 msgid "На главную"
 msgstr "Home page"
+
+#: products/templates/products/register.html:201
+#, fuzzy
+#| msgid "политика конфиденциальности"
+msgid "Я принимаю политику конфенденциальности "
+msgstr "privacy policy"
+
+#: products/templates/products/register.html:208
+msgid "политика конфиденциальности"
+msgstr "privacy policy"
 
 #: products/templates/products/reset.html:6
 #: products/templates/products/reset.html:28

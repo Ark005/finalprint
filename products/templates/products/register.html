@@ -18,8 +18,6 @@
 
 
 
-
-
 <div class="container-fluid">
 
  {% block messages %}
@@ -67,7 +65,7 @@
   }
   #link:hover:before {
     display: block;
-    content:  {% trans '"Подтвердите своё согласие с политикой конфендециальности"' %};
+    content:  {% trans 'Подтвердите своё согласие с политикой конфендециальности' %};
     position: absolute;
     top: 0; left: 50%;
     transform: translate(-50%, calc(-100% - 10px));
@@ -173,7 +171,7 @@
      }
      #link:hover:before {
        display: block;
-       content:  {% trans '"Подтвердите своё согласие с политикой конфендециальности"' %};
+       content: " {% trans 'Подтвердите своё согласие с политикой конфендециальности' %}";
        position: absolute;
        top: 0; left: 50%;
        transform: translate(-50%, calc(-100% - 10px));
@@ -198,7 +196,7 @@
      #linkDa:checked ~ #link:after, #linkDa:checked ~ #link:before {
        content: none;
      }
-     </style>  {% trans 'Я принимаю политику конфенденциальности ' %}
+     </style>    {% trans 'Я ознакомлен/а c политикой конфенденциальности и принимаю её ' %}
      <input type="checkbox" id="linkDa"/><label for="linkDa"></label><br>
    
      <span id="link"><a class="btn btn-primary" style="background-color: #dd4b39;" href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}"><i class="fa fa-{{provider.name}}" id="social_icon"></i>{{provider.name}}</a> </span>
