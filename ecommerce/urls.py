@@ -66,6 +66,7 @@ urlpatterns += i18n_patterns(
     path('layout.html/', TemplateView.as_view(template_name="products/layout.html")),
     path('delivery.html/', TemplateView.as_view(template_name="products/delivery.html")),
     path('photo.html/', TemplateView.as_view(template_name="products/photo.html")),
+    path('hmo.html/', TemplateView.as_view(template_name="products/hmo.html")),
     path('terms&conditions.html/', TemplateView.as_view(template_name="products/terms&conditions.html")),
     path('privacy-policy.html/', TemplateView.as_view(template_name="products/privacy-policy.html")),
     

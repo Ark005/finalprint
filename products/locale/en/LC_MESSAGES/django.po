@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 22:53+0300\n"
+"POT-Creation-Date: 2021-06-27 21:28+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,26 +23,36 @@ msgid "Приветствуем Вас, друзья!"
 msgstr "Dear friends!"
 
 #: products/templates/products/about.html:41
+#, fuzzy
+#| msgid "Мы создали этот сервис"
 msgid "мы создали этот сервис"
 msgstr "we created this service"
 
 #: products/templates/products/about.html:41
+#, fuzzy
+#| msgid "для заказа полиграфической продукции из сотен готовых проектов."
 msgid "для выбора продуктов из готовых проектов"
-msgstr "to select products from ready-made projects"
+msgstr "to order polgraphic products from hundreds of ready-made projects."
 
 #: products/templates/products/about.html:41
 msgid "или создания новых вместе с консультантом"
 msgstr "or create new ones together with a consultant"
 
 #: products/templates/products/about.html:44
+#, fuzzy
+#| msgid " за 60 cекунд "
 msgid "После этого  за 60 cекунд "
 msgstr "After that, in 60 seconds"
 
 #: products/templates/products/about.html:50
+#, fuzzy
+#| msgid "найдите лучшее полиграфическое решение"
 msgid "найти лучшее полиграфическое решение"
 msgstr "find the best Product decisions"
 
 #: products/templates/products/about.html:50
+#, fuzzy
+#| msgid "узнайте цену  и закажите то, что вам нужно"
 msgid "узнать цену  и заказать то, что вам нужно"
 msgstr "find out the price and order what you need"
 
@@ -138,6 +148,10 @@ msgstr ""
 "screen, where we select the desired product in the selected category"
 
 #: products/templates/products/calc.html:68
+#, fuzzy
+#| msgid ""
+#| "попадаем на страничку с расчётом, где нам останется только ввести тираж, "
+#| "выбрать один из параметров  и посмотреть результат расчёта."
 msgid ""
 "и, наконец, попадаем на страничку с расчётом, где нам останется только "
 "ввести тираж, выбрать один из параметров  и посмотреть результат расчёта"
@@ -199,81 +213,105 @@ msgid "блокноты"
 msgstr "notepads"
 
 #: products/templates/products/home.html:56
-msgid "визитки"
+#, fuzzy
+#| msgid "визитки"
+msgid "• визитки"
 msgstr "business cards"
 
 #: products/templates/products/home.html:57
-msgid "журналы"
+#, fuzzy
+#| msgid "журналы"
+msgid "• журналы"
 msgstr "magazines"
 
 #: products/templates/products/home.html:58
-msgid "календари"
+#, fuzzy
+#| msgid "календари"
+msgid "• календари"
 msgstr "calendars"
 
 #: products/templates/products/home.html:59
-msgid "книги"
+#, fuzzy
+#| msgid "книги"
+msgid "• книги"
 msgstr "books"
 
 #: products/templates/products/home.html:60
-msgid "конверты"
+#, fuzzy
+#| msgid "конверты"
+msgid "• конверты"
 msgstr "envelopes"
 
 #: products/templates/products/home.html:61
-#: products/templates/products/rest.html:52
-msgid "коробки"
+#, fuzzy
+#| msgid "коробки"
+msgid "• коробки"
 msgstr "boxes"
 
 #: products/templates/products/home.html:62
-msgid "ленты"
+#, fuzzy
+#| msgid "ленты"
+msgid "• ленты"
 msgstr "ribbons fabric"
 
 #: products/templates/products/home.html:63
-#: products/templates/products/rest.html:54
-msgid "листовки"
+#, fuzzy
+#| msgid "листовки"
+msgid "• листовки"
 msgstr "flyers"
 
 #: products/templates/products/home.html:64
-#: products/templates/products/rest.html:57
-msgid "наклейки"
+#, fuzzy
+#| msgid "наклейки"
+msgid "• наклейки"
 msgstr "stickers"
 
 #: products/templates/products/home.html:65
-#: products/templates/products/rest.html:58
-msgid "пакеты"
+#, fuzzy
+#| msgid "пакеты"
+msgid "• пакеты"
 msgstr "paper bags"
 
 #: products/templates/products/home.html:66
-#: products/templates/products/rest.html:59
-msgid "папки"
+#, fuzzy
+#| msgid "папки"
+msgid "• папки"
 msgstr "folders"
 
 #: products/templates/products/home.html:67
-msgid "подарки"
+#, fuzzy
+#| msgid "подарки"
+msgid "• подарки"
 msgstr "gifts"
 
 #: products/templates/products/home.html:68
-#: products/templates/products/rest.html:60
-msgid "постеры"
-msgstr "posters"
-
-#: products/templates/products/home.html:69
-#: products/templates/products/rest.html:62
-msgid "приглашения"
-msgstr "invitations"
-
-#: products/templates/products/home.html:70
-#: products/templates/products/rest.html:63
-msgid "ролл апы"
-msgstr "roll-ups"
-
-#: products/templates/products/home.html:71
-#: products/templates/products/rest.html:61
-msgid "плейсметы"
+#, fuzzy
+#| msgid "плейсметы"
+msgid "• плейсметы"
 msgstr "placemets"
 
+#: products/templates/products/home.html:69
+#, fuzzy
+#| msgid "постеры"
+msgid "• постеры"
+msgstr "posters"
+
+#: products/templates/products/home.html:70
+#, fuzzy
+#| msgid "приглашения"
+msgid "• приглашения"
+msgstr "invitations"
+
+#: products/templates/products/home.html:71
+#, fuzzy
+#| msgid "ролл апы"
+msgid "• ролл апы"
+msgstr "roll-ups"
+
 #: products/templates/products/home.html:72
-#: products/templates/products/rest.html:67
-msgid "этикетки"
+#, fuzzy
+#| msgid "этикетки"
+msgid "• этикетки"
 msgstr "labels"
 
 #: products/templates/products/home.html:143
@@ -395,11 +433,9 @@ msgid ""
 " значение тиража не слетает, результат выводится на экран  в строке  зеленым "
 "цветом, а поле ввода обнуляется для следующего расчёта"
 msgstr ""
-"the value  does not fly off, the result is displayed on the screen in the "
-"line in green color, and the input field is reset to zero for the next "
-"calculationthe value of the quantity does not fly off, the result is "
-"displayed on the screen in the line in green  color, and the input field is "
-"reset to zero for the next calculation"
+"the value of the circulation does not fly off, the result is displayed on "
+"the screen in a greencolor, and the input field is reset to zero for the "
+"next calculation"
 
 #: products/templates/products/products_details.html:225
 msgid "вы вводите один тираж, а на экране выводится другой?"
@@ -460,54 +496,49 @@ msgstr "We are focused on the final quality result."
 msgid "Sign In"
 msgstr "Войти"
 
-#: products/templates/products/register.html:19
-#, fuzzy
-#| msgid "политика конфиденциальности"
-msgid "Необходимо согласие с политикой конфенденциальности"
-msgstr "It is necessary to agree with privacy policy"
-
-#: products/templates/products/register.html:55
+#: products/templates/products/register.html:53
 msgid "Войти"
 msgstr "Sign in"
 
-#: products/templates/products/register.html:56
+#: products/templates/products/register.html:54
 msgid "Забыли пароль ?"
 msgstr "Forget Password ?"
 
+#: products/templates/products/register.html:68
+#: products/templates/products/register.html:174
+#, fuzzy
+#| msgid "политика конфиденциальности"
+msgid "Подтвердите своё согласие с политикой конфендециальности"
+msgstr "It is necessary to agree with privacy policy"
 
-#: products/templates/products/register.html:97
+#: products/templates/products/register.html:95
+#: products/templates/products/register.html:199
 msgid "Я ознакомлен/а c политикой конфенденциальности и принимаю её "
 msgstr "I accept privacy policy"
 
-#: products/templates/products/register.html:99
+#: products/templates/products/register.html:97
 msgid "Зарегистрироваться"
 msgstr "Register"
 
-#: products/templates/products/register.html:117
+#: products/templates/products/register.html:115
 #, fuzzy
 #| msgid "Set Password"
 msgid "Forgot Password?"
 msgstr "Установить пароль"
 
-#: products/templates/products/register.html:119
+#: products/templates/products/register.html:117
 msgid "Поменять Пароль"
 msgstr "Change Password"
 
-#: products/templates/products/register.html:131
+#: products/templates/products/register.html:129
 msgid "Выйти из системы"
 msgstr "Logout"
 
-#: products/templates/products/register.html:132
+#: products/templates/products/register.html:130
 msgid "На главную"
 msgstr "Home page"
 
-#: products/templates/products/register.html:201
-#, fuzzy
-#| msgid "политика конфиденциальности"
-msgid "Я принимаю политику конфенденциальности "
-msgstr "privacy policy"
-
-#: products/templates/products/register.html:208
+#: products/templates/products/register.html:206
 msgid "политика конфиденциальности"
 msgstr "privacy policy"
 
@@ -521,9 +552,17 @@ msgstr "Установить пароль"
 msgid "визитные карточки"
 msgstr "business cards"
 
+#: products/templates/products/rest.html:52
+msgid "коробки"
+msgstr "boxes"
+
 #: products/templates/products/rest.html:53
 msgid "лента с печатью"
 msgstr "ribbon with a print"
+
+#: products/templates/products/rest.html:54
+msgid "листовки"
+msgstr "flyers"
 
 #: products/templates/products/rest.html:55
 msgid "меню"
@@ -532,6 +571,34 @@ msgstr "menu"
 #: products/templates/products/rest.html:56
 msgid "мобильные стенды"
 msgstr "roll ups"
+
+#: products/templates/products/rest.html:57
+msgid "наклейки"
+msgstr "stickers"
+
+#: products/templates/products/rest.html:58
+msgid "пакеты"
+msgstr "paper bags"
+
+#: products/templates/products/rest.html:59
+msgid "папки"
+msgstr "folders"
+
+#: products/templates/products/rest.html:60
+msgid "постеры"
+msgstr "posters"
+
+#: products/templates/products/rest.html:61
+msgid "плейсметы"
+msgstr "placemets"
+
+#: products/templates/products/rest.html:62
+msgid "приглашения"
+msgstr "invitations"
+
+#: products/templates/products/rest.html:63
+msgid "ролл апы"
+msgstr "roll-ups"
 
 #: products/templates/products/rest.html:64
 msgid "стаканчики бумажные"
@@ -544,6 +611,10 @@ msgstr "table tents"
 #: products/templates/products/rest.html:66
 msgid "флаеры"
 msgstr "flyers"
+
+#: products/templates/products/rest.html:67
+msgid "этикетки"
+msgstr "labels"
 
 #: products/templates/products/rest.html:83
 msgid "Вы  задаете нам вопросы,"
@@ -594,7 +665,42 @@ msgstr ""
 
 #: products/templates/products/technologies.html:15
 msgid "Технологии"
-msgstr ""
+msgstr "Technologies"
+
+#~ msgid ""
+#~ "Если окажется, что у нас нет еще готового решения, мы разработаем его по "
+#~ "вашим требованиям. При необходимости, обращайтесь к консультанту"
+#~ msgstr ""
+#~ "If it turns out that we don't have a ready-made solution yet, we will "
+#~ "develop it according to your requirements. If necessary, contact a "
+#~ "consultant"
+
+#~ msgid ""
+#~ "Если вы видите, что введенное значение тиража обнуляется, не волнуйтесь,"
+#~ msgstr "do you lose the entered value?"
+
+#~ msgid "Если вы вводите один тираж, а на экране выводится другой,"
+#~ msgstr "do you enter one value and the screen displays another?"
+
+#~ msgid ""
+#~ "не расстраивайтесь, алгоритм ориентируется на min или max тиражи, то есть "
+#~ "автоматически увеличивает тираж до минимального, или считает не больше "
+#~ "максимального "
+#~ msgstr ""
+#~ "Everything is fine, the algorithm focuses on min or max runs, that is, "
+#~ "automatically increases the run to the minimum, or counts no more than  "
+#~ "maximum"
+
+#~ msgid "как сделать заказ"
+#~ msgstr "how to place an order"
+
+#, fuzzy
+#~| msgid "политика конфиденциальности"
+#~ msgid "Я принимаю политику конфенденциальности "
+#~ msgstr "privacy policy"
+
+#~ msgid "назад"
+#~ msgstr "backwards"
 
 #~ msgid ""
 #~ "Обладая 25-летнем опытом и самым широким спектром технических "
