@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-27 21:28+0300\n"
+"POT-Creation-Date: 2021-06-27 22:08+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -208,111 +208,142 @@ msgstr ""
 msgid " Куда везём?"
 msgstr "Where"
 
+#: products/templates/products/hmo.html:23
+#, fuzzy
+#| msgid "как сделать заказ"
+msgid "Как сделать заказ"
+msgstr "how to place an order"
+
+#: products/templates/products/hmo.html:32
+#: products/templates/products/quality.html:32
+msgid ""
+"До печати мы проверяем техническую корректность файлов, а после отправляем "
+"на подпись, проверенный файл в формате pdf"
+msgstr ""
+"Before printing, we check the technical correctness of the files, and then "
+"we send  for signature, a verified pdf file"
+
+#: products/templates/products/hmo.html:33
+#: products/templates/products/quality.html:33
+msgid ""
+"\tВ работе мы используем самое передовое полиграфическое оборудование "
+"немецкой фирмы HEIDELBERG."
+msgstr ""
+"In our work, we use the most advanced printing equipment  of the German "
+"company HEIDELBERG."
+
+#: products/templates/products/hmo.html:34
+#: products/templates/products/quality.html:34
+msgid ""
+"\tПри печати специальными приборами в автоматическом режиме мы контролируем "
+"плотность краски, раскат краски по бумаге, сведение полиграфических крестов."
+msgstr ""
+"When printing with special devices in automatic mode, we control the  "
+"density of paint, the roll of paint on paper, the reduction of printing "
+"crosses."
+
+#: products/templates/products/hmo.html:35
+#: products/templates/products/quality.html:35
+msgid ""
+"На каждом этапе производства (во время печати и на финишных этапах обработки "
+"и отделки) мастер отслеживает качество работ."
+msgstr ""
+"At each stage of production (during printing and at the final stages of "
+"processing and finishing), the master monitors the quality of work."
+
+#: products/templates/products/hmo.html:36
+#: products/templates/products/quality.html:36
+msgid "\tМы ориентированы на конечный качественный результат.</p>"
+msgstr "We are focused on the final quality result."
+
 #: products/templates/products/home.html:55
 msgid "блокноты"
 msgstr "notepads"
 
 #: products/templates/products/home.html:56
-#, fuzzy
-#| msgid "визитки"
+
 msgid "• визитки"
-msgstr "business cards"
+msgstr "• business cards"
 
 #: products/templates/products/home.html:57
-#, fuzzy
-#| msgid "журналы"
+
 msgid "• журналы"
-msgstr "magazines"
+msgstr "• magazines"
 
 #: products/templates/products/home.html:58
-#, fuzzy
-#| msgid "календари"
+
 msgid "• календари"
-msgstr "calendars"
+msgstr "• calendars"
 
 #: products/templates/products/home.html:59
-#, fuzzy
-#| msgid "книги"
+
 msgid "• книги"
-msgstr "books"
+msgstr "• books"
 
 #: products/templates/products/home.html:60
-#, fuzzy
-#| msgid "конверты"
+
 msgid "• конверты"
-msgstr "envelopes"
+msgstr "• envelopes"
 
 #: products/templates/products/home.html:61
-#, fuzzy
-#| msgid "коробки"
+
 msgid "• коробки"
-msgstr "boxes"
+msgstr "• boxes"
 
 #: products/templates/products/home.html:62
-#, fuzzy
-#| msgid "ленты"
+
 msgid "• ленты"
-msgstr "ribbons fabric"
+msgstr "• ribbons fabric"
 
 #: products/templates/products/home.html:63
-#, fuzzy
-#| msgid "листовки"
+
 msgid "• листовки"
-msgstr "flyers"
+msgstr "• flyers"
 
 #: products/templates/products/home.html:64
-#, fuzzy
-#| msgid "наклейки"
+
 msgid "• наклейки"
-msgstr "stickers"
+msgstr "• stickers"
 
 #: products/templates/products/home.html:65
-#, fuzzy
-#| msgid "пакеты"
+
 msgid "• пакеты"
-msgstr "paper bags"
+msgstr "• paper bags"
 
 #: products/templates/products/home.html:66
-#, fuzzy
-#| msgid "папки"
+
 msgid "• папки"
-msgstr "folders"
+msgstr "• folders"
 
 #: products/templates/products/home.html:67
-#, fuzzy
-#| msgid "подарки"
+
 msgid "• подарки"
-msgstr "gifts"
+msgstr "• gifts"
 
 #: products/templates/products/home.html:68
-#, fuzzy
-#| msgid "плейсметы"
+
 msgid "• плейсметы"
-msgstr "placemets"
+msgstr "• placemets"
 
 #: products/templates/products/home.html:69
-#, fuzzy
-#| msgid "постеры"
+
 msgid "• постеры"
-msgstr "posters"
+msgstr "• posters"
 
 #: products/templates/products/home.html:70
-#, fuzzy
-#| msgid "приглашения"
+
 msgid "• приглашения"
-msgstr "invitations"
+msgstr "• invitations"
 
 #: products/templates/products/home.html:71
-#, fuzzy
-#| msgid "ролл апы"
+
 msgid "• ролл апы"
-msgstr "roll-ups"
+msgstr "• roll-ups"
 
 #: products/templates/products/home.html:72
-#, fuzzy
-#| msgid "этикетки"
+
 msgid "• этикетки"
-msgstr "labels"
+msgstr "• labels"
 
 #: products/templates/products/home.html:143
 msgid "поддержка"
@@ -365,9 +396,8 @@ msgid "о нас"
 msgstr "about us"
 
 #: products/templates/products/navbar.html:29
-#: products/templates/products/requirements.html:22
-msgid "требования к файлам"
-msgstr "file requirements"
+msgid "как сделать заказ"
+msgstr "how to place an order"
 
 #: products/templates/products/navbar.html:122
 msgid "Корзина"
@@ -455,43 +485,6 @@ msgstr ""
 msgid "Качество во главе угла"
 msgstr "Quality is at the forefront"
 
-#: products/templates/products/quality.html:32
-msgid ""
-"До печати мы проверяем техническую корректность файлов, а после отправляем "
-"на подпись, проверенный файл в формате pdf"
-msgstr ""
-"Before printing, we check the technical correctness of the files, and then "
-"we send  for signature, a verified pdf file"
-
-#: products/templates/products/quality.html:33
-msgid ""
-"\tВ работе мы используем самое передовое полиграфическое оборудование "
-"немецкой фирмы HEIDELBERG."
-msgstr ""
-"In our work, we use the most advanced printing equipment  of the German "
-"company HEIDELBERG."
-
-#: products/templates/products/quality.html:34
-msgid ""
-"\tПри печати специальными приборами в автоматическом режиме мы контролируем "
-"плотность краски, раскат краски по бумаге, сведение полиграфических крестов."
-msgstr ""
-"When printing with special devices in automatic mode, we control the  "
-"density of paint, the roll of paint on paper, the reduction of printing "
-"crosses."
-
-#: products/templates/products/quality.html:35
-msgid ""
-"На каждом этапе производства (во время печати и на финишных этапах обработки "
-"и отделки) мастер отслеживает качество работ."
-msgstr ""
-"At each stage of production (during printing and at the final stages of "
-"processing and finishing), the master monitors the quality of work."
-
-#: products/templates/products/quality.html:36
-msgid "\tМы ориентированы на конечный качественный результат.</p>"
-msgstr "We are focused on the final quality result."
-
 #: products/templates/products/register.html:13
 msgid "Sign In"
 msgstr "Войти"
@@ -541,6 +534,10 @@ msgstr "Home page"
 #: products/templates/products/register.html:206
 msgid "политика конфиденциальности"
 msgstr "privacy policy"
+
+#: products/templates/products/requirements.html:22
+msgid "требования к файлам"
+msgstr "file requirements"
 
 #: products/templates/products/reset.html:6
 #: products/templates/products/reset.html:28
@@ -690,9 +687,6 @@ msgstr "Technologies"
 #~ "Everything is fine, the algorithm focuses on min or max runs, that is, "
 #~ "automatically increases the run to the minimum, or counts no more than  "
 #~ "maximum"
-
-#~ msgid "как сделать заказ"
-#~ msgstr "how to place an order"
 
 #, fuzzy
 #~| msgid "политика конфиденциальности"
