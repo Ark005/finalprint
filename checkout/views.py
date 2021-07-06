@@ -117,7 +117,7 @@ def create_document_email(email_addr, name):
     with open('doc/order_total.json', 'r', encoding="utf-8") as file:
         order_total_info = json.loads(file.read())
 
-    email_addr = '005.ru'
+    email_addr = 'info@005.ru'
     doc = DocxTemplate("doc/шаблон.docx")
     info = {'name': 'Коммерческое предложение', 'Title': order_items_info['order_items'],
             'цена': order_total_info['order_total'],
@@ -171,16 +171,15 @@ def send_email(request):
         print(dict(request.POST), 'send')
 
         name = request.POST.get("name")
-        # sendMail('and444petr@gmail.com', 'av269van@gmail.com', "Тест",  )
+        # sendMail('a@gmail.com', 'a@gmail.com', "Тест",  )
         # send_mail('Subject here', 'Here is the message.', 'from@example.com',
-        # ['av269van@gmail.com'], fail_silently=False)
+        # ['a@gmail.com'], fail_silently=False)
 
         # email = request.POST.get('email', '')
 
         # Куда отправлять для теста
         email = request.user.email
-        #email = '005ark@gmail.com'
-      
+       
         #email = request.POST.get(email, '005ark@gmail.com')
       
         print(email)
@@ -191,15 +190,13 @@ def send_email(request):
 
         # template_name = 'emailattachment.html'
 
-        subject = 'Заказ от типографии 005.ru'
-        message = 'Спасибо, что Вы с нами'
+        subject = 'Коммерческое предложение от типографии 005.ru'
+        message = 'Спасибо за доверие'
+      
 
         # mail = EmailMessage(subject, message, settings.EMAIL_HOST_USER, [email], fail_silently=False)
 
-        mail = EmailMessage(subject, message, settings.EMAIL_HOST_USER, [email])
-
-
-
+        mail = EmailMessage(subject, message, settings.EMAIL_HOST_USER, [email],['005ark@gmail.com'])
 
 
         # filename, content and mimetype. filename is the name of the file attachment as it will appear 

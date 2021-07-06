@@ -168,7 +168,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'ru-en'
+LANGUAGE_CODE = 'ru-Ru'
 
 TIME_ZONE = 'UTC'
 
@@ -181,8 +181,10 @@ LOCALE_PATHS = (
     BASE_DIR + 'locale/', )
 
 LANGUAGES = [
+
+    ('ru', 'Russian'),
     ('en', 'English'),
-    ('ru', 'Russian')
+    
 ]
 
 
@@ -203,7 +205,7 @@ else:
 
 SITE_ID = 2
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/ru'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
     

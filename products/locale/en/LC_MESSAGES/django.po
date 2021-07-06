@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-27 22:08+0300\n"
+"POT-Creation-Date: 2021-07-06 13:39+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -153,19 +153,56 @@ msgstr ""
 #| "попадаем на страничку с расчётом, где нам останется только ввести тираж, "
 #| "выбрать один из параметров  и посмотреть результат расчёта."
 msgid ""
-"и, наконец, попадаем на страничку с расчётом, где нам останется только "
-"ввести тираж, выбрать один из параметров  и посмотреть результат расчёта"
+" попадаем на страничку с расчётом, где нам останется только ввести тираж, "
+"выбрать один из параметров  и посмотреть результат расчёта"
 msgstr ""
 "and finally, we get to the page with the calculation, where we will only "
 "have to enter the circulation, select one of the parameters and see the "
 "result of the calculation"
 
+#: products/templates/products/calc.html:73
+#, fuzzy
+#| msgid "у вас исчезает введенное значение тиража?"
+msgid "у вас исчезнет введенное значение тиража, не волнуйтесь"
+msgstr "do you lose the entered value?"
+
+#: products/templates/products/calc.html:75
+#: products/templates/products/products_details.html:213
+msgid ""
+" значение тиража не слетает, результат выводится на экран  в строке  зеленым "
+"цветом, а поле ввода обнуляется для следующего расчёта"
+msgstr ""
+"the value of the circulation does not fly off, the result is displayed on "
+"the screen in a greencolor, and the input field is reset to zero for the "
+"next calculation"
+
+#: products/templates/products/calc.html:77
+#, fuzzy
+#| msgid "вы вводите один тираж, а на экране выводится другой?"
+msgid "вы вводите один тираж, а на экране выводится другой,"
+msgstr "do you enter one value and the screen displays another?"
+
 #: products/templates/products/calc.html:79
+#, fuzzy
+#| msgid ""
+#| "Всё нормально, алгоритм ориентируется на min или max тиражи, то есть "
+#| "автоматически увеличивает тираж до минимального, или считает не больше "
+#| "максимального "
+msgid ""
+"всё нормально, алгоритм ориентируется на min или max тиражи, то есть "
+"автоматически увеличивает тираж до минимального, или считает не больше "
+"максимального "
+msgstr ""
+"Everything is fine, the algorithm focuses on min or max runs, that is, "
+"automatically increases the run to the minimum, or counts no more than  "
+"maximum"
+
+#: products/templates/products/calc.html:97
 msgid ""
 "после чего, нажимаем на кнопку \"заказать\" и переходим на страницу заказа"
 msgstr "after that, click on the \"order\" button and go to the order page"
 
-#: products/templates/products/calc.html:88
+#: products/templates/products/calc.html:106
 msgid ""
 "заполняем адрес доставки и вписываем своё имя в ячейку Name,чтобы получить "
 "счёт на почту, указанную при регистрации"
@@ -214,134 +251,120 @@ msgstr "Where"
 msgid "Как сделать заказ"
 msgstr "how to place an order"
 
-#: products/templates/products/hmo.html:32
-#: products/templates/products/quality.html:32
-msgid ""
-"До печати мы проверяем техническую корректность файлов, а после отправляем "
-"на подпись, проверенный файл в формате pdf"
-msgstr ""
-"Before printing, we check the technical correctness of the files, and then "
-"we send  for signature, a verified pdf file"
-
 #: products/templates/products/hmo.html:33
-#: products/templates/products/quality.html:33
 msgid ""
-"\tВ работе мы используем самое передовое полиграфическое оборудование "
-"немецкой фирмы HEIDELBERG."
+"Для расчета вам нужно в поле тираж ввести нужное количество экземпляров и "
+"нажать кнопку рассчитать."
 msgstr ""
-"In our work, we use the most advanced printing equipment  of the German "
-"company HEIDELBERG."
 
 #: products/templates/products/hmo.html:34
-#: products/templates/products/quality.html:34
-msgid ""
-"\tПри печати специальными приборами в автоматическом режиме мы контролируем "
-"плотность краски, раскат краски по бумаге, сведение полиграфических крестов."
-msgstr ""
-"When printing with special devices in automatic mode, we control the  "
-"density of paint, the roll of paint on paper, the reduction of printing "
-"crosses."
+#, fuzzy
+#| msgid "Мгновенно определяем тираж, цену и сроки производства."
+msgid "В таблице внизу появятся параметры расчета,сроки производства и цена."
+msgstr "Instantly determine the circulation, price and production time."
 
 #: products/templates/products/hmo.html:35
-#: products/templates/products/quality.html:35
 msgid ""
-"На каждом этапе производства (во время печати и на финишных этапах обработки "
-"и отделки) мастер отслеживает качество работ."
+"Таким образом,  из сотен готовых решений вы выбирте нужное вам и мгновенно "
+"получите техническое задание и расчет цены."
 msgstr ""
-"At each stage of production (during printing and at the final stages of "
-"processing and finishing), the master monitors the quality of work."
 
 #: products/templates/products/hmo.html:36
-#: products/templates/products/quality.html:36
-msgid "\tМы ориентированы на конечный качественный результат.</p>"
-msgstr "We are focused on the final quality result."
+#, fuzzy
+#| msgid ""
+#| " значение тиража не слетает, результат выводится на экран  в строке  "
+#| "зеленым цветом, а поле ввода обнуляется для следующего расчёта"
+msgid ""
+"Введенное значение тиража исчезнет. Не пугайтесь, оно появится в табличке "
+"внизу, а ячейка обнулится для следующего расчета."
+msgstr ""
+"the value of the circulation does not fly off, the result is displayed on "
+"the screen in a greencolor, and the input field is reset to zero for the "
+"next calculation"
+
+#: products/templates/products/hmo.html:37
+#, fuzzy
+#| msgid ""
+#| "Всё нормально, алгоритм ориентируется на min или max тиражи, то есть "
+#| "автоматически увеличивает тираж до минимального, или считает не больше "
+#| "максимального "
+msgid ""
+"Алгоритм ориентируется на min или max тиражи, то есть автоматически "
+"увеличивает тираж до минимального, или считает не больше максимального."
+msgstr ""
+"Everything is fine, the algorithm focuses on min or max runs, that is, "
+"automatically increases the run to the minimum, or counts no more than  "
+"maximum"
 
 #: products/templates/products/home.html:55
 msgid "блокноты"
 msgstr "notepads"
 
 #: products/templates/products/home.html:56
-
 msgid "• визитки"
 msgstr "• business cards"
 
 #: products/templates/products/home.html:57
-
 msgid "• журналы"
 msgstr "• magazines"
 
 #: products/templates/products/home.html:58
-
 msgid "• календари"
 msgstr "• calendars"
 
 #: products/templates/products/home.html:59
-
 msgid "• книги"
 msgstr "• books"
 
 #: products/templates/products/home.html:60
-
 msgid "• конверты"
 msgstr "• envelopes"
 
 #: products/templates/products/home.html:61
-
 msgid "• коробки"
 msgstr "• boxes"
 
 #: products/templates/products/home.html:62
-
 msgid "• ленты"
 msgstr "• ribbons fabric"
 
 #: products/templates/products/home.html:63
-
 msgid "• листовки"
 msgstr "• flyers"
 
 #: products/templates/products/home.html:64
-
 msgid "• наклейки"
 msgstr "• stickers"
 
 #: products/templates/products/home.html:65
-
 msgid "• пакеты"
 msgstr "• paper bags"
 
 #: products/templates/products/home.html:66
-
 msgid "• папки"
 msgstr "• folders"
 
 #: products/templates/products/home.html:67
-
 msgid "• подарки"
 msgstr "• gifts"
 
 #: products/templates/products/home.html:68
-
 msgid "• плейсметы"
 msgstr "• placemets"
 
 #: products/templates/products/home.html:69
-
 msgid "• постеры"
 msgstr "• posters"
 
 #: products/templates/products/home.html:70
-
 msgid "• приглашения"
 msgstr "• invitations"
 
 #: products/templates/products/home.html:71
-
 msgid "• ролл апы"
 msgstr "• roll-ups"
 
 #: products/templates/products/home.html:72
-
 msgid "• этикетки"
 msgstr "• labels"
 
@@ -383,7 +406,7 @@ msgstr "special offer"
 
 #: products/templates/products/home.html:196
 #: products/templates/products/home.html:197
-#: products/templates/products/navbar.html:38
+#: products/templates/products/navbar.html:52
 msgid "доставка"
 msgstr "delivery"
 
@@ -391,32 +414,32 @@ msgstr "delivery"
 msgid "Категории продуктов "
 msgstr "Product Categories"
 
-#: products/templates/products/navbar.html:17
+#: products/templates/products/navbar.html:31
 msgid "о нас"
 msgstr "about us"
 
-#: products/templates/products/navbar.html:29
+#: products/templates/products/navbar.html:43
 msgid "как сделать заказ"
 msgstr "how to place an order"
 
-#: products/templates/products/navbar.html:122
+#: products/templates/products/navbar.html:136
 msgid "Корзина"
 msgstr "Cart"
 
-#: products/templates/products/navbar.html:134
+#: products/templates/products/navbar.html:148
 #, fuzzy
 msgid "Заказы"
 msgstr "Orders"
 
-#: products/templates/products/navbar.html:135
+#: products/templates/products/navbar.html:149
 msgid "Регистрация"
 msgstr "Registraion"
 
-#: products/templates/products/navbar.html:138
+#: products/templates/products/navbar.html:152
 msgid "выход из системы"
 msgstr "logout"
 
-#: products/templates/products/navbar.html:147
+#: products/templates/products/navbar.html:161
 msgid "Войти / Регистрация"
 msgstr "Login / Registraion"
 
@@ -458,15 +481,6 @@ msgstr "Price(rub.)"
 msgid "у вас исчезает введенное значение тиража?"
 msgstr "do you lose the entered value?"
 
-#: products/templates/products/products_details.html:213
-msgid ""
-" значение тиража не слетает, результат выводится на экран  в строке  зеленым "
-"цветом, а поле ввода обнуляется для следующего расчёта"
-msgstr ""
-"the value of the circulation does not fly off, the result is displayed on "
-"the screen in a greencolor, and the input field is reset to zero for the "
-"next calculation"
-
 #: products/templates/products/products_details.html:225
 msgid "вы вводите один тираж, а на экране выводится другой?"
 msgstr "do you enter one value and the screen displays another?"
@@ -484,6 +498,43 @@ msgstr ""
 #: products/templates/products/quality.html:23
 msgid "Качество во главе угла"
 msgstr "Quality is at the forefront"
+
+#: products/templates/products/quality.html:32
+msgid ""
+"До печати мы проверяем техническую корректность файлов, а после отправляем "
+"на подпись, проверенный файл в формате pdf"
+msgstr ""
+"Before printing, we check the technical correctness of the files, and then "
+"we send  for signature, a verified pdf file"
+
+#: products/templates/products/quality.html:33
+msgid ""
+"\tВ работе мы используем самое передовое полиграфическое оборудование "
+"немецкой фирмы HEIDELBERG."
+msgstr ""
+"In our work, we use the most advanced printing equipment  of the German "
+"company HEIDELBERG."
+
+#: products/templates/products/quality.html:34
+msgid ""
+"\tПри печати специальными приборами в автоматическом режиме мы контролируем "
+"плотность краски, раскат краски по бумаге, сведение полиграфических крестов."
+msgstr ""
+"When printing with special devices in automatic mode, we control the  "
+"density of paint, the roll of paint on paper, the reduction of printing "
+"crosses."
+
+#: products/templates/products/quality.html:35
+msgid ""
+"На каждом этапе производства (во время печати и на финишных этапах обработки "
+"и отделки) мастер отслеживает качество работ."
+msgstr ""
+"At each stage of production (during printing and at the final stages of "
+"processing and finishing), the master monitors the quality of work."
+
+#: products/templates/products/quality.html:36
+msgid "\tМы ориентированы на конечный качественный результат.</p>"
+msgstr "We are focused on the final quality result."
 
 #: products/templates/products/register.html:13
 msgid "Sign In"

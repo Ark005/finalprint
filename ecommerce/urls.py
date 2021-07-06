@@ -24,6 +24,9 @@ from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.static import serve
 from django.contrib.sitemaps.views import sitemap
+user_language = 'ru'
+user_language = 'en'
+
 
 
 
@@ -44,6 +47,8 @@ urlpatterns = [
   
 ]
 urlpatterns += i18n_patterns(
+
+   
     path('', include('products.urls', namespace='mainapp')),
  	path('', include('checkout.urls', namespace='checkout')),
     path('post/ajax/product', postProduct, name = "post_product"),
