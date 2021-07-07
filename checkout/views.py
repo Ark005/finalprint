@@ -123,7 +123,16 @@ def create_document_email(email_addr, name):
             'цена': order_total_info['order_total'],
             'director': name, 'email ': email_addr}
     doc.render(info)
+    
     doc.save("doc/kp.docx")
+
+
+    """
+    import time
+    while True:
+        doc.save("doc/kp.docx")
+        time.sleep(50000)
+    """
 #     destination_document = Document('doc/document.docx')
 
     # with open('doc/document.xml') as f:
