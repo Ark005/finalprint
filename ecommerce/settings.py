@@ -205,7 +205,7 @@ else:
 
 SITE_ID = 2
 
-LOGIN_REDIRECT_URL = '/ru'
+LOGIN_REDIRECT_URL = '/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
     

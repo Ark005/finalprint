@@ -139,7 +139,7 @@
     
  <a data-role="button" data-inline="true" href="support.html"> 
       <div class="col-sm">
-        <h5 style="color:rgb(0, 0, 0)" class="card-title"><i class="fa fa-headset" ></i></h5></span>
+        <h5 style="color:rgb(0, 0, 0)" class="card-title"><i class="fas fa-phone-volume"></i></h5></span>
         <h5  style="color:rgb(36, 163, 60)" class="card-title"> {% trans 'поддержка' %}</h5></span>
         <h7 class="card-title"><span class="text-muted">  {% trans 'консультации при' %}<br> <i class="fas fa-shopping-cart"></i> {% trans 'онлайн заказе' %}</h7></span>
       </a>
@@ -222,9 +222,9 @@
 <div class="blog">
 
  <div class="container">
-  
+  <H2 class="text-center"  >{% trans 'Наши изделия ' %} </H2>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-  <H2 class="text-center"  >{% trans 'Категории продуктов ' %} </H2>
   <br>
  
  
@@ -268,9 +268,10 @@
 
        
 	    <div class="card-body">
-        <H6 STYLE="font-family: 'avenir next rounded std'"></H6>
-         <h5 class="card-title"><a href="products_by_category/{{ product.id }}"><p style="color:rgb(36, 163, 60)">{{ product.name }} ></p></a></h5>
-
+        <H7 STYLE="font-family: 'avenir next rounded std'"></H6>
+         <h5 class="card-title"><a href="products_by_category/{{ product.id }}"><p style="color:rgb(36, 163, 60)">{{ product.name }} ></p></a></h4>
+         
+     {{product.minprice}}
   
  <h6 class="card-title"><span class="text-muted"> {{ product.preview_text}}</span></a></h6>
          <p class="card-text">

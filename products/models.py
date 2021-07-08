@@ -107,7 +107,14 @@ class  Product(PolymorphicModel):
         return "{0:.2f}".format(round(a,0))
       
     
+    def minprice(self):
 
+        boxsize = self.boxsizes_set.get(value = self.box_size)
+      
+        a = float(boxsize.b*self.lim1**2+boxsize.h*self.lim1**1+boxsize.d)*self.p
+        
+       
+        return "{0:.2f}".format(round(a,0))
 
 
 class BoxType1(Product):
