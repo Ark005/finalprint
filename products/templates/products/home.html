@@ -11,8 +11,6 @@
 
 
 
-
-
 {% load crispy_forms_tags %}
 <div class="col-md-">
   <span class="icon"><i class="fa fa-search"></i></span>
@@ -216,7 +214,7 @@
           <br>
           <br>
         
-        
+             
     
 
 <div class="blog">
@@ -265,15 +263,15 @@
 	     </div>
 
 
-
+     
        
 	    <div class="card-body">
         <H7 STYLE="font-family: 'avenir next rounded std'"></H6>
          <h5 class="card-title"><a href="products_by_category/{{ product.id }}"><p style="color:rgb(36, 163, 60)">{{ product.name }} ></p></a></h4>
          
-     {{product.minprice}}
+     
   
- <h6 class="card-title"><span class="text-muted"> {{ product.preview_text}}</span></a></h6>
+ <h6 class="card-title"><span class="text-muted"> {{product.minprice}}</span></a></h6>
          <p class="card-text">
           
 	      

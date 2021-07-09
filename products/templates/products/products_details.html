@@ -27,11 +27,11 @@
     
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
-<center>
+
     {% if request.user.is_authenticated %}
     
   
-         <span id="link"><a href="{% url 'mainapp:cart' product.slug %}" class="btn  btn-lg  btn-success text-uppercase"> <i class="fas fa-shopping-cart"></i> {% trans 'заказать' %}  </a></span>
+       <span id="link"><a href="{% url 'mainapp:cart' product.slug %}" class="btn  btn-lg  btn-success text-uppercase"> <i class="fas fa-shopping-cart"></i> {% trans 'заказать' %}  </a></span> 
         
          {% else %}
         <!--    <h6 class="card-title"><span class="text-muted"><p style="color:rgb(229, 152, 147)">{% trans 'пожалуйста, зарегистрируйтесь,чтобы мы смогли оформить заказ' %}</p></span></a></h6> -->
@@ -39,12 +39,12 @@
         <p style="color:rgb(229, 152, 147)"><a href="/register.html"> <p style="color:rgb(229, 152, 147)"> {% trans 'пожалуйста, зарегистрируйтесь,чтобы мы смогли оформить заказ' %}</p></span></a></h6> 
          {% endif %}
     
-        </center>
+    
       </body> 
 
 
 
-
+ 
 
     <!-- slider-product.// -->
     </article> <!-- gallery-wrap .end// -->
@@ -80,22 +80,35 @@
 </ul>
 <p style="color:rgb(229, 152, 147)"> минимальный тираж-{{product.lim1}}; максимальный тираж- {{product.lim2}}</p></td>
 
+<p id="demo"></p>
+
+<script>
+a = {{product.lim1}} 
+b = {{product.boxsize.b}}
+h = {{boxsize.minprice}
+d = {{product.boxsize.d}} 
+
+document.getElementById("demo").innerHTML = h;
+</script>
+
+
+
 
    <!-- <h6 class="title mb-3">{{product.detail_text }}</h3> -->
 <div class="container-fluid">
     <form id="product-form">
         <div class="row">
             {% csrf_token %}
-            <div class="form-group col-1">
-
+            <div class="form-group col-11">
+              
             {% for field in form %}
             
                 <label class="col-4">{{ field.label }}</label>
           
-          <ul>     {{ field }}   </ul> 
+          <ul>   {{ field }}   </ul>  
               
             {% endfor %}
-            
+      
            
 <!--
 
@@ -137,8 +150,8 @@
   
    <head>
 
-    <center>
-
+   
+<center>
     <input type="submit" class= "btn btn-secondary btn-buy" value="{% trans 'Рассчитать' %}" />
 
 </center>
@@ -222,7 +235,7 @@
 
        
 
-         <li>
+        
 
            
            
@@ -403,6 +416,5 @@
     var res = e*x; }
     document.getElementById("result").innerHTML = res;
 </script> 
-
 
 
