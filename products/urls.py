@@ -13,12 +13,9 @@ urlpatterns = [
     # path('product/<slug>/', indexView, name='product'),!!!
 
     # детали продукта
-    # старая вьюха
-   
-
+ 
     #path('my_test', test_view, name='test_view'),
 
-    # новая вьюха
     # детали продукта
     path('product/<slug>/', new_indexView, name='product'),
     

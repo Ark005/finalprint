@@ -74,7 +74,7 @@ urlpatterns += i18n_patterns(
     path('hmo.html/', TemplateView.as_view(template_name="products/hmo.html")),
     path('terms&conditions.html/', TemplateView.as_view(template_name="products/terms&conditions.html")),
     path('privacy-policy.html/', TemplateView.as_view(template_name="products/privacy-policy.html")),
-    
+    path('products_details1.html/', TemplateView.as_view(template_name="products/products_details.html")),
     path(
         "robots.txt",
         TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),

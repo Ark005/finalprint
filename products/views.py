@@ -86,20 +86,6 @@ def postProduct(request):
 
 
 
-def checkNickName(request):
-    # request should be ajax and method should be GET.
-    if request.is_ajax and request.method == "GET":
-        # get the nick name from the client side.
-        nick_name = request.GET.get("nick_name", None)
-        # check for the nick name in the database.
-        if Friend.objects.filter(nick_name = nick_name).exists():
-            # if nick_name found return not valid new friend
-            return JsonResponse({"valid":False}, status = 200)
-        else:
-            # if nick_name not found, then user can create a new friend.
-            return JsonResponse({"valid":True}, status = 200)
-
-    return JsonResponse({}, status = 400)
 
 def foto():
     return render ("foto")
@@ -313,37 +299,7 @@ def postProduct(request):
     # some error occured
     return JsonResponse({"error": ""}, status=400)
 
-"""
 
-class FriendView(View):
-    form_class = FriendForm
-    template_name = "products/product_detail.html"
-
-    def get(self, *args, **kwargs):
-        form = self.form_class()
-        friends = Friend.objects.all()
-        return render(self.request, self.template_name, 
-            {"form": form, "friends": friends})
-
-    def post(self, *args, **kwargs):
-        # request should be ajax and method should be POST.
-        if self.request.is_ajax and self.request.method == "POST":
-            # get the form data
-            form = self.form_class(self.request.POST)
-            # save the data and after fetch the object in instance
-            if form.is_valid():
-                instance = form.save()
-                # serialize in new friend object in json
-                ser_instance = serializers.serialize('json', [ instance, ])
-                # send to client side.
-                return JsonResponse({"instance": ser_instance}, status=200)
-            else:
-                # some form errors occured.
-                return JsonResponse({"error": form.errors}, status=400)
-
-        # some error occured
-        return JsonResponse({"error": ""}, status=400)
-"""
 from .forms import SubproductForm
 
 from django.shortcuts import render, HttpResponse
@@ -387,13 +343,13 @@ def products_by_category(request, category):
     # product_list = Product.objects.all()
     product_list  = Product.objects.filter(category = category)
     product_filter = ProductFilter(request.GET, queryset=product_list)
-
+    return render(request, 'products/category_products.html', {'filter': product_filter})
 
 
     
     # product_filter = ProductFilter(request.GET, queryset=product_list)
 
-    return render(request, 'products/category_products.html', {'filter': product_filter})
+    
     # return render(request, 'products/category_products.html', {'products': product_list, 'filter': product_filter})
 
 
@@ -425,3 +381,50 @@ def show_subcategory(request):
 
 
 
+"""
+
+class FriendView(View):
+    form_class = FriendForm
+    template_name = "products/product_detail.html"
+
+    def get(self, *args, **kwargs):
+        form = self.form_class()
+        friends = Friend.objects.all()
+        return render(self.request, self.template_name, 
+            {"form": form, "friends": friends})
+
+    def post(self, *args, **kwargs):
+        # request should be ajax and method should be POST.
+        if self.request.is_ajax and self.request.method == "POST":
+            # get the form data
+            form = self.form_class(self.request.POST)
+            # save the data and after fetch the object in instance
+            if form.is_valid():
+                instance = form.save()
+                # serialize in new friend object in json
+                ser_instance = serializers.serialize('json', [ instance, ])
+                # send to client side.
+                return JsonResponse({"instance": ser_instance}, status=200)
+            else:
+                # some form errors occured.
+                return JsonResponse({"error": form.errors}, status=400)
+
+        # some error occured
+        return JsonResponse({"error": ""}, status=400)
+"""
+
+
+def checkNickName(request):
+    # request should be ajax and method should be GET.
+    if request.is_ajax and request.method == "GET":
+        # get the nick name from the client side.
+        nick_name = request.GET.get("nick_name", None)
+        # check for the nick name in the database.
+        if Friend.objects.filter(nick_name = nick_name).exists():
+            # if nick_name found return not valid new friend
+            return JsonResponse({"valid":False}, status = 200)
+        else:
+            # if nick_name not found, then user can create a new friend.
+            return JsonResponse({"valid":True}, status = 200)
+
+    return JsonResponse({}, status = 400)

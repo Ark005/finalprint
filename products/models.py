@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from datetime import datetime, timedelta
+import math
 
 
 # Category Model
@@ -96,7 +97,7 @@ class  Product(PolymorphicModel):
         boxsize = self.boxsizes_set.get(value = self.box_size)
       
         a = float(boxsize.b*self.tirazh**2+boxsize.h*self.tirazh**1+boxsize.d)*self.p
-        
+      
         if self.tirazh<self.lim1:
             self.tirazh=self.lim1
             
@@ -111,10 +112,19 @@ class  Product(PolymorphicModel):
 
         boxsize = self.boxsizes_set.get(value = self.box_size)
       
-        a = float(boxsize.b*self.lim1**2+boxsize.h*self.lim1**1+boxsize.d)*self.p
-        
+        a = float(boxsize.b*self.lim2**2+boxsize.h*self.lim2**1+boxsize.d)*self.p/self.lim2
+        a = abs(a)
        
-        return "{0:.2f}".format(round(a,0))
+        return "{0:.0f}".format(round(a,0))
+    
+    def maxprice(self):
+
+        boxsize = self.boxsizes_set.get(value = self.box_size)
+      
+        a = float(boxsize.b*self.lim1**2+boxsize.h*self.lim1**1+boxsize.d)*self.p/self.lim1
+        a = abs(a)
+       
+        return "{0:.0f}".format(round(a,0))
 
 
 class BoxType1(Product):
