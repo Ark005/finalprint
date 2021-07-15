@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-10 10:22+0300\n"
+"POT-Creation-Date: 2021-07-15 18:05+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,7 +56,12 @@ msgstr "find the best Product decisions"
 msgid "узнать цену  и заказать то, что вам нужно"
 msgstr "find out the price and order what you need"
 
-#: products/templates/products/base.html:182
+#: products/templates/products/base.html:44
+msgid "комфортная поддержка"
+msgstr "comfortable support"
+
+#: products/templates/products/base.html:137
+#: products/templates/products/base_old.html:180
 msgid "условия и положения"
 msgstr "terms and conditions"
 
@@ -112,7 +117,7 @@ msgid "у вас исчезает введенное значение тираж
 msgstr "do you lose the entered value?"
 
 #: products/templates/products/calc.html:75
-#: products/templates/products/products_details.html:242
+#: products/templates/products/products_details.html:248
 #: products/templates/products/products_details1.html:245
 msgid ""
 " значение тиража не слетает, результат выводится на экран  в строке  зеленым "
@@ -165,7 +170,8 @@ msgid "Продукты"
 msgstr "Products"
 
 #: products/templates/products/category_products.html:34
-#: products/templates/products/home.html:120
+#: products/templates/products/home.html:152
+#: products/templates/products/home_old.html:120
 msgid "искать"
 msgstr "find"
 
@@ -247,151 +253,211 @@ msgstr ""
 "maximum"
 
 #: products/templates/products/home.html:55
+#: products/templates/products/home_old.html:55
 msgid "блокноты"
 msgstr "notepads"
 
 #: products/templates/products/home.html:56
+#: products/templates/products/home_old.html:56
 msgid "• визитки"
 msgstr "• business cards"
 
 #: products/templates/products/home.html:57
+#: products/templates/products/home_old.html:57
 msgid "• журналы"
 msgstr "• magazines"
 
 #: products/templates/products/home.html:58
+#: products/templates/products/home_old.html:58
 msgid "• календари"
 msgstr "• calendars"
 
 #: products/templates/products/home.html:59
+#: products/templates/products/home_old.html:59
 msgid "• книги"
 msgstr "• books"
 
 #: products/templates/products/home.html:60
+#: products/templates/products/home_old.html:60
 msgid "• конверты"
 msgstr "• envelopes"
 
 #: products/templates/products/home.html:61
+#: products/templates/products/home_old.html:61
 msgid "• коробки"
 msgstr "• boxes"
 
 #: products/templates/products/home.html:62
+#: products/templates/products/home_old.html:62
 msgid "• ленты"
 msgstr "• ribbons fabric"
 
 #: products/templates/products/home.html:63
+#: products/templates/products/home_old.html:63
 msgid "• листовки"
 msgstr "• flyers"
 
 #: products/templates/products/home.html:64
+#: products/templates/products/home_old.html:64
 msgid "• наклейки"
 msgstr "• stickers"
 
 #: products/templates/products/home.html:65
+#: products/templates/products/home_old.html:65
 msgid "• пакеты"
 msgstr "• paper bags"
 
 #: products/templates/products/home.html:66
+#: products/templates/products/home_old.html:66
 msgid "• папки"
 msgstr "• folders"
 
 #: products/templates/products/home.html:67
+#: products/templates/products/home_old.html:67
 msgid "• подарки"
 msgstr "• gifts"
 
 #: products/templates/products/home.html:68
+#: products/templates/products/home_old.html:68
 msgid "• плейсметы"
 msgstr "• placemets"
 
 #: products/templates/products/home.html:69
+#: products/templates/products/home_old.html:69
 msgid "• постеры"
 msgstr "• posters"
 
 #: products/templates/products/home.html:70
+#: products/templates/products/home_old.html:70
 msgid "• приглашения"
 msgstr "• invitations"
 
 #: products/templates/products/home.html:71
+#: products/templates/products/home_old.html:71
 msgid "• ролл апы"
 msgstr "• roll-ups"
 
 #: products/templates/products/home.html:72
+#: products/templates/products/home_old.html:72
 msgid "• этикетки"
 msgstr "• labels"
 
-#: products/templates/products/home.html:143
-msgid "поддержка"
-msgstr "support"
+#: products/templates/products/home.html:187
+#: products/templates/products/home_old.html:244
+msgid "консультации"
+msgstr "consultations"
 
-#: products/templates/products/home.html:144
-msgid "консультации при"
-msgstr "advice when"
-
-#: products/templates/products/home.html:144
-msgid "онлайн заказе"
-msgstr "ordering online"
-
-#: products/templates/products/home.html:152
-msgid "высокое качество"
-msgstr "high quality"
-
-#: products/templates/products/home.html:153
+#: products/templates/products/home.html:199
+#: products/templates/products/home_old.html:153
+#: products/templates/products/home_old.html:256
 msgid "контроль качества"
 msgstr "quality control"
 
-#: products/templates/products/home.html:166
+#: products/templates/products/home.html:210
+#: products/templates/products/home_old.html:267
+msgid "расчёт  в 2 клика"
+msgstr "calculation in 2 clicks"
+
+#: products/templates/products/home.html:219
+#: products/templates/products/home_old.html:276
+msgid " для ресторанов"
+msgstr "for restaurants"
+
+#: products/templates/products/home.html:227
+msgid " как заказать"
+msgstr "how to place an order"
+
+#: products/templates/products/home_old.html:143
+msgid "поддержка"
+msgstr "support"
+
+#: products/templates/products/home_old.html:144
+msgid "консультации при"
+msgstr "advice when"
+
+#: products/templates/products/home_old.html:144
+msgid "онлайн заказе"
+msgstr "ordering online"
+
+#: products/templates/products/home_old.html:152
+msgid "высокое качество"
+msgstr "high quality"
+
+#: products/templates/products/home_old.html:166
 msgid "мгновенный расчёт"
 msgstr "instant calculation"
 
-#: products/templates/products/home.html:167
+#: products/templates/products/home_old.html:167
 msgid "очень простой калькулятор расчёта  в 2 клика"
 msgstr "very simple calculation in 2 clicks"
 
-#: products/templates/products/home.html:188
+#: products/templates/products/home_old.html:188
 msgid "для ресторанов"
 msgstr "for restaurants"
 
-#: products/templates/products/home.html:189
+#: products/templates/products/home_old.html:189
 msgid "специальное предложение"
 msgstr "special offer"
 
-#: products/templates/products/home.html:196
-#: products/templates/products/home.html:197
-#: products/templates/products/navbar.html:42
+#: products/templates/products/home_old.html:196
+#: products/templates/products/home_old.html:197
+#: products/templates/products/navbar.html:49
+#: products/templates/products/navbar1.html:68
 msgid "доставка"
 msgstr "delivery"
 
-#: products/templates/products/home.html:225
-msgid "Наши изделия "
-msgstr ""
+#: products/templates/products/home_old.html:284
+msgid " как сделать заказ"
+msgstr "how to place an order"
 
-#: products/templates/products/navbar.html:21
+#: products/templates/products/home_old.html:300
+msgid "Популярная продукция"
+msgstr "Popular products"
+
+#: products/templates/products/navbar.html:22
+msgid "типография комфорта"
+msgstr "comfort printing house"
+
+#: products/templates/products/navbar.html:27
+#: products/templates/products/navbar1.html:33
 msgid "о нас"
 msgstr "about us"
 
-#: products/templates/products/navbar.html:33
-msgid "как сделать заказ"
-msgstr "how to place an order"
+#: products/templates/products/navbar.html:40
 
-#: products/templates/products/navbar.html:115
+msgid "как заказать"
+msgstr "how make an order"
+
+#: products/templates/products/navbar.html:122
+#: products/templates/products/navbar1.html:89
 msgid "Корзина"
 msgstr "Cart"
 
-#: products/templates/products/navbar.html:127
+#: products/templates/products/navbar.html:134
+#: products/templates/products/navbar1.html:101
 #, fuzzy
 msgid "Заказы"
 msgstr "Orders"
 
-#: products/templates/products/navbar.html:128
+#: products/templates/products/navbar.html:135
+#: products/templates/products/navbar1.html:102
 msgid "Регистрация"
 msgstr "Registraion"
 
-#: products/templates/products/navbar.html:131
+#: products/templates/products/navbar.html:138
+#: products/templates/products/navbar1.html:105
 msgid "выход из системы"
 msgstr "logout"
 
-#: products/templates/products/navbar.html:140
+#: products/templates/products/navbar.html:147
+#: products/templates/products/navbar1.html:114
 msgid "Войти / Регистрация"
 msgstr "Login / Registraion"
+
+#: products/templates/products/navbar1.html:24
+#: products/templates/products/navbar1.html:30
+msgid "как сделать заказ"
+msgstr "how to place an order"
 
 #: products/templates/products/products_details.html:34
 #: products/templates/products/products_details1.html:37
@@ -407,26 +473,26 @@ msgstr "Order"
 msgid "пожалуйста, зарегистрируйтесь,чтобы мы смогли оформить заказ"
 msgstr "please, register so, that we can place your order"
 
-#: products/templates/products/products_details.html:81
+#: products/templates/products/products_details.html:93
 msgid "мин.тираж"
 msgstr "min."
 
-#: products/templates/products/products_details.html:81
+#: products/templates/products/products_details.html:93
 msgid "шт."
 msgstr "pcs."
 
-#: products/templates/products/products_details.html:81
+#: products/templates/products/products_details.html:93
 msgid "мaкс.тираж"
 msgstr "max."
 
-#: products/templates/products/products_details.html:122
-#: products/templates/products/products_details.html:237
+#: products/templates/products/products_details.html:129
+#: products/templates/products/products_details.html:243
 #: products/templates/products/products_details1.html:125
 #: products/templates/products/products_details1.html:240
 msgid "у вас исчезает введенное значение тиража?"
 msgstr "do you lose the entered value?"
 
-#: products/templates/products/products_details.html:127
+#: products/templates/products/products_details.html:134
 #: products/templates/products/products_details1.html:130
 #, fuzzy
 #| msgid ""
@@ -440,37 +506,37 @@ msgstr ""
 "the screen in a greencolor, and the input field is reset to zero for the "
 "next calculation"
 
-#: products/templates/products/products_details.html:146
+#: products/templates/products/products_details.html:154
 #: products/templates/products/products_details1.html:150
 msgid "Рассчитать"
 msgstr "Calculate"
 
-#: products/templates/products/products_details.html:156
+#: products/templates/products/products_details.html:162
 #: products/templates/products/products_details1.html:159
 msgid "Размер"
 msgstr "Size"
 
-#: products/templates/products/products_details.html:157
+#: products/templates/products/products_details.html:163
 #: products/templates/products/products_details1.html:160
 msgid "Дата изготовления"
 msgstr "Date of manufacture"
 
-#: products/templates/products/products_details.html:158
+#: products/templates/products/products_details.html:164
 #: products/templates/products/products_details1.html:161
 msgid "Тираж(шт.)"
 msgstr "Quantity(pcs.)"
 
-#: products/templates/products/products_details.html:159
+#: products/templates/products/products_details.html:165
 #: products/templates/products/products_details1.html:162
 msgid "Цена(руб.)"
 msgstr "Price(rub.)"
 
-#: products/templates/products/products_details.html:253
+#: products/templates/products/products_details.html:260
 #: products/templates/products/products_details1.html:257
 msgid "вы вводите один тираж, а на экране выводится другой?"
 msgstr "do you enter one value and the screen displays another?"
 
-#: products/templates/products/products_details.html:259
+#: products/templates/products/products_details.html:266
 #: products/templates/products/products_details1.html:263
 msgid ""
 "Всё нормально, алгоритм ориентируется на min или max тиражи, то есть "

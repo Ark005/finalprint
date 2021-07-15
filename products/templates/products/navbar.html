@@ -14,9 +14,15 @@
     <ul class="navbar-nav ml-auto">
 
 
-   
-     
 
+
+<!--
+
+      <li class="nav-item">
+        <a class="nav-link active" href="/calc.html/"><i class="fas fa-file"></i> {% trans 'типография комфорта' %}</a>
+      </li>
+     
+-->
       <li {% if request.path == 'contact' %}class="nav-item active"{% else %}class="nav-item"{% endif %}>
         <a class="nav-link active" href="/about.html/"><strong>{% trans 'о нас' %}</strong> <span class="sr-only">(current)</span></a>
       </li>
@@ -29,8 +35,9 @@
       <li class="nav-item">
        <!--  <a class="nav-link" href="/layout.html">дизайн</a>-->
       </li>
+
       <li class="nav-item">
-        <a class="nav-link active" href="/calc.html/"><i class="fas fa-file"></i> {% trans 'как сделать заказ' %}</a>
+        <a class="nav-link active" href="/calc.html/"><i class="fas fa-cart-plus"></i> {% trans 'как заказать' %}</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/"></a>

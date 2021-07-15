@@ -114,7 +114,7 @@ class  Product(PolymorphicModel):
       
         a = float(boxsize.b*self.lim2**2+boxsize.h*self.lim2**1+boxsize.d)*self.p/self.lim2
         a = abs(a)
-       
+
         return "{0:.0f}".format(round(a,0))
     
     def maxprice(self):
@@ -125,6 +125,24 @@ class  Product(PolymorphicModel):
         a = abs(a)
        
         return "{0:.0f}".format(round(a,0))
+    
+        
+    def min(self):
+
+        boxsize = self.boxsizes_set.get(value = self.box_size)
+
+        x = []
+        while x>0:
+            min = x(0) 
+            if x(i) < x(i+1):
+             min = x (i+1)
+      
+        a = float(boxsize.b*self.lim1**2+boxsize.h*self.lim1**1+boxsize.d)*self.p/self.lim1
+        a = abs(a)
+       
+        return "{0:.0f}".format(round(min,0))
+
+
 
 
 class BoxType1(Product):
