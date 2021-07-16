@@ -136,6 +136,9 @@
 
 
 -->
+
+
+
 <br><br><br>
 
 <div class="container">
@@ -275,7 +278,7 @@
 
        <a href="products_by_category/{{ product.id }}">
          {% thumbnail product.mainimage "300" as im %}
-           <img align="center" src="{{ im.url }}"  class="img-fluid">
+           <img align="center" src="{{ im.url }}"  class="img-fluid" title="нажмите и увидите варианты">
      {% endthumbnail %}
        </a>
       </div>
@@ -290,7 +293,7 @@
    
  
 <h6 class="card-title"><span class="text-muted"> {{ product.preview_text}}</span></a></h6>
-<!--<center>	<span class="price-new">от  {{product.minprice}} руб.</span> </center>-->
+<center>	<span class="price-new">от  {{product.price}} руб.</span> </center>
 
         <p class="card-text">
          

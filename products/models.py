@@ -9,6 +9,7 @@ class Category(models.Model):
     name = models.CharField(max_length=300)
     primaryCategory = models.BooleanField(default=False)
     mainimage = models.ImageField(upload_to='products/', blank=True)
+    price = models.FloatField(default = None, null=True)
     preview_text = models.TextField(max_length= 60 , verbose_name='Preview Text', blank=True, null=True)
     
 
