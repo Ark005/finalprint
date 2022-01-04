@@ -27,7 +27,34 @@ from django.contrib.sitemaps.views import sitemap
 user_language = 'ru'
 user_language = 'en'
 
+from django.urls import re_path
+from django.views.static import serve
 
+from django.conf import settings
+import os
+from django.views.static import serve as staticserve
+
+
+
+
+from django.conf.urls import url, include
+from cart.models import Cart
+from rest_framework import routers, serializers, viewsets
+
+# Сериализаторы описывают представление данных.
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Cart
+        fields = ['quantity','purchased']
+
+# Наборы представлений описывают поведение представлений.
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = Cart.objects.all()
+    serializer_class = UserSerializer
+
+# Роутеры позволяют быстро и просто сконфигурировать адреса.
+router = routers.DefaultRouter()
+router.register(r'users', UserViewSet)
 
 
 from products.views import (
@@ -40,10 +67,12 @@ from products.views import (
 from django.conf.urls import url, include
 
 urlpatterns = [
+   
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
  	path('i18n/', include('django.conf.urls.i18n')),
-
+    url(r'^api-auth/', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
   
 ]
 urlpatterns += i18n_patterns(
@@ -51,6 +80,7 @@ urlpatterns += i18n_patterns(
    
     path('', include('products.urls', namespace='mainapp')),
  	path('', include('checkout.urls', namespace='checkout')),
+    
     path('post/ajax/product', postProduct, name = "post_product"),
     path('get/ajax/validate/nickname', checkNickName, name = "validate_nickname"),
     path('admin/', admin.site.urls),
@@ -79,6 +109,7 @@ urlpatterns += i18n_patterns(
         "robots.txt",
         TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),
     ),
+    
    # path(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     
 )
@@ -99,3 +130,36 @@ from django.conf import settings
 import os
 from django.views.static import serve as staticserve
 
+
+'''
+
+from django.conf.urls import url, include
+from cart.models import Cart
+from rest_framework import routers, serializers, viewsets
+
+# Сериализаторы описывают представление данных.
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Cart
+        fields = ['quantity','purchased']
+
+# Наборы представлений описывают поведение представлений.
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = Cart.objects.all()
+    serializer_class = UserSerializer
+
+# Роутеры позволяют быстро и просто сконфигурировать адреса.
+router = routers.DefaultRouter()
+router.register(r'users', UserViewSet)
+
+# Привяжите конфигурацию URL, используя роутеры.
+# Так же мы предоставляем URL для авторизации в браузере.
+urlpatterns = [
+    url(r'^', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+]
+urlpatterns = [
+    url(r'^', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+]
+'''

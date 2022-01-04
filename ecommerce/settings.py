@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['*']
@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
     'whitenoise.runserver_nostatic',
     'django.contrib.admindocs',
+    'rest_framework',
 
     #'allauth.socialaccount.providers.vk',
    #allauth.socialaccount.providers.facebook',
@@ -264,6 +265,15 @@ ACCOUNT_UNIQUE_EMAIL=True
 ACCOUNT_USERNAME_MIN_LENGTH = 5
 ACCOUNT_USERNAME_REQUIRED =True
 ACCOUNT_USERNAME_VALIDATORS = None
+
+
+REST_FRAMEWORK = {
+    # Используйте стандартные Django  `django.contrib.auth` разрешения,
+    # или разрешите доступ только для чтения для неаутентифицированных пользователей.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 
 #Account adapters
