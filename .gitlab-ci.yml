@@ -7,7 +7,7 @@ deploy to dev:
   retry: 2
   only:
     refs:
-      - master
+      - main
   script:
     - ls -lah
     # - docker compose stop || true
