@@ -13,6 +13,7 @@ deploy to dev:
     # - docker compose stop || true
     # - docker compose rm || true
     # - docker system prune || true
+    - cd ./docker
     - docker compose build
     - docker compose up -d
     - sleep 5
