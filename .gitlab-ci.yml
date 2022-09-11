@@ -1,0 +1,20 @@
+stages:
+  - 005_dev
+
+deploy to dev:
+  stage: 005_dev
+  when: always
+  retry: 2
+  only:
+    refs:
+      - master
+  script:
+    - ls -lah
+    # - docker compose stop || true
+    # - docker compose rm || true
+    # - docker system prune || true
+    - docker compose build
+    - docker compose up -d
+    - sleep 5
+  tags:
+    - 005-dev
