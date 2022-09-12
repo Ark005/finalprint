@@ -15,20 +15,20 @@ services:
       - 5432:5432
 
   ## web container, with django project and revers proxy (nginx)
-  nginx:
-    restart: always
-    build: ./nginx
-    ports:
-      - 80:80
-      - 443:443
-    # volumes:
-    #   - /data/project:/005
-    networks:
-      - nginx_network
-      - web_network
-    depends_on:
-      - pgsql
-      - python
+  # nginx:
+  #   restart: always
+  #   build: ./nginx
+  #   ports:
+  #     - 80:80
+  #     - 443:443
+  #   # volumes:
+  #   #   - /data/project:/005
+  #   networks:
+  #     - nginx_network
+  #     - web_network
+  #   depends_on:
+  #     - pgsql
+  #     - python
   
   python:
     restart: always
