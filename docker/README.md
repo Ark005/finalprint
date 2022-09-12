@@ -1,9 +1,9 @@
 ### Создаем новый vps для размещения docker ###
 
 1. Учетные данные для подключения:
-ip: ```207.154.195.66```
+ip: ```188.225.77.40```
 login: ```root```
-passwd: ```zykE2WnabbHEm5YwLTq2w3h8YWLoEeUM```
+passwd: ```ssh key```
 
 Portainer - программа для управления docker
 ip: ```207.154.195.66:50001```
