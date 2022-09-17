@@ -12,9 +12,9 @@ deploy to dev:
     - rsync -av --no-perms --no-owner --no-group --exclude ".git*" $CI_PROJECT_DIR/ /data/project/
     - ls -lah /data/project
     - cd ./docker
-    # - docker compose stop || true
-    # - docker compose rm || true
-    # - docker system prune || true
+    - docker compose stop || true
+    - docker compose rm || true
+    - docker system prune || true
     - chmod -R 777 /data/project/
     - docker compose build
     - docker compose up -d
