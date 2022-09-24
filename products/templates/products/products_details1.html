@@ -1,5 +1,3 @@
-   
-
 
 {% extends "products/base.html" %}
 {% load thumbnail %}
@@ -12,7 +10,11 @@
 
 {% for product in products %}
 
-
+<script>
+    var str='{{product.tirazh}} ';
+   
+    document.getElementById("demo").innerHTML =  str.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+</script>
 
 <div class="container my-5">
     
@@ -32,15 +34,26 @@
 </head>
 
     {% if request.user.is_authenticated %}
+
+<br>
+
+
+
+
+      
+
+        <br>
     
   <center>
-       <span id="link"><a href="{% url 'mainapp:cart' product.slug %}" class="btn  btn-lg  btn-success text-uppercase"> <i class="fas fa-shopping-cart"></i> {% trans 'заказать' %}  </a></span> 
- </center>    
+       <span id="link"><a href="{% url 'mainapp:cart' product.slug %}" class="btn  btn-lg  btn-outline-secondary text-uppercase"> <i class="fas fa-shopping-cart"></i> {% trans 'заказать' %}  </a></span> 
+    </center>    
          {% else %}
         <!--    <h6 class="card-title"><span class="text-muted"><p style="color:rgb(229, 152, 147)">{% trans 'пожалуйста, зарегистрируйтесь,чтобы мы смогли оформить заказ' %}</p></span></a></h6> -->
         
         <p style="color:rgb(229, 152, 147)"><a href="/register.html"> <p style="color:rgb(229, 152, 147)"> {% trans 'пожалуйста, зарегистрируйтесь,чтобы мы смогли оформить заказ' %}</p></span></a></h6> 
          {% endif %}
+
+
     
     
       </body> 
@@ -74,34 +87,44 @@
     </td>   
 <ul>
   <!-- <span class="price h3 text-warning">  --> 
-    <h3 class="title mb-3"> {{ product.name }}</h3>
+ <center>  <h3 class="title mb-3"> {{ product.name }}</h3> </center> 
 
 </ul>
 <ul>
-    <div onmouseover="this.style.color='green';" onmouseout="this.style.color='black';">{{product.detail_text }}</div>
+    <div onmouseover="this.style.color='black';" onmouseout="this.style.color='black';">{{product.detail_text }}</div>
  
 </ul>
-<p style="color:rgb(229, 152, 147)"> минимальный тираж-{{product.lim1}}; максимальный тираж- {{product.lim2}}</p></td>
 
+<p id="demo"></p>
 
+<script>
+a = {{product.lim1}} 
+b = {{product.boxsize.b}}
+h = {{boxsize.minprice}
+d = {{product.boxsize.d}} 
 
-
-<center><p style="color:rgb(229, 152, 147)"> 	<span class="price-new">от<br>₽ {{product.minprice}}</span> </center>
-
-<br>
-   <h6 class="title mb-3">{{product.detail_text }}</h3> 
+document.getElementById("demo").innerHTML = a;
+</script>
+<!--
+<p style="color:rgb(229, 152, 147)">  {% trans 'мин.тираж' %}- {{product.lim1}} {% trans 'шт.' %}.(<span class="price-new">{{product.maxprice}} ₽/шт.); {% trans 'мaкс.тираж' %}- {{product.lim2}} шт. ({{product.minprice}} ₽/шт.)</span></p></td>
+-->
+<center>
+<p style="color:rgb(229, 152, 147)"></p> {% trans 'мин.тираж' %}- {{product.lim1}} {% trans 'шт.' %}.(<span class="price-new">{{product.maxprice}} ₽/шт.); </p>
+    {% trans 'мaкс.тираж' %}- {{product.lim2}} шт. ({{product.minprice}} ₽/шт.)</span></p></td>
+</center>
+   <!-- <h6 class="title mb-3">{{product.detail_text }}</h3> -->
 <div class="container-fluid">
     <form id="product-form">
         <div class="row">
             {% csrf_token %}
             <div class="form-group col-11">
-              
+        
             {% for field in form %}
-            
+            <center>    
                 <label class="col-4">{{ field.label }}</label>
-          
+           
           <ul>   {{ field }}   </ul>  
-              
+        </center>
             {% endfor %}
       
            
@@ -116,18 +139,33 @@
             
             <input type="hidden" id="custId" name="product_id" value="{{ product.id }}">
             
-           
-            
-           
         </div> 
+        <center>
+            <span id="link"><a href="{% url 'mainapp:cart' product.slug %}" class="btn  btn-lg  btn-outline-secondary text-uppercase"> <i class="fas fa fa-calculator"></i> {% trans 'Рассчитать' %}  </a></span> 
+         </center> 
+<!--
+        <center>
+            <input type="submit" class="btn btn-outline-secondary btn-buy" value="{% trans 'Рассчитать' %}" />
+        
+            <center> -->
 
+                <br>
+                <script>
+                    var str='{{product.tirazh}} ';
+                   
+                    document.getElementById("demo").innerHTML =  str.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+    </script>
+        <tr> 
+            <center>   <td><h3><p >{{product.calc}} ₽ за {{product.tirazh}} шт.</p></h3></td>  </center> 
+         </tr>
+         <center>
                 
-<p><a href="javascript:flipflop('animals');">{% trans 'у вас исчезает введенное значение тиража?' %}</a></p> 
-         
+<p><a style="color:rgb(229, 152, 147)" href="javascript:flipflop('animals');">{% trans 'у вас исчезает введенное значение тиража?' %}</a></p> 
+</center>
 <ul id="animals" style="display: none;">
   <li><div id="browse_app">
 
-    {% trans ' значение тиража не слетает, результат выводится в таблице ниже  зеленым цветом, а поле ввода обнуляется для следующего расчёта' %}
+    {% trans ' значение тиража не слетает, результат выводится в таблице ниже , а поле ввода обнуляется для следующего расчёта' %}
    
 
 </li>
@@ -146,12 +184,8 @@
    <head>
 
    
-<center>
-    <input type="submit" class= "btn btn-secondary btn-buy" value="{% trans 'Рассчитать' %}" />
-
-</center>
-
-<a href="/products_details1.html/" class="link-secondary">S</a>
+   
+  
     <div class="container-fluid">
         <table class="table table-striped table-sm" id="my_products">  
             <thead>
@@ -167,7 +201,7 @@
             <tbody>
 
 
-               
+
     <!--
               
     
@@ -183,13 +217,13 @@
 
     
             <tr>
-
-                <td><p  style="color:rgb(36, 163, 60)">{{product.box_size}}</p></td>
-                <td><p  style="color:rgb(36, 163, 60)">{{product.timeplus}}</p></td>
-                <td><p style="color:rgb(36, 163, 60)">{{product.tirazh}}</p></td>
-                <td><p style="color:rgb(36, 163, 60)">{{product.calc}}</p></td>
+                
+                <td><p  >{{product.box_size}}</p></td>
+                <td><p  >{{product.timeplus}}</p></td>
+                <td><p >{{product.tirazh}}</p></td>
+                <td><p >{{product.calc}}</p></td>
             
-
+           
             </tr>
     
             
@@ -414,5 +448,3 @@
 </script> 
 
 
-
--->

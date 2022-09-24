@@ -40,7 +40,7 @@
         <br>
     
   <center>
-       <span id="link"><a href="{% url 'mainapp:cart' product.slug %}" class="btn  btn-lg  btn-success text-uppercase"> <i class="fas fa-shopping-cart"></i> {% trans 'заказать' %}  </a></span> 
+       <span id="link"><a href="{% url 'mainapp:cart' product.slug %}" class="btn  btn-lg  btn-secondary text-uppercase"> <i class="fas fa-shopping-cart"></i> {% trans 'заказать' %}  </a></span> 
     </center>    
          {% else %}
         <!--    <h6 class="card-title"><span class="text-muted"><p style="color:rgb(229, 152, 147)">{% trans 'пожалуйста, зарегистрируйтесь,чтобы мы смогли оформить заказ' %}</p></span></a></h6> -->
@@ -82,11 +82,11 @@
     </td>   
 <ul>
   <!-- <span class="price h3 text-warning">  --> 
-    <h3 class="title mb-3"> {{ product.name }}</h3>
+  <center> <h3 class="title mb-3"> {{ product.name }}</h3></center> 
 
 </ul>
 <ul>
-    <div onmouseover="this.style.color='green';" onmouseout="this.style.color='black';">{{product.detail_text }}</div>
+    <div onmouseover="this.style.color='black';" onmouseout="this.style.color='black';">{{product.detail_text }}</div>
  
 </ul>
 
@@ -101,8 +101,11 @@ d = {{product.boxsize.d}}
 document.getElementById("demo").innerHTML = a;
 </script>
 
-<p style="color:rgb(229, 152, 147)">  {% trans 'мин.тираж' %}- {{product.lim1}} {% trans 'шт.' %}.(<span class="price-new">{{product.maxprice}} ₽/шт.); {% trans 'мaкс.тираж' %}- {{product.lim2}} шт. ({{product.minprice}} ₽/шт.)</span></p></td>
+<center>
 
+<p style="color:rgb(0, 0, 0
+)">  {% trans 'мин.тираж' %}- {{product.lim1}} {% trans 'шт.' %}.(<span class="price-new">{{product.maxprice}} ₽/шт.);<p>{% trans 'мaкс.тираж' %}- {{product.lim2}} шт. ({{product.minprice}} ₽/шт.)</span></p></td>
+</center>
 
    <!-- <h6 class="title mb-3">{{product.detail_text }}</h3> -->
 <div class="container-fluid">
@@ -112,11 +115,11 @@ document.getElementById("demo").innerHTML = a;
             <div class="form-group col-11">
               
             {% for field in form %}
-            
+            <center>
                 <label class="col-4">{{ field.label }}</label>
           
           <ul>   {{ field }}   </ul>  
-              
+        </center>
             {% endfor %}
       
            
@@ -133,19 +136,30 @@ document.getElementById("demo").innerHTML = a;
             
         </div> 
 
+      <!--  
+  <center>
+    <span id="link"><a class="btn  btn-lg  btn-outline-secondary text-uppercase"> <i class="fas fa-shopping-cart"></i> заказать </a></span> 
+ </center> 
+--> 
         <center>
-            <input type="submit" class="btn btn-outline-danger btn-buy" value="{% trans 'Рассчитать' %}" />
-        
+
+            <input type="submit"  class="btn btn-lg btn-outline-secondary btn-buy"  value="ПОСЧИТАТЬ СТОИМОСТЬ ТИРАЖА" 
+            
             <center>
 
-                <br>
+                <br><br>
+
+
+     
 
         <tr> 
-            <center>   <td><h3><p style="color:rgb(235, 95, 14)">{{product.calc}} руб. за {{product.tirazh}} шт.</p></h3></td>  </center> 
-         </tr>
+            <center>   <td><h3><p style="color:rgb(0, 0, 0)">{{product.calc}} руб. за {{product.tirazh}} шт.</p></h3></td>  </center> 
+         
+       
+        </tr>
 
-                
-<p><a href="javascript:flipflop('animals');">{% trans 'у вас исчезает введенное значение тиража?' %}</a></p> 
+         <p><a style="color:rgb(229, 152, 147)" href="javascript:flipflop('animals');">{% trans 'у вас исчезает введенное значение тиража?' %}</a></p>             
+
          
 <ul id="animals" style="display: none;">
   <li><div id="browse_app">
@@ -155,7 +169,13 @@ document.getElementById("demo").innerHTML = a;
 
 </li>
 
+<li><div id="browse_app">
 
+  в случае, если вы ввели число не попадающие в диапазон между минимальным и макисмальным тиражом,
+    рассчет будет произведен по одной из границ.Алгоритм ориентируется на min или max тиражи, 
+    то есть автоматически увеличивает тираж до минимального, или считает не больше максимального.
+
+</li>
   
 <!--</div>  подчеркивание на всю страницу --> 
 
@@ -203,10 +223,10 @@ document.getElementById("demo").innerHTML = a;
     
             <tr>
 
-                <td><p  style="color:rgb(229, 152, 147)">{{product.box_size}}</p></td>
-                <td><p  style="color:rgb(36, 163, 60)">{{product.timeplus}}</p></td>
-                <td><p style="color:rgb(36, 163, 60)">{{product.tirazh}}</p></td>
-                <td><p style="color:rgb(229, 152, 147)">{{product.calc}}</p></td>
+                <td><p  style="color:rgb(0, 0, 0)">{{product.box_size}}</p></td>
+                <td><p  style="color:rgb(0, 0, 0)">{{product.timeplus}}</p></td>
+                <td><p style="color:rgb(0, 0, 0)">{{product.tirazh}}</p></td>
+                <td><p style="color:rgb(0, 0, 0)">{{product.calc}}</p></td>
             
 
             </tr>

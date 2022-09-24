@@ -76,6 +76,10 @@ class  Product(PolymorphicModel):
     p = models.FloatField(default = None, null=True)
     box_size = models.CharField(max_length=50)
     
+    
+  
+     
+    
 
     def timeplus(self):
 
@@ -92,22 +96,24 @@ class  Product(PolymorphicModel):
     # не существует в базе данных, то возвращает новый инстанс этой модели, 
     # который нужно будет потом сохранить.
 
-
     def calc(self):
 
         boxsize = self.boxsizes_set.get(value = self.box_size)
       
         a = float(boxsize.b*self.tirazh**2+boxsize.h*self.tirazh**1+boxsize.d)*self.p
       
+        a = int (a//1)
+        a = '{0:,}'.format(a).replace(',', ' ')
+
+
         if self.tirazh<self.lim1:
             self.tirazh=self.lim1
             
         elif self.tirazh>self.lim2:
             self.tirazh=self.lim2
 
-       
-        return "{0:.2f}".format(round(a,0))
       
+        return a
     
     def minprice(self):
 
@@ -116,17 +122,20 @@ class  Product(PolymorphicModel):
         a = float(boxsize.b*self.lim2**2+boxsize.h*self.lim2**1+boxsize.d)*self.p/self.lim2
         a = abs(a)
 
-        return "{0:.0f}".format(round(a,0))
-    
+        a = int (a//1)
+        a = '{0:,}'.format(a).replace(',', ' ')
+        return a
+        
     def maxprice(self):
 
         boxsize = self.boxsizes_set.get(value = self.box_size)
       
         a = float(boxsize.b*self.lim1**2+boxsize.h*self.lim1**1+boxsize.d)*self.p/self.lim1
         a = abs(a)
-       
-        return "{0:.0f}".format(round(a,0))
-    
+        a = int (a//1)
+        a = '{0:,}'.format(a).replace(',', ' ')
+        return a
+
         
     def min(self):
 
@@ -140,8 +149,10 @@ class  Product(PolymorphicModel):
       
         a = float(boxsize.b*self.lim1**2+boxsize.h*self.lim1**1+boxsize.d)*self.p/self.lim1
         a = abs(a)
-       
-        return "{0:.0f}".format(round(min,0))
+        a = int (a//1)
+        a = '{0:,}'.format(a).replace(',', ' ')
+        return a
+ 
 
 
 

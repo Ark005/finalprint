@@ -1,0 +1,153 @@
+
+   
+    
+    {% extends 'products/base.html' %}
+    {% load thumbnail %} 
+    {% load i18n %}
+    {% load crispy_forms_tags %}
+    {% block content %}
+    {% load static %}
+
+
+
+{% for 12 in banner %}
+<img src="{{ 12.mainimage.url }}" alt="images" width="90%">
+{% endfor %}
+  
+
+    <h2  style="color:rgb(229, 152, 147)" class="text-center" class="card-title"><br>{% trans 'Посчитать/заказать очень просто' %}  <br>  </h2></span>
+  
+    <br>
+   
+
+
+        
+        <h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">{% trans 'Сначала на главном экране в разделе "Категории продуктов"выбираем название нужного продукта'  %}  <br>  </h5></span>
+
+
+       
+{% thumbnail  "350" as im %}
+
+<img  src="/media/products/choice_strE.png" width="90%">
+
+{% endthumbnail %}
+
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">{% trans 'или выбираем категорию по картинке' %}  <br>  </h5></span>
+
+{% thumbnail  "350" as im %}
+
+
+<img src="/media/products/choiceE.png" width="25%">
+
+{% endthumbnail %}
+
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">{% trans 'или ищем категорию через поиск, при этом достаточно набрать несколько первых символов с маленькой буквы' %}  <br>  </h5></span>
+
+
+
+
+{% thumbnail  "350" as im %}
+
+
+<img src="/media/products/searchE.png" width="90%">
+
+{% endthumbnail %}
+
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">{% trans 'затем делаем нужный выбор, нажимаем и оказываемся на следующем экране, где в выбранной категории выбираем нужный продукт' %}  <br>  </h5></span>
+
+
+
+
+{% thumbnail  "350" as im %}
+
+
+<img src="/media/products/choiceE2.png" width="30%">
+
+{% endthumbnail %}
+
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">{% trans ' попадаем на страничку с расчётом, где нам останется только ввести тираж, выбрать один из параметров  и посмотреть результат расчёта' %}  <br>  </h5></span>
+
+
+
+
+<h5  style="color:rgb(115, 197, 230)"  class="text-center" class="card-title">{% trans 'у вас исчезает введенное значение тиража, не волнуйтесь' %}</h5>
+         
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">{% trans ' значение тиража не слетает, результат выводится на экран  в строке  зеленым цветом, а поле ввода обнуляется для следующего расчёта' %} </h5>
+   
+<h5  style="color:rgb(115, 197, 230)"  class="text-center" class="card-title">{% trans 'вы вводите один тираж, а на экране выводится другой,' %} </h5>
+  
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">{% trans 'всё нормально, алгоритм ориентируется на min или max тиражи, то есть автоматически увеличивает тираж до минимального, или считает не больше максимального ' %}</h5>
+      
+
+
+
+
+
+
+
+
+
+{% thumbnail  "350" as im %}
+
+
+<img src="/media/products/calcE.png" width="70%">
+
+{% endthumbnail %}
+
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">{% trans 'после чего, нажимаем на кнопку "заказать" и переходим на страницу заказа' %}  <br>  </h5></span>
+
+
+{% thumbnail  "350" as im %}
+
+<img src="/media/products/orderE.png" width="70%">
+
+{% endthumbnail %}  
+
+<h5  style="color:rgb(36, 163, 60)" class="text-center" class="card-title">{% trans 'заполняем адрес доставки и вписываем своё имя в ячейку Name,чтобы получить коммерческое предложение на почту, указанную при регистрации' %}  <br>  </h5></span>
+
+ 
+
+{% thumbnail  "350" as im %}
+
+<img align="center" src="/media/products/nameE.png" width="70%">
+
+
+
+{% endthumbnail %}  
+
+
+                                    
+
+
+
+    <div>       
+ 
+             
+             </div>
+  
+              </p>
+             </div>
+    
+            </div>
+    
+      </div>
+
+       </div>
+      </div>
+     </div>
+    </div>
+    </div>
+    </div>
+    
+  </div>
+    <br>
+    <br>
+    <br>
+    
+
+    
+    
+    {% endblock %}
+    
+    
+    
