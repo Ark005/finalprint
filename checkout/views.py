@@ -12,7 +12,7 @@ from django.utils.datastructures import MultiValueDict as MVD
 from .forms import NameForm
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-import stripe
+
 
 
 stripe.api_key = settings.STRIPE_SECRET_KEY 

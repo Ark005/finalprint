@@ -39,7 +39,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'modeltranslation',
+    #'modeltranslation',
     'polymorphic',
     'allauth',
     'allauth.account',

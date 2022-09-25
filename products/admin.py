@@ -2,23 +2,23 @@ from django.contrib import admin
 
 from polymorphic.admin import PolymorphicParentModelAdmin, PolymorphicChildModelAdmin, PolymorphicChildModelFilter
 from products.models import *
-from modeltranslation.admin import TranslationAdmin
+#from modeltranslation.admin import TranslationAdmin
 
 
 admin.site.register(BoxSizes)
 
 
 @admin.register(Category)
-class CategoryAdmin(TranslationAdmin):
-    list_display = ('name', 'preview_text')
-    list_display_links = ('name', )
+#class CategoryAdmin(TranslationAdmin):
+    #list_display = ('name', 'preview_text')
+    #list_display_links = ('name', )
 # admin.site.register(Product)
 #admin.site.register(SubCategory)
  
 @admin.register(SubCategory)
-class CategoryAdmin(TranslationAdmin):
-    list_display = ('name', 'preview_text')
-    list_display_links = ('name', )
+#class CategoryAdmin(TranslationAdmin):
+    #list_display = ('name', 'preview_text')
+    #list_display_links = ('name', )
 # нужен чтобы наследовать дочерние модели
 class ModelAChildAdmin(PolymorphicChildModelAdmin):
     """ Base admin class for all child models """
@@ -67,17 +67,14 @@ class ModelBAdmin(ModelAChildAdmin):
 
 
 @admin.register(Placement)
-class ModelBAdmin(TranslationAdmin):
-    base_model = Placement 
+#class ModelBAdmin(TranslationAdmin):
+    #base_model = Placement 
 
 @admin.register(Note2)
-class ModelBAdmin(TranslationAdmin):
-    base_model = Note2
+#class ModelBAdmin(TranslationAdmin):
+   # base_model = Note2
 
 @admin.register(Banner)
-class BanerAdmin(TranslationAdmin):
-    base_model = Banner
-
 
 # Базовая модель
 @admin.register(Product) # Декоратор для регистрации
