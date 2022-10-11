@@ -14,7 +14,7 @@
          
          <div class="card mb-5" style="height: auto">
             <div class="card-body">
-               <h4 class="mb-3">{% trans 'адрес доставки/delivery address' %} <span class="text-muted"></span></h4>
+               <h4 class="mb-3">{% trans 'адрес доставки' %} <span class="text-muted"></span></h4>
                <form method="POST">
                   {% csrf_token %}
                   {{ form | crispy}}
@@ -128,7 +128,7 @@
                      <ul class="list-group list-group-flush"> </ul>
                      <h4 class="mb-3">  <span class="text-muted"></span></h4>
                      <form method="POST" action="{% url 'checkout:charge' %}">
-                         {% csrf_token %} {% trans 'спасибо, что вы с нами!' %}
+                         {% csrf_token %} {% trans 'спасибо, что выбрали нас!' %}
                         <button class="btn btn-secondary float-right" onclick="myFunction()">{% trans 'подтвердите заказ' %}</button>
 <!--                        <input type="checkbox" name="option1" id="option1" value="True" checked> Подтвердить-->
 <!--                         <button class="btn btn-success float-right" id="fa" name="button" value="True" onclick="myFunction()">Подтвердить заказ</button>-->

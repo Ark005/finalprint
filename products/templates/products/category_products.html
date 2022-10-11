@@ -142,7 +142,7 @@ function makeNormal() {
   </div>
   <br>  <br>
 
-    <div class="col-md-9">
+    <div class="col-md-7">
 		<div class="row">
 			{% for product in filter.qs %}
 		  <div class="col-md-6 col-sm-12 col-lg-4">
@@ -166,7 +166,7 @@ function makeNormal() {
 
 					<div class="card-body">
 						
-					 <h5 class="card-title"><a href="/product/{{ product.slug }}"><p style="color:rgb(36, 163, 60)">{{ product.name }}></p></a></h5>  
+					 <h5 class="card-title"><a href="/product/{{ product.slug }}"><p style="color:rgb(0, 0, 0)">{{ product.name }}></p></a></h5>  
 				
 				 <h6 class="card-title"><span class="text-muted">   {{ product.preview_text}} </span></a></h6>
 				 <center>	<span class="price-new">от  {{product.minprice}} руб.</span> </center>
