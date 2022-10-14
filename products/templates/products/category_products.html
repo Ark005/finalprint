@@ -133,7 +133,7 @@ function makeNormal() {
 	  <div class="col-sm">
 		<button type= "submit"
 		
-		  type="button" class="btn btn-success"><i class="fas fa-search"></i> {% trans 'искать' %}</button>
+		  type="button" class="btn btn-secondary"><i class="fas fa-search"></i> {% trans 'искать' %}</button>
   
 		</button>
 
@@ -142,12 +142,12 @@ function makeNormal() {
   </div>
   <br>  <br>
 
-    <div class="col-md-7">
+    <div class="col-md-9">
 		<div class="row">
 			{% for product in filter.qs %}
 		  <div class="col-md-6 col-sm-12 col-lg-4">
 			<figure class="card card-product">
-				<div class="img-wrap"> 
+				<div class="img-wrap h4"> 
 
 
 			
@@ -264,7 +264,7 @@ function makeNormal() {
 				</div>
 				<figcaption class="info-wrap">
 					<!-- Старый -->
-					<h6 class="card-title"><a href="products_by_category/{{ product.id }}"><p style="color:rgb(36, 163, 60)">{{ product.name }}></p></a></h6>
+					<h6 class="card-title"><a href="products_by_category/{{ product.id }}"><p style="color:rgb(0, 0, 0)">{{ product.name }}></p></a></h6>
 		
 					<H6 STYLE="font-family: 'avenir next rounded std'">
 					<h6 class="title text-dots">{{ product.preview_text }}</a></h6>					

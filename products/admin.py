@@ -48,6 +48,11 @@ class ModelBAdmin(ModelAChildAdmin):
     base_model = BoxType1  # Explicitly set here!
     # define custom features here
 
+@admin.register(Toy)
+class ModelBAdmin(ModelAChildAdmin):
+    base_model = Toy  # Explicitly set here!
+    # define custom features here
+
 # Child модель
 @admin.register(BoxType2)
 class ModelBAdmin(ModelAChildAdmin):
@@ -81,6 +86,6 @@ class ModelBAdmin(ModelAChildAdmin):
 class ProductParentAdmin(PolymorphicParentModelAdmin):
     """ The parent model admin """
     base_model = Product  # Optional, explicitly set here.
-    child_models = (BoxType2, BoxType1,  FolderType1, FolderType2,Placement,Note2)
+    child_models = (BoxType2, BoxType1,  FolderType1, FolderType2,Placement,Note2,Toy)
     list_filter = (PolymorphicChildModelFilter,)  # This is optional
    

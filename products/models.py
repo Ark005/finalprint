@@ -154,7 +154,12 @@ class  Product(PolymorphicModel):
         return a
  
 
+class Toy(Product):
+    """docstring for BoxType1"""
 
+    def __init__(self, *args, **kwargs):
+  
+        super(Toy, self).__init__(*args, **kwargs)
 
 
 class BoxType1(Product):
