@@ -68,7 +68,7 @@ class  Product(PolymorphicModel):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default = None, null=True)
     preview_text = models.TextField(max_length=50, verbose_name='Preview Text', blank=True, null=True)
     detail_text = models.TextField(max_length=1000, verbose_name='Detail Text', blank=True, null=True)
-    #price = models.FloatField(default = None, null=True)
+    price = models.FloatField(default = None, null=True)
     lim1 = models.FloatField(default = None, null=True)
     lim2 = models.FloatField(default = None, null=True)
     tirazh = models.IntegerField(null=False)
