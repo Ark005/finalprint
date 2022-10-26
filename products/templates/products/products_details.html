@@ -11,6 +11,15 @@
 {% for product in products %}
 
 
+
+
+
+
+
+
+
+
+
 <div class="container my-5">
     
     <div class="card">
@@ -18,11 +27,42 @@
             <aside class="col-sm-5 border-right">
     <article class="gallery-wrap"> 
     <div class="img-big-wrap">
-       
+       <!--
         {% thumbnail product.mainimage "350" as im %}
         <img align="center" src="{{ im.url }}"  class="img-fluid">
     {% endthumbnail %}
- 
+ -->
+
+    <!DOCTYPE html>
+    <html>
+     <head>
+      <meta charset="utf-8">
+      <title>Увеличение изображения</title>
+      <style>
+       .scale {
+        display: inline-block; /* Строчно-блочный элемент */
+        overflow: hidden; /* Скрываем всё за контуром */
+       }
+       .scale img {
+        transition: 1s; /* Время эффекта */
+        display: block; /* Убираем небольшой отступ снизу */
+       }
+       .scale img:hover {
+        transform: scale(1.4); /* Увеличиваем масштаб */
+       }
+      </style>
+     </head>
+     <body>
+     <!-- <div class="scale"> <img src="/media/products/test9.png"  alt="" class="scale"></div> -->
+      <div class="scale">  {% thumbnail product.mainimage "350" as im %}
+        <img align="center" src="{{ im.url }}"  class="img-fluid">
+    {% endthumbnail %} </div>
+
+     
+
+     </body>
+    </html>
+    
 
     
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -45,12 +85,12 @@
          {% else %}
         <!--    <h6 class="card-title"><span class="text-muted"><p style="color:rgb(229, 152, 147)">{% trans 'пожалуйста, зарегистрируйтесь,чтобы мы смогли оформить заказ' %}</p></span></a></h6> -->
         
-        <p style="color:rgb(229, 152, 147)"><a href="/register.html"> <p style="color:rgb(229, 152, 147)"> {% trans 'пожалуйста, зарегистрируйтесь,чтобы мы смогли оформить заказ' %}</p></span></a></h6> 
-         {% endif %}
+        <center>
+            <p><a style="color:rgb(229, 152, 147)" href="/register.html"> <p style="color:rgb(0, 0, 0)"> {% trans 'зарегистрироваться и оформить заказ' %}</p></span></a></h6> 
+             {% endif %}
+            </center> 
 
-
-    
-    
+      
       </body> 
 
 
@@ -122,7 +162,11 @@ document.getElementById("demo").innerHTML = a;
         </center>
             {% endfor %}
       
+            <tr> 
+                <center>   <td><h3><p style="color:rgb(0, 0, 0)">{{product.calc}} руб. за {{product.tirazh}} шт.</p></h3></td>  </center> 
+             
            
+            </tr>
 <!--
 
             <div style="position:absolute;z-index:10000;top:500 px;margin-left: 500 px;">
@@ -150,24 +194,16 @@ document.getElementById("demo").innerHTML = a;
                 <br><br>
 
 
-     
+    
 
-        <tr> 
-            <center>   <td><h3><p style="color:rgb(0, 0, 0)">{{product.calc}} руб. за {{product.tirazh}} шт.</p></h3></td>  </center> 
-         
-       
-        </tr>
-
-         <p><a style="color:rgb(229, 152, 147)" href="javascript:flipflop('animals');">{% trans 'у вас исчезает введенное значение тиража?' %}</a></p>             
+         <p><a style="color:rgb(229, 152, 147)" href="javascript:flipflop('animals');">{% trans 'у вас выводится иное от введенного значение тиража?' %}</a></p>             
 
          
 <ul id="animals" style="display: none;">
-  <li><div id="browse_app">
-
-    {% trans ' значение тиража не слетает, результат выводится в таблице ниже , а поле ввода обнуляется для следующего расчёта' %}
-   
-
-</li>
+ 
+ <!--
+    <li><div id="browse_app">
+</li> -->
 
 <li><div id="browse_app">
 
