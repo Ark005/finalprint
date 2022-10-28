@@ -60,12 +60,7 @@ class  Product(PolymorphicModel):
         except cls.DoesNotExist:
             return cls()
 
-    @classmethod
-    def load(cls):
-        try:
-            return cls.objects.get()
-        except cls.DoesNotExist:
-            return cls()
+    
    
     mainimage = models.ImageField(upload_to='products/', blank=True, null=True)
     name = models.CharField(max_length=300, default = None, null=True)
