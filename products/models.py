@@ -60,6 +60,12 @@ class  Product(PolymorphicModel):
         except cls.DoesNotExist:
             return cls()
 
+    @classmethod
+    def load(cls):
+        try:
+            return cls.objects.get()
+        except cls.DoesNotExist:
+            return cls()
    
     mainimage = models.ImageField(upload_to='products/', blank=True, null=True)
     name = models.CharField(max_length=300, default = None, null=True)
@@ -68,7 +74,7 @@ class  Product(PolymorphicModel):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default = None, null=True)
     preview_text = models.TextField(max_length=50, verbose_name='Preview Text', blank=True, null=True)
     detail_text = models.TextField(max_length=1000, verbose_name='Detail Text', blank=True, null=True)
-    price = models.FloatField(default = None, null=True)
+    #price = models.FloatField(default = None, null=True)
     lim1 = models.FloatField(default = None, null=True)
     lim2 = models.FloatField(default = None, null=True)
     tirazh = models.IntegerField(null=False)

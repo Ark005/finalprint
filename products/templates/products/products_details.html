@@ -259,31 +259,26 @@ magnify("myimage", 3);
       </style>
      </head>
      <body>
+
+       
      <!-- <div class="scale"> <img src="/media/products/test9.png"  alt="" class="scale"></div> -->
       <div class="scale">  {% thumbnail product.mainimage "350" as im %}
         <img align="center" src="{{ im.url }}"  class="img-fluid">
+   
+        <tr> 
+            <center>   <td><h3><p style="color:rgb(0, 0, 0)">{{product.calc}} руб. за {{product.tirazh}} шт.</p></h3></td>  </center> 
+        </tr>
+   
+
     {% endthumbnail %} </div>
-
-     
-
      </body>
     </html>
-    
-
     
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
     {% if request.user.is_authenticated %}
 
-<br>
-
-
-
-
-      
-
-        <br>
     
   <center>
        <span id="link"><a href="{% url 'mainapp:cart' product.slug %}" class="btn  btn-lg  btn-secondary text-uppercase"> <i class="fas fa-shopping-cart"></i> {% trans 'заказать' %}  </a></span> 
@@ -301,7 +296,7 @@ magnify("myimage", 3);
 
 
 
- 
+      
 
     <!-- slider-product.// -->
     </article> <!-- gallery-wrap .end// -->
@@ -385,11 +380,7 @@ document.getElementById("demo").innerHTML = a;
         </center>
             {% endfor %}
       
-            <tr> 
-                <center>   <td><h3><p style="color:rgb(0, 0, 0)">{{product.calc}} руб. за {{product.tirazh}} шт.</p></h3></td>  </center> 
-             
            
-            </tr>
 <!--
 
             <div style="position:absolute;z-index:10000;top:500 px;margin-left: 500 px;">
