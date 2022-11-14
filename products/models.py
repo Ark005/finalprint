@@ -111,10 +111,12 @@ class  Product(PolymorphicModel):
             self.tirazh=self.lim1
             a = float(boxsize.b*self.lim1**2+boxsize.h*self.lim1**1+boxsize.d)*self.p
             a = int (a//1)
+            a = '{0:,}'.format(a).replace(',', ' ')
         elif self.tirazh>self.lim2:
             self.tirazh=self.lim2
             a = float(boxsize.b*self.lim2**2+boxsize.h*self.lim2**1+boxsize.d)*self.p
             a = int (a//1)
+            a = '{0:,}'.format(a).replace(',', ' ')
         return a
     
     def minprice(self):

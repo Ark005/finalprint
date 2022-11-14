@@ -3,17 +3,14 @@
 
 {% extends 'products/base.html' %}
 {% load thumbnail %}
+
 {% load static %}
+
 {% load i18n %}
+
+
+
 {% load crispy_forms_tags %}
-
-
-
-
-
-
-
-
 <div class="col-md-">
   <span class="icon"><i class="fa fa-search"></i></span>
   <form method="get">
@@ -376,7 +373,7 @@
 
   <div class="col-md-3 col-lg-4 col-sm-6">
 
-     <div class="row">
+     <div class="card">
       <div class="card-img">
 
        <a href="products_by_category/{{ product.id }}">
@@ -428,7 +425,7 @@
   
  </a>
 
-  
+  </div>
  </div>
 </div>
 </div>
